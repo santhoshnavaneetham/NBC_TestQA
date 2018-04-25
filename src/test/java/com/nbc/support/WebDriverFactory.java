@@ -265,6 +265,8 @@ public class WebDriverFactory {
 				chromeCapabilities.setCapability(ChromeOptions.CAPABILITY, opt);
 				chromeCapabilities.setCapability("opera.arguments", "-screenwidth 1024 -screenheight 768");
 				chromeCapabilities.setPlatform(Platform.fromString(platform));
+				String methodName = new Exception().getStackTrace()[1].getMethodName();
+				chromeCapabilities.setCapability("name", methodName );
 
 				if (System.getProperty("har") == "true")
 					chromeCapabilities.setCapability(CapabilityType.PROXY, seleniumProxy);
@@ -277,6 +279,8 @@ public class WebDriverFactory {
 				chromeCapabilities.setCapability(ChromeOptions.CAPABILITY, opt);
 				chromeCapabilities.setCapability("opera.arguments", "-screenwidth 1024 -screenheight 768");
 				chromeCapabilities.setPlatform(Platform.fromString(platform));
+				String methodName = new Exception().getStackTrace()[1].getMethodName();
+				chromeCapabilities.setCapability("name", methodName );
 				driver = new RemoteWebDriver(new URL(URL), chromeCapabilities);
 
 			} else if ("SauceChromeWithUserAgentPC".equalsIgnoreCase(browser)) {
@@ -284,6 +288,8 @@ public class WebDriverFactory {
 				chromeCapabilities.setCapability("platform", "Windows 10");
 				chromeCapabilities.setCapability("version", "64.0");
 				chromeCapabilities.setCapability("opera.arguments", "-screenwidth 2560 -screenheight 1600");
+				String methodName = new Exception().getStackTrace()[1].getMethodName();
+				chromeCapabilities.setCapability("name", methodName );
 
 				driver = new RemoteWebDriver(new URL(URL), chromeCapabilities);
 			} else if ("SauceChromeWithUserAgentPixel".equalsIgnoreCase(browser)) {
@@ -292,6 +298,8 @@ public class WebDriverFactory {
 				chromeCapabilities.setCapability(ChromeOptions.CAPABILITY, opt);
 				chromeCapabilities.setCapability("opera.arguments", "-screenwidth 411 -screenheight 731");
 				chromeCapabilities.setPlatform(Platform.fromString(platform));
+				String methodName = new Exception().getStackTrace()[1].getMethodName();
+				chromeCapabilities.setCapability("name", methodName );
 				// driver = new RemoteWebDriver(hubURL, chromeCapabilities);
 				driver = new RemoteWebDriver(new URL(URL), chromeCapabilities);
 
@@ -299,6 +307,8 @@ public class WebDriverFactory {
 				chromeCapabilities.setCapability(ChromeOptions.CAPABILITY, opt);
 				chromeCapabilities.setCapability("platform", "Windows 10");
 				chromeCapabilities.setCapability("version", "64.0");
+				String methodName = new Exception().getStackTrace()[1].getMethodName();
+				chromeCapabilities.setCapability("name", methodName );
 
 				driver = new RemoteWebDriver(new URL(URL), chromeCapabilities);
 
@@ -317,11 +327,14 @@ public class WebDriverFactory {
 			} else if ("sauceFirefox".equalsIgnoreCase(browser)) {
 				firefoxCapabilities.setCapability("platform", "Windows 10");
 				firefoxCapabilities.setCapability("version", "58.0");
-
+				String methodName = new Exception().getStackTrace()[1].getMethodName();
+				firefoxCapabilities.setCapability("name", methodName );
 				driver = new RemoteWebDriver(new URL(URL), firefoxCapabilities);
 			} else if ("sauceSafari".equalsIgnoreCase(browser)) {
 				safariCapabilities.setCapability("platform", "macOS 10.12");
 				safariCapabilities.setCapability("version", "11.0");
+				String methodName = new Exception().getStackTrace()[1].getMethodName();
+				safariCapabilities.setCapability("name", methodName );
 				driver = new RemoteWebDriver(new URL(URL), safariCapabilities);
 
 			} else {
