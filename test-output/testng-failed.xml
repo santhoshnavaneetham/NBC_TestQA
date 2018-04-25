@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" guice-stage="DEVELOPMENT" verbose="3" name="Failed suite [NBC_PoC]" parallel="methods">
+  <parameter name="extentXProjectName" value="NBC_PoC"/>
+  <parameter name="imageLoad" value="false"/>
+  <parameter name="klovProjectName" value="NBC_PoC"/>
+  <parameter name="extentXMongoDBConnectionPort" value="27017"/>
+  <parameter name="framesLoad" value="false"/>
+  <parameter name="documentLoad" value="true"/>
+  <parameter name="extentXURL" value="http://172.24.115.100:1337"/>
+  <parameter name="extentXMongoDBConnectionName" value="172.24.115.100"/>
+  <parameter name="klovMongoDBConnectionPort" value="27017"/>
+  <parameter name="webSite" value="https://www.nbcwashington.com_NBC-Washington"/>
+  <parameter name="deviceHost" value="localhost"/>
+  <parameter name="extentXReport" value="No"/>
+  <parameter name="testNgReport" value="Yes"/>
+  <parameter name="klovMongoDBConnectionName" value="172.24.115.100"/>
+  <parameter name="har" value="false"/>
+  <parameter name="klovReport" value="Yes"/>
+  <parameter name="devicePort" value="4444"/>
+  <parameter name="browserName" value="sauceFirefox_windows, sauceSafari_windows"/>
+  <parameter name="klovURL" value="http://172.24.115.100:80"/>
+  <test thread-count="2" verbose="3" name="NBC_PoC_JAVA(failed)" parallel="methods">
+    <classes>
+      <class name="com.nbc.testscripts.demo.NBC_Demo">
+        <methods>
+          <include name="afterSuite"/>
+          <include name="tc004" invocation-numbers="1 0"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+          <include name="beforeSuite"/>
+          <include name="tc001" invocation-numbers="1 0"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.nbc.testscripts.demo.NBC_Demo -->
+    </classes>
+  </test> <!-- NBC_PoC_JAVA(failed) -->
+</suite> <!-- Failed suite [NBC_PoC] -->

@@ -1,0 +1,335 @@
+<html>
+<head>
+<title>TestNG:  NBC_PoC_JAVA</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>NBC_PoC_JAVA</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/4</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Apr 25 21:26:08 IST 2018</td>
+</tr>
+<tr><td>Total time:</td><td>122 seconds (122987 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nbc.testscripts.demo.NBC_Demo.tc001()'><b>tc001</b><br>Test class: com.nbc.testscripts.demo.NBC_Demo<br>Parameters:  sauceSafari_windows, https://www.nbcwashington.com_NBC-Washington<br/>
+<a href="#Output-1740144376" onClick='toggleBox("Output-1740144376", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1740144376" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1740144376">
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Apr 21:26:23 988 - <b>15</b> - Driver::Get - com.nbc.support.WebDriverFactory.get(WebDriverFactory.java:390)</small> </font> </div><br/>
+&emsp;<div class="test-title" align="center"> <strong><font color = "blue">Logo is clickable[ sauceSafari_windows || NBC-WASHINGTON ]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report --><br/>
+</div>
+</td>
+<td><div><pre>org.testng.SkipException: Exception at Log.addTestRunMachineInfo: JSONObject[&quot;proxyId&quot;] not found.
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:699)
+	at com.nbc.support.Log.testCaseInfo(Log.java:815)
+	at com.nbc.testscripts.demo.NBC_Demo.tc001(NBC_Demo.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.json.JSONException: JSONObject[&quot;proxyId&quot;] not found.
+	at org.json.JSONObject.get(JSONObject.java:520)
+	at org.json.JSONObject.getString(JSONObject.java:806)
+	at com.nbc.support.WebDriverFactory.getTestSessionNodeIP(WebDriverFactory.java:430)
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:662)
+	... 17 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1740144376", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1740144376'><pre>org.testng.SkipException: Exception at Log.addTestRunMachineInfo: JSONObject[&quot;proxyId&quot;] not found.
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:699)
+	at com.nbc.support.Log.testCaseInfo(Log.java:815)
+	at com.nbc.testscripts.demo.NBC_Demo.tc001(NBC_Demo.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.json.JSONException: JSONObject[&quot;proxyId&quot;] not found.
+	at org.json.JSONObject.get(JSONObject.java:520)
+	at org.json.JSONObject.getString(JSONObject.java:806)
+	at com.nbc.support.WebDriverFactory.getTestSessionNodeIP(WebDriverFactory.java:430)
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:662)
+	... 17 more
+</pre></div></td>
+<td>1</td>
+<td>com.nbc.testscripts.demo.NBC_Demo@20322d26</td></tr>
+<tr>
+<td title='com.nbc.testscripts.demo.NBC_Demo.tc001()'><b>tc001</b><br>Test class: com.nbc.testscripts.demo.NBC_Demo<br>Parameters: sauceFirefox_windows, https://www.nbcwashington.com_NBC-Washington<br/>
+<a href="#Output-1003965672" onClick='toggleBox("Output-1003965672", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1003965672" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1003965672">
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Apr 21:28:11 301 - <b>122</b> - Driver::Get - com.nbc.support.WebDriverFactory.get(WebDriverFactory.java:390)</small> </font> </div><br/>
+&emsp;<div class="test-title" align="center"> <strong><font color = "blue">Logo is clickable[sauceFirefox_windows || NBC-WASHINGTON ]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report --><br/>
+</div>
+</td>
+<td><div><pre>org.testng.SkipException: Exception at Log.addTestRunMachineInfo: JSONObject[&quot;proxyId&quot;] not found.
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:699)
+	at com.nbc.support.Log.testCaseInfo(Log.java:815)
+	at com.nbc.testscripts.demo.NBC_Demo.tc001(NBC_Demo.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.json.JSONException: JSONObject[&quot;proxyId&quot;] not found.
+	at org.json.JSONObject.get(JSONObject.java:520)
+	at org.json.JSONObject.getString(JSONObject.java:806)
+	at com.nbc.support.WebDriverFactory.getTestSessionNodeIP(WebDriverFactory.java:430)
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:662)
+	... 17 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1003965672", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1003965672'><pre>org.testng.SkipException: Exception at Log.addTestRunMachineInfo: JSONObject[&quot;proxyId&quot;] not found.
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:699)
+	at com.nbc.support.Log.testCaseInfo(Log.java:815)
+	at com.nbc.testscripts.demo.NBC_Demo.tc001(NBC_Demo.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.json.JSONException: JSONObject[&quot;proxyId&quot;] not found.
+	at org.json.JSONObject.get(JSONObject.java:520)
+	at org.json.JSONObject.getString(JSONObject.java:806)
+	at com.nbc.support.WebDriverFactory.getTestSessionNodeIP(WebDriverFactory.java:430)
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:662)
+	... 17 more
+</pre></div></td>
+<td>0</td>
+<td>com.nbc.testscripts.demo.NBC_Demo@20322d26</td></tr>
+<tr>
+<td title='com.nbc.testscripts.demo.NBC_Demo.tc004()'><b>tc004</b><br>Test class: com.nbc.testscripts.demo.NBC_Demo<br>Parameters:  sauceSafari_windows, https://www.nbcwashington.com_NBC-Washington<br/>
+<a href="#Output-1468970227" onClick='toggleBox("Output-1468970227", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1468970227" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1468970227">
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Apr 21:26:23 621 - <b>14</b> - Driver::Get - com.nbc.support.WebDriverFactory.get(WebDriverFactory.java:390)</small> </font> </div><br/>
+&emsp;<div class="test-title" align="center"> <strong><font color = "blue">Right rail has Spredfast[ sauceSafari_windows || NBC-WASHINGTON ]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report --><br/>
+</div>
+</td>
+<td><div><pre>org.testng.SkipException: Exception at Log.addTestRunMachineInfo: JSONObject[&quot;proxyId&quot;] not found.
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:699)
+	at com.nbc.support.Log.testCaseInfo(Log.java:815)
+	at com.nbc.testscripts.demo.NBC_Demo.tc004(NBC_Demo.java:212)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.json.JSONException: JSONObject[&quot;proxyId&quot;] not found.
+	at org.json.JSONObject.get(JSONObject.java:520)
+	at org.json.JSONObject.getString(JSONObject.java:806)
+	at com.nbc.support.WebDriverFactory.getTestSessionNodeIP(WebDriverFactory.java:430)
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:662)
+	... 17 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1468970227", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1468970227'><pre>org.testng.SkipException: Exception at Log.addTestRunMachineInfo: JSONObject[&quot;proxyId&quot;] not found.
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:699)
+	at com.nbc.support.Log.testCaseInfo(Log.java:815)
+	at com.nbc.testscripts.demo.NBC_Demo.tc004(NBC_Demo.java:212)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.json.JSONException: JSONObject[&quot;proxyId&quot;] not found.
+	at org.json.JSONObject.get(JSONObject.java:520)
+	at org.json.JSONObject.getString(JSONObject.java:806)
+	at com.nbc.support.WebDriverFactory.getTestSessionNodeIP(WebDriverFactory.java:430)
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:662)
+	... 17 more
+</pre></div></td>
+<td>2</td>
+<td>com.nbc.testscripts.demo.NBC_Demo@20322d26</td></tr>
+<tr>
+<td title='com.nbc.testscripts.demo.NBC_Demo.tc004()'><b>tc004</b><br>Test class: com.nbc.testscripts.demo.NBC_Demo<br>Parameters: sauceFirefox_windows, https://www.nbcwashington.com_NBC-Washington<br/>
+<a href="#Output-298783139" onClick='toggleBox("Output-298783139", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-298783139" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-298783139">
+<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Apr 21:26:26 902 - <b>17</b> - Driver::Get - com.nbc.support.WebDriverFactory.get(WebDriverFactory.java:390)</small> </font> </div><br/>
+&emsp;<div class="test-title" align="center"> <strong><font color = "blue">Right rail has Spredfast[sauceFirefox_windows || NBC-WASHINGTON ]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report --><br/>
+</div>
+</td>
+<td><div><pre>org.testng.SkipException: Exception at Log.addTestRunMachineInfo: JSONObject[&quot;proxyId&quot;] not found.
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:699)
+	at com.nbc.support.Log.testCaseInfo(Log.java:815)
+	at com.nbc.testscripts.demo.NBC_Demo.tc004(NBC_Demo.java:212)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.json.JSONException: JSONObject[&quot;proxyId&quot;] not found.
+	at org.json.JSONObject.get(JSONObject.java:520)
+	at org.json.JSONObject.getString(JSONObject.java:806)
+	at com.nbc.support.WebDriverFactory.getTestSessionNodeIP(WebDriverFactory.java:430)
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:662)
+	... 17 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace298783139", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace298783139'><pre>org.testng.SkipException: Exception at Log.addTestRunMachineInfo: JSONObject[&quot;proxyId&quot;] not found.
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:699)
+	at com.nbc.support.Log.testCaseInfo(Log.java:815)
+	at com.nbc.testscripts.demo.NBC_Demo.tc004(NBC_Demo.java:212)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.json.JSONException: JSONObject[&quot;proxyId&quot;] not found.
+	at org.json.JSONObject.get(JSONObject.java:520)
+	at org.json.JSONObject.getString(JSONObject.java:806)
+	at com.nbc.support.WebDriverFactory.getTestSessionNodeIP(WebDriverFactory.java:430)
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:662)
+	... 17 more
+</pre></div></td>
+<td>0</td>
+<td>com.nbc.testscripts.demo.NBC_Demo@20322d26</td></tr>
+</table><p>
+</body>
+</html>

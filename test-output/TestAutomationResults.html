@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8" /><script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script type="text/javascript">
+
+	function hideTestDetails() {
+	
+		 $("tr[class^='skip'] a:not(:visible),tr[class^='pass'] a:not(:visible),tr[class^='failed'] a:not(:visible)").each(function() {
+				$($(this).get(0).getAttribute("href")).hide();
+				$($(this).get(0).getAttribute("href")).next().hide();
+				$($(this).get(0).getAttribute("href")).next().next().hide();
+			 });
+			 
+	}
+	
+	function showTestDetails() {
+	
+		 $("tr[class^='skip'] a:visible,tr[class^='pass'] a:visible,tr[class^='failed'] a:visible").each(function() {
+					$($(this).get(0).getAttribute("href")).show();
+					$($(this).get(0).getAttribute("href")).next().show();
+					$($(this).get(0).getAttribute("href")).next().next().show();
+			 });
+	}
+	$(document).ready(function(){
+	
+		//Change Titles for Suite & Summary Table headers
+		$("table[id='suitesummary']").find("th").eq(4).text("Total Duration");
+		$("table[id='summary']").find("thead th").eq(0).text("Test Suites");
+		$("table[id='summary']").find("thead th").eq(1).text("Test Cases");
+		$("table[id='summary']").find("thead th").eq(3).text("Time");
+		$("table[id='suitesummary']").find("tr td:nth-last-of-type(1),th:nth-last-of-type(1)").hide();
+		$("table[id='suitesummary']").find("tr td:nth-last-of-type(2),th:nth-last-of-type(2):eq(0)").hide();
+	
+		$("<th>Pass/Fail</th>").insertBefore($("table[id='summary']").find("th:nth-last-of-type(2)"))
+		$("table[id='summary']").find("tr[class^='pass'] td:nth-last-of-type(2)").each(function() {
+		
+			if ($(this).get(0).getAttribute("rowSpan") != null)
+				$("<td valign=center align=center bgcolor=#00FF00 rowSpan=" + $(this).get(0).getAttribute("rowSpan") + "><b>Pass</b></td>").insertBefore($(this));
+			else
+				$("<td valign=center align=center bgcolor=#00FF00><b>Pass</b></td>").insertBefore($(this));
+		});
+		
+		$("table[id='summary']").find("tr[class^='fail'] td:nth-last-of-type(2)").each(function() {
+		
+			if ($(this).get(0).getAttribute("rowSpan") != null)
+				$("<td valign=center align=center bgcolor=#F00000 rowSpan=" + $(this).get(0).getAttribute("rowSpan") + "><b>Fail</b></td>").insertBefore($(this))
+			else
+				$("<td valign=center align=center bgcolor=#F00000><b>Fail</b></td>").insertBefore($(this));
+		});
+
+		$("table[id='summary']").find("tr[class^='skip'] td:nth-last-of-type(2)").each(function() {
+		
+			if ($(this).get(0).getAttribute("rowSpan") != null)
+				$("<td valign=center align=center bgcolor=#DDDDDD rowSpan=" + $(this).get(0).getAttribute("rowSpan") + "><b>Skip</b></td>").insertBefore($(this))
+			else
+				$("<td valign=center align=center bgcolor=#DDDDDD><b>Skip</b></td>").insertBefore($(this));
+		});
+
+		$('a').css('textDecoration','none') //hide hyperlinks underline
+		$("body>table:nth-of-type(2) th[colspan]").hide() //Hide site table row headers pass, fail , skip
+	
+		//Test Start
+		$($("table[id='summary']").find("tr[class]")).find("td:last").prev().each(function() {
+           var time = new Date($(this).text()/1);
+           time = (time.getHours()<10?"0"+time.getHours():time.getHours()) + ":" + (time.getMinutes()<10?"0"+time.getMinutes():time.getMinutes()) + ":" + (time.getSeconds()<10?"0"+time.getSeconds():time.getSeconds());
+            $(this).text(time);
+         });
+
+		
+		//Test Run Duration
+		$("table[id='summary']").find("tr[class]").each(function() {
+			if ($(this).find("td").length >=3) {
+				var time = new Date($(this).find("td:last").text()/1);
+				time = (time.getUTCMinutes()<10?"0"+time.getUTCMinutes():time.getUTCMinutes()) + ":" + (time.getUTCSeconds()<10?"0"+time.getUTCSeconds():time.getUTCSeconds());
+				$($(this).find("td:last").get(0)).text(time);
+			}
+		});
+	
+		//Test Suite Run Duration - Top Table
+		$($("table[id='suitesummary']").find("tr")).find("td:nth-of-type(5)").each(function() {
+			var time = $(this).text();
+			time = time.replace(/,/g, "");
+			var time = new Date(time/1);
+			time = (time.getUTCHours()<10?"0"+time.getUTCHours():time.getUTCHours()) + ":" + (time.getUTCMinutes()<10?"0"+time.getUTCMinutes():time.getUTCMinutes()) + ":" + (time.getUTCSeconds()<10?"0"+time.getUTCSeconds():time.getUTCSeconds());
+			$(this).text(time);
+		});
+		
+		//Test Suite Total Duration
+		var time = $("table[id='suitesummary']").get(0).getAttribute("duration");
+		time = new Date(time/1);
+		time = (time.getUTCHours()<10?"0"+time.getUTCHours():time.getUTCHours()) + ":" + (time.getUTCMinutes()<10?"0"+time.getUTCMinutes():time.getUTCMinutes()) + ":" + (time.getUTCSeconds()<10?"0"+time.getUTCSeconds():time.getUTCSeconds());
+		$("table[id='suitesummary']").find("th:last").prev().text(time);
+	
+		var header = "<hr size=3 noshade><h2 align=center>" + $("table:eq(0) tr:nth-of-type(2) th:first").text() + "</h2><hr size=3 noshade><br>"
+		$(header).insertBefore($("table").get(0));
+		$("<h3>Suite Summary:</h3>").insertBefore($("table").get(0));
+		$("<br><h3>Test Case Summary:</h3>").insertBefore($("table").get(1));
+	});
+	
+	
+	/*
+	 * Displays only the test case summary of clicked suite
+	 */
+	$(document).ready(function(){
+		  
+		$("a[href^='#t']").parent().click(function(){
+			
+			$("tbody[id^='t']").hide();
+			var tgtTable = $($($(this).get(0)).children("a").get(0).getAttribute("href"));
+			$(tgtTable).show();
+			$(tgtTable).find("tr").each(function() {
+				$(this).show();
+			});
+			hideTestDetails();
+		 	showTestDetails();
+			 
+		});
+	
+		//Preventing click of suite hyper link so function to hide other suite summary is not called
+		$("a[href^='#t']").click(function(e){
+			  e.stopPropagation();
+		 });
+	
+	});
+	
+	/*
+	 * Double click shows all test cases summary
+	 */
+	 
+	 $(document).ready(function(){
+		 
+		 $("table[id='suitesummary']").dblclick(function(){
+			
+		 	$("tbody[id^='t']").show();
+		 	$("tr[class^='failed']").show();
+		 	$("tr[class^='skip']").show();
+		 	$("tr[class^='pass']").show();
+		 
+			hideTestDetails();
+		 	showTestDetails();
+
+		});
+		
+	});
+		
+	 $(document).ready(function(){
+		 
+		 $("table:eq(0) tr:last th:first").click(function(){
+			 $("table[id='suitesummary']").trigger("dblclick");
+
+		});
+		
+	});
+
+	 /*
+	 * Display only pass/skip/fail cases
+	 */
+	$(document).ready(function(){
+		
+		$("td[class^='num'],th[class^='num']").click(function(){
+		  	
+		  	var col = $(this).index();
+		  	var row = $(this).closest("tr");
+		 	$($(row).find("td,th").get(0)).trigger("click");
+		  	
+		  	if (col == 1) {
+				$("tr[class^='failed']").hide();
+				$("tr[class^='skip']").hide();
+				$("tr[class^='pass']").show();
+			}
+		
+			if (col == 2) {
+				$("tr[class^='failed']").hide();
+			 	$("tr[class^='pass']").hide();
+				$("tr[class^='skip']").show();
+		  	}
+		
+		  	if (col == 3) {
+			  	$("tr[class^='skip']").hide();
+			 	$("tr[class^='pass']").hide();
+				$("tr[class^='failed']").show();
+			}
+		
+			hideTestDetails();
+		 	showTestDetails();
+		});
+
+
+	});
+		
+	/*
+	 * Shows test events on key press of ctrl+alt+e
+	 */
+	$(document).keypress("e", function(e) {
+		  if(e.altKey && e.ctrlKey)
+			  $("div[class='test-event']").fadeToggle(500);
+		});
+
+</script>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">
+	table {margin-bottom:10px;border-collapse:collapse;empty-cells:show; border: 2px solid;}
+	body>table:nth-of-type(1) {width: 30%}
+	body>table:nth-of-type(2) {width: 75%}
+	th {border:1px solid #000000;padding:.75em .5em; } 
+	td {border:1px solid #000000;padding:.35em .5em; }
+	th {border-bottom: 2px solid; border-top: 2px solid; border-color: #000000}
+	tbody {border-bottom: 2px solid; border-top: 2px solid;}
+	body {font-family: Verdana, Geneva, sans-serif; font-size: 80%; font-weight: 500;}
+	.num {text-align:right}
+	tr[class^='passed'] td a {color: #009400}
+	tr[class^='skipped'] td a {color: #555555}
+	tr[class^='failed'] td a, .attn {color: #F00000}
+	th {font-weight: bold; background-color: #BBBBBB}
+	div[class='test-event'] {display:none;}
+	table[class='result'] {font-family: monospace; font-size: 100%;}
+	.stacktrace {white-space: pre-wrap;}
+</style>
+</head>
+<body>
+	<table id='suitesummary' title="Filters results based on cell clicked/Shows all result on double-click" duration="108245">
+		<tr>			<th>Test			</th>			<th># Passed			</th>			<th># Skipped			</th>			<th># Failed			</th>			<th>Time (ms)			</th>			<th>Included Groups			</th>			<th>Excluded Groups			</th>		</tr>
+		<tr>			<th colspan="7">NBC_PoC			</th>		</tr>
+		<tr>			<td><a href="#t0">NBC_PoC_JAVA</a>			</td><td class="num">0			</td><td class="num attn">4			</td><td class="num">0			</td><td class="num">122,987			</td>			<td>			</td>			<td>			</td>		</tr>
+	</table>
+	<table id='summary'>				<thead>		<tr>			<th>Class			</th>			<th>Method			</th>			<th>Start			</th>			<th>Time (ms)			</th>		</tr>	</thead>	<tbody>		<tr>			<th colspan="4">NBC_PoC			</th>		</tr>	</tbody><tbody id="t0">		<tr>			<th colspan="4">NBC_PoC_JAVA &#8212; skipped			</th>		</tr>		<tr class="skippedeven"><td rowspan="4">com.nbc.testscripts.demo.NBC_Demo			</td>			<td><a href="#m0">tc001</a>			</td><td rowspan="2">1524671783696			</td><td rowspan="2">1798			</td>		</tr>		<tr class="skippedeven">			<td><a href="#m1">tc001</a>			</td>		</tr>		<tr class="skippedeven">			<td><a href="#m2">tc004</a>			</td><td rowspan="2">1524671786582			</td><td rowspan="2">359			</td>		</tr>		<tr class="skippedeven">			<td><a href="#m3">tc004</a>			</td>		</tr>	</tbody>
+	</table>
+		<h2>NBC_PoC_JAVA</h2><h3 id="m0">com.nbc.testscripts.demo.NBC_Demo#tc001</h3>	<table class="result">		<tr class="param">			<th>Parameter #1			</th>			<th>Parameter #2			</th>		</tr>		<tr class="param stripe">			<td> sauceSafari_windows			</td>			<td>https://www.nbcwashington.com_NBC-Washington			</td>		</tr>		<tr>			<th colspan="2">Messages			</th>		</tr>		<tr><td colspan="2"><div class="messages"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Apr 21:26:23 988 - <b>15</b> - Driver::Get - com.nbc.support.WebDriverFactory.get(WebDriverFactory.java:390)</small> </font> </div>&emsp;<div class="test-title" align="center"> <strong><font color = "blue">Logo is clickable[ sauceSafari_windows || NBC-WASHINGTON ]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report --></div>			</td>		</tr>		<tr>			<th colspan="2">Exception			</th>		</tr>		<tr><td colspan="2"><div class="stacktrace">org.testng.SkipException: Exception at Log.addTestRunMachineInfo: JSONObject["proxyId"] not found.
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:699)
+	at com.nbc.support.Log.testCaseInfo(Log.java:815)
+	at com.nbc.testscripts.demo.NBC_Demo.tc001(NBC_Demo.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.json.JSONException: JSONObject["proxyId"] not found.
+	at org.json.JSONObject.get(JSONObject.java:520)
+	at org.json.JSONObject.getString(JSONObject.java:806)
+	at com.nbc.support.WebDriverFactory.getTestSessionNodeIP(WebDriverFactory.java:430)
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:662)
+	... 17 more
+</div>			</td>		</tr>	</table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.nbc.testscripts.demo.NBC_Demo#tc001</h3>	<table class="result">		<tr class="param">			<th>Parameter #1			</th>			<th>Parameter #2			</th>		</tr>		<tr class="param stripe">			<td>sauceFirefox_windows			</td>			<td>https://www.nbcwashington.com_NBC-Washington			</td>		</tr>		<tr>			<th colspan="2">Messages			</th>		</tr>		<tr><td colspan="2"><div class="messages"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Apr 21:28:11 301 - <b>122</b> - Driver::Get - com.nbc.support.WebDriverFactory.get(WebDriverFactory.java:390)</small> </font> </div>&emsp;<div class="test-title" align="center"> <strong><font color = "blue">Logo is clickable[sauceFirefox_windows || NBC-WASHINGTON ]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report --></div>			</td>		</tr>		<tr>			<th colspan="2">Exception			</th>		</tr>		<tr><td colspan="2"><div class="stacktrace">org.testng.SkipException: Exception at Log.addTestRunMachineInfo: JSONObject["proxyId"] not found.
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:699)
+	at com.nbc.support.Log.testCaseInfo(Log.java:815)
+	at com.nbc.testscripts.demo.NBC_Demo.tc001(NBC_Demo.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.json.JSONException: JSONObject["proxyId"] not found.
+	at org.json.JSONObject.get(JSONObject.java:520)
+	at org.json.JSONObject.getString(JSONObject.java:806)
+	at com.nbc.support.WebDriverFactory.getTestSessionNodeIP(WebDriverFactory.java:430)
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:662)
+	... 17 more
+</div>			</td>		</tr>	</table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.nbc.testscripts.demo.NBC_Demo#tc004</h3>	<table class="result">		<tr class="param">			<th>Parameter #1			</th>			<th>Parameter #2			</th>		</tr>		<tr class="param stripe">			<td>sauceFirefox_windows			</td>			<td>https://www.nbcwashington.com_NBC-Washington			</td>		</tr>		<tr>			<th colspan="2">Messages			</th>		</tr>		<tr><td colspan="2"><div class="messages"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Apr 21:26:26 902 - <b>17</b> - Driver::Get - com.nbc.support.WebDriverFactory.get(WebDriverFactory.java:390)</small> </font> </div>&emsp;<div class="test-title" align="center"> <strong><font color = "blue">Right rail has Spredfast[sauceFirefox_windows || NBC-WASHINGTON ]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report --></div>			</td>		</tr>		<tr>			<th colspan="2">Exception			</th>		</tr>		<tr><td colspan="2"><div class="stacktrace">org.testng.SkipException: Exception at Log.addTestRunMachineInfo: JSONObject["proxyId"] not found.
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:699)
+	at com.nbc.support.Log.testCaseInfo(Log.java:815)
+	at com.nbc.testscripts.demo.NBC_Demo.tc004(NBC_Demo.java:212)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.json.JSONException: JSONObject["proxyId"] not found.
+	at org.json.JSONObject.get(JSONObject.java:520)
+	at org.json.JSONObject.getString(JSONObject.java:806)
+	at com.nbc.support.WebDriverFactory.getTestSessionNodeIP(WebDriverFactory.java:430)
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:662)
+	... 17 more
+</div>			</td>		</tr>	</table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.nbc.testscripts.demo.NBC_Demo#tc004</h3>	<table class="result">		<tr class="param">			<th>Parameter #1			</th>			<th>Parameter #2			</th>		</tr>		<tr class="param stripe">			<td> sauceSafari_windows			</td>			<td>https://www.nbcwashington.com_NBC-Washington			</td>		</tr>		<tr>			<th colspan="2">Messages			</th>		</tr>		<tr><td colspan="2"><div class="messages"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Apr 21:26:23 621 - <b>14</b> - Driver::Get - com.nbc.support.WebDriverFactory.get(WebDriverFactory.java:390)</small> </font> </div>&emsp;<div class="test-title" align="center"> <strong><font color = "blue">Right rail has Spredfast[ sauceSafari_windows || NBC-WASHINGTON ]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report --></div>			</td>		</tr>		<tr>			<th colspan="2">Exception			</th>		</tr>		<tr><td colspan="2"><div class="stacktrace">org.testng.SkipException: Exception at Log.addTestRunMachineInfo: JSONObject["proxyId"] not found.
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:699)
+	at com.nbc.support.Log.testCaseInfo(Log.java:815)
+	at com.nbc.testscripts.demo.NBC_Demo.tc004(NBC_Demo.java:212)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.json.JSONException: JSONObject["proxyId"] not found.
+	at org.json.JSONObject.get(JSONObject.java:520)
+	at org.json.JSONObject.getString(JSONObject.java:806)
+	at com.nbc.support.WebDriverFactory.getTestSessionNodeIP(WebDriverFactory.java:430)
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:662)
+	... 17 more
+</div>			</td>		</tr>	</table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

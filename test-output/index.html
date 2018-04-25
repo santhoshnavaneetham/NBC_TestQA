@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-NBC_PoC">
+              <span class="suite-name border-skipped">NBC_PoC</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-NBC_PoC">
+                    <span>C:\NBC\Praveen\25Apr18\NBC PoC\testxml\NBC_Demo_Washington_Jenkins_Job_2.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-NBC_PoC">
+                    <span class="test-stats">1 test</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-NBC_PoC">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-NBC_PoC">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-NBC_PoC">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-NBC_PoC">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-NBC_PoC">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">4 methods,  4 skipped,  </span>
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-NBC_PoC" class="hide-methods skipped suite-NBC_PoC"> (hide)</a> <!-- hide-methods skipped suite-NBC_PoC -->
+                      <a href="#" panel-name="suite-NBC_PoC" class="show-methods skipped suite-NBC_PoC"> (show)</a> <!-- show-methods skipped suite-NBC_PoC -->
+                    </span>
+                    <div class="method-list-content skipped suite-NBC_PoC">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-NBC_PoC" title="com.nbc.testscripts.demo.NBC_Demo" hash-for-method="tc001( sauceSafari_windows, https://www.nbcwashington.com_NBC-Washington)">tc001( sauceSafari_windows, https://www.nbcwashington.com_NBC-Washington)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-NBC_PoC" title="com.nbc.testscripts.demo.NBC_Demo" hash-for-method="tc001(sauceFirefox_windows, https://www.nbcwashington.com_NBC-Washington)">tc001(sauceFirefox_windows, https://www.nbcwashington.com_NBC-Washington)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-NBC_PoC" title="com.nbc.testscripts.demo.NBC_Demo" hash-for-method="tc004(sauceFirefox_windows, https://www.nbcwashington.com_NBC-Washington)">tc004(sauceFirefox_windows, https://www.nbcwashington.com_NBC-Washington)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-NBC_PoC" title="com.nbc.testscripts.demo.NBC_Demo" hash-for-method="tc004( sauceSafari_windows, https://www.nbcwashington.com_NBC-Washington)">tc004( sauceSafari_windows, https://www.nbcwashington.com_NBC-Washington)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-NBC_PoC -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-NBC_PoC" class="panel NBC_PoC">
+          <div class="suite-NBC_PoC-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.nbc.testscripts.demo.NBC_Demo</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="tc001( sauceSafari_windows, https://www.nbcwashington.com_NBC-Washington)">
+                  </a> <!-- tc001( sauceSafari_windows, https://www.nbcwashington.com_NBC-Washington) -->
+                  <span class="method-name">tc001</span>
+                  <span class="parameters">( sauceSafari_windows, https://www.nbcwashington.com_NBC-Washington)</span>
+                  <div class="stack-trace">org.testng.SkipException: Exception at Log.addTestRunMachineInfo: JSONObject[&quot;proxyId&quot;] not found.
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:699)
+	at com.nbc.support.Log.testCaseInfo(Log.java:815)
+	at com.nbc.testscripts.demo.NBC_Demo.tc001(NBC_Demo.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.json.JSONException: JSONObject[&quot;proxyId&quot;] not found.
+	at org.json.JSONObject.get(JSONObject.java:520)
+	at org.json.JSONObject.getString(JSONObject.java:806)
+	at com.nbc.support.WebDriverFactory.getTestSessionNodeIP(WebDriverFactory.java:430)
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:662)
+	... 17 more
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="tc001(sauceFirefox_windows, https://www.nbcwashington.com_NBC-Washington)">
+                  </a> <!-- tc001(sauceFirefox_windows, https://www.nbcwashington.com_NBC-Washington) -->
+                  <span class="method-name">tc001</span>
+                  <span class="parameters">(sauceFirefox_windows, https://www.nbcwashington.com_NBC-Washington)</span>
+                  <div class="stack-trace">org.testng.SkipException: Exception at Log.addTestRunMachineInfo: JSONObject[&quot;proxyId&quot;] not found.
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:699)
+	at com.nbc.support.Log.testCaseInfo(Log.java:815)
+	at com.nbc.testscripts.demo.NBC_Demo.tc001(NBC_Demo.java:47)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.json.JSONException: JSONObject[&quot;proxyId&quot;] not found.
+	at org.json.JSONObject.get(JSONObject.java:520)
+	at org.json.JSONObject.getString(JSONObject.java:806)
+	at com.nbc.support.WebDriverFactory.getTestSessionNodeIP(WebDriverFactory.java:430)
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:662)
+	... 17 more
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="tc004(sauceFirefox_windows, https://www.nbcwashington.com_NBC-Washington)">
+                  </a> <!-- tc004(sauceFirefox_windows, https://www.nbcwashington.com_NBC-Washington) -->
+                  <span class="method-name">tc004</span>
+                  <span class="parameters">(sauceFirefox_windows, https://www.nbcwashington.com_NBC-Washington)</span>
+                  <div class="stack-trace">org.testng.SkipException: Exception at Log.addTestRunMachineInfo: JSONObject[&quot;proxyId&quot;] not found.
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:699)
+	at com.nbc.support.Log.testCaseInfo(Log.java:815)
+	at com.nbc.testscripts.demo.NBC_Demo.tc004(NBC_Demo.java:212)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.json.JSONException: JSONObject[&quot;proxyId&quot;] not found.
+	at org.json.JSONObject.get(JSONObject.java:520)
+	at org.json.JSONObject.getString(JSONObject.java:806)
+	at com.nbc.support.WebDriverFactory.getTestSessionNodeIP(WebDriverFactory.java:430)
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:662)
+	... 17 more
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="tc004( sauceSafari_windows, https://www.nbcwashington.com_NBC-Washington)">
+                  </a> <!-- tc004( sauceSafari_windows, https://www.nbcwashington.com_NBC-Washington) -->
+                  <span class="method-name">tc004</span>
+                  <span class="parameters">( sauceSafari_windows, https://www.nbcwashington.com_NBC-Washington)</span>
+                  <div class="stack-trace">org.testng.SkipException: Exception at Log.addTestRunMachineInfo: JSONObject[&quot;proxyId&quot;] not found.
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:699)
+	at com.nbc.support.Log.testCaseInfo(Log.java:815)
+	at com.nbc.testscripts.demo.NBC_Demo.tc004(NBC_Demo.java:212)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.json.JSONException: JSONObject[&quot;proxyId&quot;] not found.
+	at org.json.JSONObject.get(JSONObject.java:520)
+	at org.json.JSONObject.getString(JSONObject.java:806)
+	at com.nbc.support.WebDriverFactory.getTestSessionNodeIP(WebDriverFactory.java:430)
+	at com.nbc.support.Log.addTestRunMachineInfo(Log.java:662)
+	... 17 more
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-NBC_PoC-class-skipped -->
+        </div> <!-- panel NBC_PoC -->
+        <div panel-name="test-xml-NBC_PoC" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\NBC\Praveen\25Apr18\NBC PoC\testxml\NBC_Demo_Washington_Jenkins_Job_2.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite thread-count=&quot;2&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;3&quot; name=&quot;NBC_PoC&quot; parallel=&quot;methods&quot;&gt;
+  &lt;parameter name=&quot;extentXProjectName&quot; value=&quot;NBC_PoC&quot;/&gt;
+  &lt;parameter name=&quot;imageLoad&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;klovProjectName&quot; value=&quot;NBC_PoC&quot;/&gt;
+  &lt;parameter name=&quot;extentXMongoDBConnectionPort&quot; value=&quot;27017&quot;/&gt;
+  &lt;parameter name=&quot;framesLoad&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;documentLoad&quot; value=&quot;true&quot;/&gt;
+  &lt;parameter name=&quot;extentXURL&quot; value=&quot;http://172.24.115.100:1337&quot;/&gt;
+  &lt;parameter name=&quot;extentXMongoDBConnectionName&quot; value=&quot;172.24.115.100&quot;/&gt;
+  &lt;parameter name=&quot;klovMongoDBConnectionPort&quot; value=&quot;27017&quot;/&gt;
+  &lt;parameter name=&quot;webSite&quot; value=&quot;https://www.nbcwashington.com_NBC-Washington&quot;/&gt;
+  &lt;parameter name=&quot;deviceHost&quot; value=&quot;localhost&quot;/&gt;
+  &lt;parameter name=&quot;extentXReport&quot; value=&quot;No&quot;/&gt;
+  &lt;parameter name=&quot;testNgReport&quot; value=&quot;Yes&quot;/&gt;
+  &lt;parameter name=&quot;klovMongoDBConnectionName&quot; value=&quot;172.24.115.100&quot;/&gt;
+  &lt;parameter name=&quot;har&quot; value=&quot;false&quot;/&gt;
+  &lt;parameter name=&quot;klovReport&quot; value=&quot;Yes&quot;/&gt;
+  &lt;parameter name=&quot;devicePort&quot; value=&quot;4444&quot;/&gt;
+  &lt;parameter name=&quot;browserName&quot; value=&quot;sauceFirefox_windows, sauceSafari_windows&quot;/&gt;
+  &lt;parameter name=&quot;klovURL&quot; value=&quot;http://172.24.115.100:80&quot;/&gt;
+  &lt;test thread-count=&quot;2&quot; verbose=&quot;3&quot; name=&quot;NBC_PoC_JAVA&quot; parallel=&quot;methods&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;com.nbc.testscripts.demo.NBC_Demo&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;tc001&quot;/&gt;
+          &lt;include name=&quot;tc004&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- com.nbc.testscripts.demo.NBC_Demo --&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- NBC_PoC_JAVA --&gt;
+&lt;/suite&gt; &lt;!-- NBC_PoC --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-NBC_PoC" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for NBC_PoC</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">NBC_PoC_JAVA (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-NBC_PoC" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for NBC_PoC</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-NBC_PoC" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for NBC_PoC</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_NBC_PoC');
+function tableData_NBC_PoC() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(4);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'tc004')
+data.setCell(0, 2, 'com.nbc.testscripts.demo.NBC_Demo')
+data.setCell(0, 3, 2383);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'tc001')
+data.setCell(1, 2, 'com.nbc.testscripts.demo.NBC_Demo')
+data.setCell(1, 3, 1798);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'tc001')
+data.setCell(2, 2, 'com.nbc.testscripts.demo.NBC_Demo')
+data.setCell(2, 3, 401);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'tc004')
+data.setCell(3, 2, 'com.nbc.testscripts.demo.NBC_Demo')
+data.setCell(3, 3, 359);
+window.suiteTableData['NBC_PoC']= { tableData: data, tableDiv: 'times-div-NBC_PoC'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <div id="times-div-NBC_PoC">
+              </div> <!-- times-div-NBC_PoC -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-NBC_PoC" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for NBC_PoC</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">tc001( sauceSafari_windows, https://www.nbcwashington.com_NBC-Washington)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Apr 21:26:23 988 - <b>15</b> - Driver::Get - com.nbc.support.WebDriverFactory.get(WebDriverFactory.java:390)</small> </font> </div></span>
+                <span class="reporter-method-output">&emsp;<div class="test-title" align="center"> <strong><font color = "blue">Logo is clickable[ sauceSafari_windows || NBC-WASHINGTON ]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report --></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">tc004(sauceFirefox_windows, https://www.nbcwashington.com_NBC-Washington)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Apr 21:26:26 902 - <b>17</b> - Driver::Get - com.nbc.support.WebDriverFactory.get(WebDriverFactory.java:390)</small> </font> </div></span>
+                <span class="reporter-method-output">&emsp;<div class="test-title" align="center"> <strong><font color = "blue">Right rail has Spredfast[sauceFirefox_windows || NBC-WASHINGTON ]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report --></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">tc004( sauceSafari_windows, https://www.nbcwashington.com_NBC-Washington)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Apr 21:26:23 621 - <b>14</b> - Driver::Get - com.nbc.support.WebDriverFactory.get(WebDriverFactory.java:390)</small> </font> </div></span>
+                <span class="reporter-method-output">&emsp;<div class="test-title" align="center"> <strong><font color = "blue">Right rail has Spredfast[ sauceSafari_windows || NBC-WASHINGTON ]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report --></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">tc001(sauceFirefox_windows, https://www.nbcwashington.com_NBC-Washington)</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output"><div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Apr 21:28:11 301 - <b>122</b> - Driver::Get - com.nbc.support.WebDriverFactory.get(WebDriverFactory.java:390)</small> </font> </div></span>
+                <span class="reporter-method-output">&emsp;<div class="test-title" align="center"> <strong><font color = "blue">Logo is clickable[sauceFirefox_windows || NBC-WASHINGTON ]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report --></span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-NBC_PoC" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">9 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">com.nbc.testscripts.demo.NBC_Demo</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">tc007</span>
+                <br/>
+                <span class="ignored-method-name">tc009</span>
+                <br/>
+                <span class="ignored-method-name">tc008</span>
+                <br/>
+                <span class="ignored-method-name">tc010</span>
+                <br/>
+                <span class="ignored-method-name">tc002</span>
+                <br/>
+                <span class="ignored-method-name">tc003</span>
+                <br/>
+                <span class="ignored-method-name">tc006</span>
+                <br/>
+                <span class="ignored-method-name">tc005</span>
+                <br/>
+                <span class="ignored-method-name">tc011</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-NBC_PoC" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">com.nbc.testscripts.demo.NBC_Demo</div> <!-- chronological-class-name -->
+              <div class="configuration-suite before">
+                <span class="method-name">beforeSuite</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-suite before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">205 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">208 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">216 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">beforeMethod</span>
+                <span class="method-start">218 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">tc004( sauceSafari_windows, https://www.nbcwashington.com_NBC-Washington)</span>
+                <span class="method-start">14784 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">tc001( sauceSafari_windows, https://www.nbcwashington.com_NBC-Washington)</span>
+                <span class="method-start">15369 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=tc004 status=SKIP method=NBC_Demo.tc004(java.lang.String, java.lang.String)[pri:0, ...)</span>
+                <span class="method-start">17175 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod(org.testng.TestRunner@3b088d51)</span>
+                <span class="method-start">17179 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=tc001 status=SKIP method=NBC_Demo.tc001(java.lang.String, java.lang.String)[pri:0, ...)</span>
+                <span class="method-start">17184 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod(org.testng.TestRunner@3b088d51)</span>
+                <span class="method-start">17187 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">tc004(sauceFirefox_windows, https://www.nbcwashington.com_NBC-Washington)</span>
+                <span class="method-start">18255 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=tc004 status=SKIP method=NBC_Demo.tc004(java.lang.String, java.lang.String)[pri:0, ...)</span>
+                <span class="method-start">18617 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod(org.testng.TestRunner@3b088d51)</span>
+                <span class="method-start">18619 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="test-method">
+                <span class="method-name">tc001(sauceFirefox_windows, https://www.nbcwashington.com_NBC-Washington)</span>
+                <span class="method-start">122628 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown([TestResult name=tc001 status=SKIP method=NBC_Demo.tc001(java.lang.String, java.lang.String)[pri:0, ...)</span>
+                <span class="method-start">123031 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method after">
+                <span class="method-name">afterMethod(org.testng.TestRunner@3b088d51)</span>
+                <span class="method-start">123038 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-suite after">
+                <span class="method-name">afterSuite</span>
+                <span class="method-start">123154 ms</span>
+              </div> <!-- configuration-suite after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="4" failed="0" ignored="9" total="13" passed="0">
+  <reporter-output>
+    <line>
+      <![CDATA[<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Apr 21:26:23 621 - <b>14</b> - Driver::Get - com.nbc.support.WebDriverFactory.get(WebDriverFactory.java:390)</small> </font> </div>]]>
+    </line>
+    <line>
+      <![CDATA[<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Apr 21:26:23 988 - <b>15</b> - Driver::Get - com.nbc.support.WebDriverFactory.get(WebDriverFactory.java:390)</small> </font> </div>]]>
+    </line>
+    <line>
+      <![CDATA[&emsp;<div class="test-title" align="center"> <strong><font color = "blue">Right rail has Spredfast[ sauceSafari_windows || NBC-WASHINGTON ]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->]]>
+    </line>
+    <line>
+      <![CDATA[&emsp;<div class="test-title" align="center"> <strong><font color = "blue">Logo is clickable[ sauceSafari_windows || NBC-WASHINGTON ]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->]]>
+    </line>
+    <line>
+      <![CDATA[<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Apr 21:26:26 902 - <b>17</b> - Driver::Get - com.nbc.support.WebDriverFactory.get(WebDriverFactory.java:390)</small> </font> </div>]]>
+    </line>
+    <line>
+      <![CDATA[&emsp;<div class="test-title" align="center"> <strong><font color = "blue">Right rail has Spredfast[sauceFirefox_windows || NBC-WASHINGTON ]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->]]>
+    </line>
+    <line>
+      <![CDATA[<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Apr 21:28:11 301 - <b>122</b> - Driver::Get - com.nbc.support.WebDriverFactory.get(WebDriverFactory.java:390)</small> </font> </div>]]>
+    </line>
+    <line>
+      <![CDATA[&emsp;<div class="test-title" align="center"> <strong><font color = "blue">Logo is clickable[sauceFirefox_windows || NBC-WASHINGTON ]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->]]>
+    </line>
+  </reporter-output>
+  <suite name="NBC_PoC" duration-ms="122987" started-at="2018-04-25T15:56:08Z" finished-at="2018-04-25T15:58:11Z">
+    <groups>
+    </groups>
+    <test name="NBC_PoC_JAVA" duration-ms="122987" started-at="2018-04-25T15:56:08Z" finished-at="2018-04-25T15:58:11Z">
+      <class name="com.nbc.testscripts.demo.NBC_Demo">
+        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.nbc.testscripts.demo.NBC_Demo@20322d26]" name="beforeSuite" is-config="true" duration-ms="51" started-at="2018-04-25T15:56:08Z" finished-at="2018-04-25T15:56:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.nbc.testscripts.demo.NBC_Demo@20322d26]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-04-25T15:56:08Z" finished-at="2018-04-25T15:56:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.nbc.testscripts.demo.NBC_Demo@20322d26]" name="beforeMethod" is-config="true" duration-ms="9" started-at="2018-04-25T15:56:08Z" finished-at="2018-04-25T15:56:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.nbc.testscripts.demo.NBC_Demo@20322d26]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-04-25T15:56:08Z" finished-at="2018-04-25T15:56:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.nbc.testscripts.demo.NBC_Demo@20322d26]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-04-25T15:56:08Z" finished-at="2018-04-25T15:56:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="SKIP" signature="tc004(java.lang.String, java.lang.String)[pri:0, instance:com.nbc.testscripts.demo.NBC_Demo@20322d26]" name="tc004" duration-ms="2383" started-at="2018-04-25T15:56:23Z" data-provider="multiBrowserWebsites" finished-at="2018-04-25T15:56:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ sauceSafari_windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.nbcwashington.com_NBC-Washington]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Exception at Log.addTestRunMachineInfo: JSONObject["proxyId"] not found.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Exception at Log.addTestRunMachineInfo: JSONObject["proxyId"] not found.
+at com.nbc.support.Log.addTestRunMachineInfo(Log.java:699)
+at com.nbc.support.Log.testCaseInfo(Log.java:815)
+at com.nbc.testscripts.demo.NBC_Demo.tc004(NBC_Demo.java:212)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+Caused by: org.json.JSONException: JSONObject["proxyId"] not found.
+at org.json.JSONObject.get(JSONObject.java:520)
+at org.json.JSONObject.getString(JSONObject.java:806)
+at com.nbc.support.WebDriverFactory.getTestSessionNodeIP(WebDriverFactory.java:430)
+at com.nbc.support.Log.addTestRunMachineInfo(Log.java:662)
+... 17 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+            <line>
+              <![CDATA[<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Apr 21:26:23 621 - <b>14</b> - Driver::Get - com.nbc.support.WebDriverFactory.get(WebDriverFactory.java:390)</small> </font> </div>]]>
+            </line>
+            <line>
+              <![CDATA[&emsp;<div class="test-title" align="center"> <strong><font color = "blue">Right rail has Spredfast[ sauceSafari_windows || NBC-WASHINGTON ]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tc004 -->
+        <test-method status="SKIP" signature="tc001(java.lang.String, java.lang.String)[pri:0, instance:com.nbc.testscripts.demo.NBC_Demo@20322d26]" name="tc001" duration-ms="1798" started-at="2018-04-25T15:56:23Z" data-provider="multiBrowserWebsites" finished-at="2018-04-25T15:56:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ sauceSafari_windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.nbcwashington.com_NBC-Washington]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Exception at Log.addTestRunMachineInfo: JSONObject["proxyId"] not found.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Exception at Log.addTestRunMachineInfo: JSONObject["proxyId"] not found.
+at com.nbc.support.Log.addTestRunMachineInfo(Log.java:699)
+at com.nbc.support.Log.testCaseInfo(Log.java:815)
+at com.nbc.testscripts.demo.NBC_Demo.tc001(NBC_Demo.java:47)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+Caused by: org.json.JSONException: JSONObject["proxyId"] not found.
+at org.json.JSONObject.get(JSONObject.java:520)
+at org.json.JSONObject.getString(JSONObject.java:806)
+at com.nbc.support.WebDriverFactory.getTestSessionNodeIP(WebDriverFactory.java:430)
+at com.nbc.support.Log.addTestRunMachineInfo(Log.java:662)
+... 17 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+            <line>
+              <![CDATA[<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Apr 21:26:23 988 - <b>15</b> - Driver::Get - com.nbc.support.WebDriverFactory.get(WebDriverFactory.java:390)</small> </font> </div>]]>
+            </line>
+            <line>
+              <![CDATA[&emsp;<div class="test-title" align="center"> <strong><font color = "blue">Logo is clickable[ sauceSafari_windows || NBC-WASHINGTON ]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tc001 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.nbc.testscripts.demo.NBC_Demo@20322d26]" name="tearDown" is-config="true" duration-ms="4" started-at="2018-04-25T15:56:25Z" finished-at="2018-04-25T15:56:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc004 status=SKIP method=NBC_Demo.tc004(java.lang.String, java.lang.String)[pri:0, instance:com.nbc.testscripts.demo.NBC_Demo@20322d26] output=<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Apr 21:26:23 621 - <b>14</b> - Driver::Get - com.nbc.support.WebDriverFactory.get(WebDriverFactory.java:390)</small> </font> </div>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestContext)[pri:0, instance:com.nbc.testscripts.demo.NBC_Demo@20322d26]" name="afterMethod" is-config="true" duration-ms="3" started-at="2018-04-25T15:56:25Z" finished-at="2018-04-25T15:56:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3b088d51]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.nbc.testscripts.demo.NBC_Demo@20322d26]" name="tearDown" is-config="true" duration-ms="2" started-at="2018-04-25T15:56:25Z" finished-at="2018-04-25T15:56:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc001 status=SKIP method=NBC_Demo.tc001(java.lang.String, java.lang.String)[pri:0, instance:com.nbc.testscripts.demo.NBC_Demo@20322d26] output=<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Apr 21:26:23 988 - <b>15</b> - Driver::Get - com.nbc.support.WebDriverFactory.get(WebDriverFactory.java:390)</small> </font> </div>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestContext)[pri:0, instance:com.nbc.testscripts.demo.NBC_Demo@20322d26]" name="afterMethod" is-config="true" duration-ms="1" started-at="2018-04-25T15:56:25Z" finished-at="2018-04-25T15:56:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3b088d51]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="tc004(java.lang.String, java.lang.String)[pri:0, instance:com.nbc.testscripts.demo.NBC_Demo@20322d26]" name="tc004" duration-ms="359" started-at="2018-04-25T15:56:26Z" data-provider="multiBrowserWebsites" finished-at="2018-04-25T15:56:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sauceFirefox_windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.nbcwashington.com_NBC-Washington]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Exception at Log.addTestRunMachineInfo: JSONObject["proxyId"] not found.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Exception at Log.addTestRunMachineInfo: JSONObject["proxyId"] not found.
+at com.nbc.support.Log.addTestRunMachineInfo(Log.java:699)
+at com.nbc.support.Log.testCaseInfo(Log.java:815)
+at com.nbc.testscripts.demo.NBC_Demo.tc004(NBC_Demo.java:212)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+Caused by: org.json.JSONException: JSONObject["proxyId"] not found.
+at org.json.JSONObject.get(JSONObject.java:520)
+at org.json.JSONObject.getString(JSONObject.java:806)
+at com.nbc.support.WebDriverFactory.getTestSessionNodeIP(WebDriverFactory.java:430)
+at com.nbc.support.Log.addTestRunMachineInfo(Log.java:662)
+... 17 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+            <line>
+              <![CDATA[<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Apr 21:26:26 902 - <b>17</b> - Driver::Get - com.nbc.support.WebDriverFactory.get(WebDriverFactory.java:390)</small> </font> </div>]]>
+            </line>
+            <line>
+              <![CDATA[&emsp;<div class="test-title" align="center"> <strong><font color = "blue">Right rail has Spredfast[sauceFirefox_windows || NBC-WASHINGTON ]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tc004 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.nbc.testscripts.demo.NBC_Demo@20322d26]" name="tearDown" is-config="true" duration-ms="2" started-at="2018-04-25T15:56:26Z" finished-at="2018-04-25T15:56:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc004 status=SKIP method=NBC_Demo.tc004(java.lang.String, java.lang.String)[pri:0, instance:com.nbc.testscripts.demo.NBC_Demo@20322d26] output=<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Apr 21:26:26 902 - <b>17</b> - Driver::Get - com.nbc.support.WebDriverFactory.get(WebDriverFactory.java:390)</small> </font> </div>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestContext)[pri:0, instance:com.nbc.testscripts.demo.NBC_Demo@20322d26]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-04-25T15:56:26Z" finished-at="2018-04-25T15:56:26Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3b088d51]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="SKIP" signature="tc001(java.lang.String, java.lang.String)[pri:0, instance:com.nbc.testscripts.demo.NBC_Demo@20322d26]" name="tc001" duration-ms="401" started-at="2018-04-25T15:58:10Z" data-provider="multiBrowserWebsites" finished-at="2018-04-25T15:58:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[sauceFirefox_windows]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[https://www.nbcwashington.com_NBC-Washington]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Exception at Log.addTestRunMachineInfo: JSONObject["proxyId"] not found.]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Exception at Log.addTestRunMachineInfo: JSONObject["proxyId"] not found.
+at com.nbc.support.Log.addTestRunMachineInfo(Log.java:699)
+at com.nbc.support.Log.testCaseInfo(Log.java:815)
+at com.nbc.testscripts.demo.NBC_Demo.tc001(NBC_Demo.java:47)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+at java.util.concurrent.FutureTask.run(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+at java.lang.Thread.run(Unknown Source)
+Caused by: org.json.JSONException: JSONObject["proxyId"] not found.
+at org.json.JSONObject.get(JSONObject.java:520)
+at org.json.JSONObject.getString(JSONObject.java:806)
+at com.nbc.support.WebDriverFactory.getTestSessionNodeIP(WebDriverFactory.java:430)
+at com.nbc.support.Log.addTestRunMachineInfo(Log.java:662)
+... 17 more
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+            <line>
+              <![CDATA[<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Apr 21:28:11 301 - <b>122</b> - Driver::Get - com.nbc.support.WebDriverFactory.get(WebDriverFactory.java:390)</small> </font> </div>]]>
+            </line>
+            <line>
+              <![CDATA[&emsp;<div class="test-title" align="center"> <strong><font color = "blue">Logo is clickable[sauceFirefox_windows || NBC-WASHINGTON ]</font> </strong> </div>&emsp;<div><strong>Steps:</strong></div><!-- Report -->]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- tc001 -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:com.nbc.testscripts.demo.NBC_Demo@20322d26]" name="tearDown" is-config="true" duration-ms="7" started-at="2018-04-25T15:58:11Z" finished-at="2018-04-25T15:58:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=tc001 status=SKIP method=NBC_Demo.tc001(java.lang.String, java.lang.String)[pri:0, instance:com.nbc.testscripts.demo.NBC_Demo@20322d26] output=<div class="test-event"> <font color="maroon"> <small> &emsp; &emsp;--- 25 Apr 21:28:11 301 - <b>122</b> - Driver::Get - com.nbc.support.WebDriverFactory.get(WebDriverFactory.java:390)</small> </font> </div>]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestContext)[pri:0, instance:com.nbc.testscripts.demo.NBC_Demo@20322d26]" name="afterMethod" is-config="true" duration-ms="1" started-at="2018-04-25T15:58:11Z" finished-at="2018-04-25T15:58:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@3b088d51]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.nbc.testscripts.demo.NBC_Demo@20322d26]" name="afterSuite" is-config="true" duration-ms="1" started-at="2018-04-25T15:58:11Z" finished-at="2018-04-25T15:58:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.nbc.testscripts.demo.NBC_Demo -->
+    </test> <!-- NBC_PoC_JAVA -->
+  </suite> <!-- NBC_PoC -->
+</testng-results>

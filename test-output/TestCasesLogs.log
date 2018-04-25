@@ -1,0 +1,13 @@
+25-Apr-2018 21:26:24:232 INFO  [TestNG-PoolService-1]  
+25-Apr-2018 21:26:24:232 INFO  [TestNG-PoolService-1]  
+25-Apr-2018 21:26:24:244 INFO  [TestNG-PoolService-1] ****             Right rail has Spredfast[ sauceSafari_windows || NBC-WASHINGTON ]             ***** 
+25-Apr-2018 21:26:24:245 INFO  [TestNG-PoolService-1]  
+25-Apr-2018 21:26:24:241 INFO  [TestNG-PoolService-1] ****             Logo is clickable[ sauceSafari_windows || NBC-WASHINGTON ]             ***** 
+25-Apr-2018 21:26:24:252 INFO  [TestNG-PoolService-1]  
+25-Apr-2018 21:26:26:917 INFO  [TestNG-PoolService-0]  
+25-Apr-2018 21:26:26:918 INFO  [TestNG-PoolService-0] ****             Right rail has Spredfast[sauceFirefox_windows || NBC-WASHINGTON ]             ***** 
+25-Apr-2018 21:26:26:920 INFO  [TestNG-PoolService-0]  
+25-Apr-2018 21:28:11:301 DEBUG [TestNG-PoolService-0] Driver::Get..122 
+25-Apr-2018 21:28:11:315 INFO  [TestNG-PoolService-0]  
+25-Apr-2018 21:28:11:317 INFO  [TestNG-PoolService-0] ****             Logo is clickable[sauceFirefox_windows || NBC-WASHINGTON ]             ***** 
+25-Apr-2018 21:28:11:317 INFO  [TestNG-PoolService-0]  
