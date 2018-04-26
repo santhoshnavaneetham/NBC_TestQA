@@ -21,7 +21,7 @@
 	<parameter name="klovMongoDBConnectionPort" value="27017" />
 	<parameter name="klovProjectName" value="NBC_PoC" />
 	<parameter name="klovURL" value="http://172.24.115.100:80" />
-	<parameter name="extentXReport" value="No" />
+	<parameter name="extentXReport" value="Yes" />
 	<parameter name="extentXMongoDBConnectionName" value="172.24.115.100" />
 	<parameter name="extentXMongoDBConnectionPort" value="27017" />
 	<parameter name="extentXProjectName" value="NBC_PoC" />
