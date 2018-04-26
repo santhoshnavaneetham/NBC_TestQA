@@ -310,7 +310,8 @@ public class WebDriverFactory {
 			} else if ("sauceChrome".equalsIgnoreCase(browser)) {
 				chromeCapabilities.setCapability(ChromeOptions.CAPABILITY, opt);
 				chromeCapabilities.setCapability("platform", "Windows 10");
-				chromeCapabilities.setCapability("version", "64.0");
+				chromeCapabilities.setCapability("version", System.getProperty("browserVersion"));
+				//chromeCapabilities.setCapability("version", "latest");
 				//String methodName = new Exception().getStackTrace()[1].getMethodName();
 				chromeCapabilities.setCapability("name", getCurrentMethodName() );
 				//System.out.println("methosdsssssssssssssssss"+methodName);
