@@ -288,6 +288,7 @@ public class WebDriverFactory {
 				chromeCapabilities.setCapability("version", "64.0");
 				chromeCapabilities.setCapability("opera.arguments", "-screenwidth 2560 -screenheight 1600");
 				String methodName = new Exception().getStackTrace()[1].getMethodName();
+				System.out.println("methosdsssssssssssssssss"+methodName);
 				chromeCapabilities.setCapability("name", methodName );
 
 				driver = new RemoteWebDriver(new URL(URL), chromeCapabilities);
@@ -308,6 +309,7 @@ public class WebDriverFactory {
 				chromeCapabilities.setCapability("version", "64.0");
 				String methodName = new Exception().getStackTrace()[1].getMethodName();
 				chromeCapabilities.setCapability("name", methodName );
+				System.out.println("methosdsssssssssssssssss"+methodName);
 				driver = new RemoteWebDriver(new URL(URL), chromeCapabilities);
 
 			} else if ("iexplorer".equalsIgnoreCase(browser)) {
@@ -327,12 +329,14 @@ public class WebDriverFactory {
 				firefoxCapabilities.setCapability("version", "58.0");
 				String methodName = new Exception().getStackTrace()[1].getMethodName();
 				firefoxCapabilities.setCapability("name", methodName );
+				System.out.println("methosdsssssssssssssssss"+methodName);
 				driver = new RemoteWebDriver(new URL(URL), firefoxCapabilities);
 			} else if ("sauceSafari".equalsIgnoreCase(browser)) {
 				safariCapabilities.setCapability("platform", "macOS 10.12");
 				safariCapabilities.setCapability("version", "11.0");
 				String methodName = new Exception().getStackTrace()[1].getMethodName();
 				safariCapabilities.setCapability("name", methodName );
+				System.out.println("methosdsssssssssssssssss"+methodName);
 				driver = new RemoteWebDriver(new URL(URL), safariCapabilities);
 
 			} else {
