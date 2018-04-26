@@ -142,6 +142,7 @@ public class ExtentReporter {
 			htmlReporter.config().setReportName(reportName);
 			htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
 			htmlReporter.config().setTheme(Theme.STANDARD);		
+			htmlReporter.setAppendExisting(true);
 			List<Status> statusHierarchy = Arrays.asList(
 					Status.FATAL,
 					Status.FAIL,
@@ -159,7 +160,6 @@ public class ExtentReporter {
 			extentReport.setSystemInfo("User Name", System.getProperty("user.name"));
 			extentReport.setSystemInfo("Java Version", System.getProperty("java.version"));
 			extentReport.config().statusConfigurator().setStatusHierarchy(statusHierarchy);
-
 			if (extentXReport.equalsIgnoreCase("Yes"))
 			{
 				try
