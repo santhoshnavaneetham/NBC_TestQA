@@ -488,6 +488,7 @@ public class WebDriverFactory {
 		String methodName = null;
 		try {
 			//StackTraceElement[] dmethodName= new Exception().getStackTrace();
+			Thread.sleep(300);
 			if(new Exception().getStackTrace()[0].getMethodName().equals("getCurrentMethodName"))
 				methodName= new Exception().getStackTrace()[2].getMethodName();
 			else
