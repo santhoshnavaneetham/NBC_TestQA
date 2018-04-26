@@ -15,7 +15,7 @@
 
 		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
 	
-	<title>NBC Automation Report - CHROME_WINDOWS</title>
+	<title>NBC Automation Report - SAUCECHROME_WINDOWS</title>
 
 	<style type='text/css'>
 	</style>
@@ -35,11 +35,12 @@
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
 				<li class='waves-effect'><a href='#!' view='author-view' onclick="configureView(3)"><i class='material-icons'>person</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
 		</ul>
 
 		<!-- report name -->
-		<span class='report-name'>NBC Automation Report - CHROME_WINDOWS</span>
+		<span class='report-name'>NBC Automation Report - SAUCECHROME_WINDOWS</span>
 		
 		<!-- report headline -->
 		<span class='report-headline'></span>
@@ -48,7 +49,7 @@
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<li>
                 <a href='#!'>
-                    <span class='label suite-start-time blue darken-3'>Apr 25, 2018 09:10:50 PM</span>
+                    <span class='label suite-start-time blue darken-3'>Apr 26, 2018 12:32:22 PM</span>
 				</a>
 			</li>
 			<li>
@@ -75,6 +76,7 @@
 				<ul id='tests-toggle' class='dropdown-content'>
 											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
 						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+						<li status='error'><a href='#!'>Error <i class='material-icons red-text lighten-2'>error</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -150,10 +152,10 @@
 					<canvas id='child-analysis' width='100' height='80'></canvas>
 				</div>
 				<div class='block text-small'>
-					<span class='tooltipped' data-position='top' data-tooltip='52.857%'><span class='strong'>37</span> step(s) passed</span>
+					<span class='tooltipped' data-position='top' data-tooltip='63.793%'><span class='strong'>37</span> step(s) passed</span>
 				</div>
 				<div class='block text-small'>
-					<span class='strong tooltipped' data-position='top' data-tooltip='2.857%'>2</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='44.286%'>31</span> others
+					<span class='strong tooltipped' data-position='top' data-tooltip='3.448%'>2</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='32.759%'>19</span> others
 				</div>
 			</div>
 		</div>
@@ -171,16 +173,16 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>TC001 - NBC-NEWYORK</span>
-						<span class='test-time'>Apr 25, 2018 09:10:51 PM</span>
+						<span class='test-time'>Apr 26, 2018 12:32:23 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 25, 2018 09:10:51 PM</span>
-	<span class='label end-time'>Apr 25, 2018 09:14:39 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 3m 47s+527ms</span>
+	<span class='label start-time'>Apr 26, 2018 12:32:23 PM</span>
+	<span class='label end-time'>Apr 26, 2018 12:33:51 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 28s+35ms</span>
 </div>
-	<div class='test-desc'><strong><font size = "4" color = "#000080">Logo is clickable[chrome_windows || NBC-NEWYORK ]</font></strong> </div>
+	<div class='test-desc'><strong><font size = "4" color = "#000080">Logo is clickable[sauceChrome_windows || NBC-NEWYORK ]</font></strong> </div>
 	<div class='test-attributes'>
 			<div class='category-list'>
 				<span class='category label white-text'>PoC_Demo</span>
@@ -201,48 +203,43 @@
 			<tbody>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:10:52 PM</td>
-					<td class='step-details'><font size = "2" color = "#2E4053"><b>Machine info.</b> - Hub: AspireVM15-18; Node: 127.0.0.1; Browser: chrome 66; Java Version: 1.8.0_152; Operating System: Windows 10; ;<br><b>Test Data</b> -  -: chrome_windows</font></td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:12:27 PM</td>
+					<td class='timestamp'>12:32:53 PM</td>
 					<td class='step-details'>Step 1. Navigated to 'NBC-NewYork' Home Page!</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:12:59 PM</td>
-					<td class='step-details'><font color="green">Validation 1: Branding Logo available as expected!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524670953594.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524670953594.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524670953594.png'></td>
+					<td class='timestamp'>12:32:59 PM</td>
+					<td class='step-details'><font color="green">Validation 1: Branding Logo available as expected!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524726175323.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524726175323.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524726175323.png'></td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:13:56 PM</td>
+					<td class='timestamp'>12:33:16 PM</td>
 					<td class='step-details'>Step 2. Navigated to 'News' Page!</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:13:58 PM</td>
-					<td class='step-details'><font color="green">Validation 2: Branding Logo available as expected!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524671036686.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524671036686.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524671036686.png'></td>
+					<td class='timestamp'>12:33:21 PM</td>
+					<td class='step-details'><font color="green">Validation 2: Branding Logo available as expected!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524726198326.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524726198326.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524726198326.png'></td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:14:23 PM</td>
+					<td class='timestamp'>12:33:34 PM</td>
 					<td class='step-details'>Step 3. Clicked on Brand Logo!</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:14:31 PM</td>
-					<td class='step-details'><font color="green">Validation 3: Navigated to Home Page as expected!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524671063407.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524671063407.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524671063407.png'></td>
+					<td class='timestamp'>12:33:41 PM</td>
+					<td class='step-details'><font color="green">Validation 3: Navigated to Home Page as expected!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524726215643.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524726215643.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524726215643.png'></td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:14:34 PM</td>
-					<td class='step-details'><font color="green">Validation 4: Branding Logo available as expected!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524671072369.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524671072369.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524671072369.png'></td>
+					<td class='timestamp'>12:33:48 PM</td>
+					<td class='step-details'><font color="green">Validation 4: Branding Logo available as expected!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524726224561.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524726224561.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524726224561.png'></td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:14:39 PM</td>
-					<td class='step-details'><font color="green">Test Passed.</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524671074717.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524671074717.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524671074717.png'></td>
+					<td class='timestamp'>12:33:51 PM</td>
+					<td class='step-details'><font color="green">Test Passed.</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524726228423.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524726228423.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc001_1524726228423.png'></td>
 				</tr>
 			</tbody>
 		</table>
@@ -254,16 +251,16 @@
 				<li class='test displayed active  fail' status='fail' bdd='false' test-id='2'>
 					<div class='test-heading'>
 						<span class='test-name'>TC002 - NBC-NEWYORK</span>
-						<span class='test-time'>Apr 25, 2018 09:10:51 PM</span>
+						<span class='test-time'>Apr 26, 2018 12:32:23 PM</span>
 						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 25, 2018 09:10:51 PM</span>
-	<span class='label end-time'>Apr 25, 2018 09:14:15 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 3m 23s+771ms</span>
+	<span class='label start-time'>Apr 26, 2018 12:32:23 PM</span>
+	<span class='label end-time'>Apr 26, 2018 12:34:31 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 2m 8s+403ms</span>
 </div>
-	<div class='test-desc'><strong><font size = "4" color = "#000080">Top stories playback- with pre roll[chrome_windows || NBC-NEWYORK ]</font></strong> </div>
+	<div class='test-desc'><strong><font size = "4" color = "#000080">Top stories playback- with pre roll[sauceChrome_windows || NBC-NEWYORK ]</font></strong> </div>
 	<div class='test-attributes'>
 			<div class='category-list'>
 				<span class='category label white-text'>PoC_Demo</span>
@@ -284,23 +281,23 @@
 			<tbody>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:10:52 PM</td>
-					<td class='step-details'><font size = "2" color = "#2E4053"><b>Machine info.</b> - Hub: AspireVM15-18; Node: 127.0.0.1; Browser: chrome 66; Java Version: 1.8.0_152; Operating System: Windows 10; ;<br><b>Test Data</b> -  -: chrome_windows</font></td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:12:30 PM</td>
+					<td class='timestamp'>12:32:57 PM</td>
 					<td class='step-details'>Step 1. Navigated to 'NBC-NewYork' Home Page!</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:14:12 PM</td>
+					<td class='timestamp'>12:33:45 PM</td>
 					<td class='step-details'>Step 2. Navigated to First Article with Video on Top Section!</td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:33:57 PM</td>
+					<td class='step-details'><font color="green">Validation 1: Validated Article Video Player!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc002_1524726231047.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc002_1524726231047.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc002_1524726231047.png'></td>
 				</tr>
 				<tr class='log' status='fail'>
 					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-					<td class='timestamp'>9:14:15 PM</td>
-					<td class='step-details'><font color="red">Article Video Player failed to load</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc002_1524671053345.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc002_1524671053345.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc002_1524671053345.png'></td>
+					<td class='timestamp'>12:34:31 PM</td>
+					<td class='step-details'><font color="red">Pre-roll Video failed to load</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc002_1524726268204.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc002_1524726268204.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc002_1524726268204.png'></td>
 				</tr>
 			</tbody>
 		</table>
@@ -312,16 +309,16 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
 					<div class='test-heading'>
 						<span class='test-name'>TC003 - NBC-NEWYORK</span>
-						<span class='test-time'>Apr 25, 2018 09:14:47 PM</span>
+						<span class='test-time'>Apr 26, 2018 12:34:03 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 25, 2018 09:14:47 PM</span>
-	<span class='label end-time'>Apr 25, 2018 09:16:16 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 1m 28s+322ms</span>
+	<span class='label start-time'>Apr 26, 2018 12:34:03 PM</span>
+	<span class='label end-time'>Apr 26, 2018 12:35:12 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 9s+16ms</span>
 </div>
-	<div class='test-desc'><strong><font size = "4" color = "#000080">Weather module appears on HP and map loads[chrome_windows || NBC-NEWYORK ]</font></strong> </div>
+	<div class='test-desc'><strong><font size = "4" color = "#000080">Weather module appears on HP and map loads[sauceChrome_windows || NBC-NEWYORK ]</font></strong> </div>
 	<div class='test-attributes'>
 			<div class='category-list'>
 				<span class='category label white-text'>PoC_Demo</span>
@@ -342,33 +339,28 @@
 			<tbody>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:14:48 PM</td>
-					<td class='step-details'><font size = "2" color = "#2E4053"><b>Machine info.</b> - Hub: AspireVM15-18; Node: 127.0.0.1; Browser: chrome 66; Java Version: 1.8.0_152; Operating System: Windows 10; ;<br><b>Test Data</b> -  -: chrome_windows</font></td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:16:00 PM</td>
+					<td class='timestamp'>12:34:36 PM</td>
 					<td class='step-details'>Step 1. Navigated to 'NBC-NewYork' Home Page!</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:16:04 PM</td>
-					<td class='step-details'><font color="green">Validation 1: Validated weather details displayed for future three days!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc003_1524671163133.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc003_1524671163133.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc003_1524671163133.png'></td>
+					<td class='timestamp'>12:34:43 PM</td>
+					<td class='step-details'><font color="green">Validation 1: Validated weather details displayed for future three days!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc003_1524726279287.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc003_1524726279287.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc003_1524726279287.png'></td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:16:10 PM</td>
-					<td class='step-details'><font color="green">Validation 2: Validated Weather Module!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc003_1524671169261.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc003_1524671169261.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc003_1524671169261.png'></td>
+					<td class='timestamp'>12:34:52 PM</td>
+					<td class='step-details'><font color="green">Validation 2: Validated Weather Module!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc003_1524726288132.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc003_1524726288132.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc003_1524726288132.png'></td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:16:14 PM</td>
-					<td class='step-details'><font color="green">Validation 4: Validated Radar in Weather Module!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc003_1524671173232.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc003_1524671173232.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc003_1524671173232.png'></td>
+					<td class='timestamp'>12:35:08 PM</td>
+					<td class='step-details'><font color="green">Validation 4: Validated Radar in Weather Module!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc003_1524726303979.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc003_1524726303979.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc003_1524726303979.png'></td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:16:16 PM</td>
-					<td class='step-details'><font color="green">Test Passed.</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc003_1524671175063.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc003_1524671175063.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc003_1524671175063.png'></td>
+					<td class='timestamp'>12:35:12 PM</td>
+					<td class='step-details'><font color="green">Test Passed.</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc003_1524726308799.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc003_1524726308799.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc003_1524726308799.png'></td>
 				</tr>
 			</tbody>
 		</table>
@@ -380,16 +372,16 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='4'>
 					<div class='test-heading'>
 						<span class='test-name'>TC004 - NBC-NEWYORK</span>
-						<span class='test-time'>Apr 25, 2018 09:14:52 PM</span>
+						<span class='test-time'>Apr 26, 2018 12:34:42 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 25, 2018 09:14:52 PM</span>
-	<span class='label end-time'>Apr 25, 2018 09:16:07 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 1m 15s+292ms</span>
+	<span class='label start-time'>Apr 26, 2018 12:34:42 PM</span>
+	<span class='label end-time'>Apr 26, 2018 12:35:12 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 30s+329ms</span>
 </div>
-	<div class='test-desc'><strong><font size = "4" color = "#000080">Right rail has Spredfast[chrome_windows || NBC-NEWYORK ]</font></strong> </div>
+	<div class='test-desc'><strong><font size = "4" color = "#000080">Right rail has Spredfast[sauceChrome_windows || NBC-NEWYORK ]</font></strong> </div>
 	<div class='test-attributes'>
 			<div class='category-list'>
 				<span class='category label white-text'>PoC_Demo</span>
@@ -410,23 +402,18 @@
 			<tbody>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:14:52 PM</td>
-					<td class='step-details'><font size = "2" color = "#2E4053"><b>Machine info.</b> - Hub: AspireVM15-18; Node: 127.0.0.1; Browser: chrome 66; Java Version: 1.8.0_152; Operating System: Windows 10; ;<br><b>Test Data</b> -  -: chrome_windows</font></td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:16:00 PM</td>
+					<td class='timestamp'>12:35:04 PM</td>
 					<td class='step-details'>Step 1. Navigated to 'NBC-NewYork' Home Page!</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:16:05 PM</td>
-					<td class='step-details'><font color="green">Validation 1: Validated Spredfast Module. Module loaded on Right Rail as expected!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc004_1524671163721.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc004_1524671163721.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc004_1524671163721.png'></td>
+					<td class='timestamp'>12:35:10 PM</td>
+					<td class='step-details'><font color="green">Validation 1: Validated Spredfast Module. Module loaded on Right Rail as expected!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc004_1524726307649.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc004_1524726307649.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc004_1524726307649.png'></td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:16:07 PM</td>
-					<td class='step-details'><font color="green">Test Passed.</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc004_1524671166113.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc004_1524671166113.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc004_1524671166113.png'></td>
+					<td class='timestamp'>12:35:12 PM</td>
+					<td class='step-details'><font color="green">Test Passed.</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc004_1524726310716.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc004_1524726310716.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc004_1524726310716.png'></td>
 				</tr>
 			</tbody>
 		</table>
@@ -438,16 +425,16 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='5'>
 					<div class='test-heading'>
 						<span class='test-name'>TC005 - NBC-NEWYORK</span>
-						<span class='test-time'>Apr 25, 2018 09:16:21 PM</span>
+						<span class='test-time'>Apr 26, 2018 12:36:49 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 25, 2018 09:16:21 PM</span>
-	<span class='label end-time'>Apr 25, 2018 09:17:41 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 1m 19s+989ms</span>
+	<span class='label start-time'>Apr 26, 2018 12:36:49 PM</span>
+	<span class='label end-time'>Apr 26, 2018 12:37:33 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 44s+68ms</span>
 </div>
-	<div class='test-desc'><strong><font size = "4" color = "#000080">Feed in spredfast are functioning[chrome_windows || NBC-NEWYORK ]</font></strong> </div>
+	<div class='test-desc'><strong><font size = "4" color = "#000080">Feed in spredfast are functioning[sauceChrome_windows || NBC-NEWYORK ]</font></strong> </div>
 	<div class='test-attributes'>
 			<div class='category-list'>
 				<span class='category label white-text'>PoC_Demo</span>
@@ -468,23 +455,18 @@
 			<tbody>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:16:21 PM</td>
-					<td class='step-details'><font size = "2" color = "#2E4053"><b>Machine info.</b> - Hub: AspireVM15-18; Node: 127.0.0.1; Browser: chrome 66; Java Version: 1.8.0_152; Operating System: Windows 10; ;<br><b>Test Data</b> -  -: chrome_windows</font></td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:17:31 PM</td>
+					<td class='timestamp'>12:37:09 PM</td>
 					<td class='step-details'>Step 1. Navigated to 'NBC-NewYork' Home Page!</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:17:39 PM</td>
-					<td class='step-details'><font color="green">Validation 1: Validated Feed in spredfast. All Feed loaded Seconds/Minutes/Hours Ago!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc005_1524671258237.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc005_1524671258237.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc005_1524671258237.png'></td>
+					<td class='timestamp'>12:37:31 PM</td>
+					<td class='step-details'><font color="green">Validation 1: Validated Feed in spredfast. All Feed loaded Seconds/Minutes/Hours Ago!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc005_1524726448384.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc005_1524726448384.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc005_1524726448384.png'></td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:17:41 PM</td>
-					<td class='step-details'><font color="green">Test Passed.</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc005_1524671260074.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc005_1524671260074.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc005_1524671260074.png'></td>
+					<td class='timestamp'>12:37:33 PM</td>
+					<td class='step-details'><font color="green">Test Passed.</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc005_1524726451624.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc005_1524726451624.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc005_1524726451624.png'></td>
 				</tr>
 			</tbody>
 		</table>
@@ -496,16 +478,16 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='6'>
 					<div class='test-heading'>
 						<span class='test-name'>TC006 - NBC-NEWYORK</span>
-						<span class='test-time'>Apr 25, 2018 09:16:23 PM</span>
+						<span class='test-time'>Apr 26, 2018 12:37:17 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 25, 2018 09:16:23 PM</span>
-	<span class='label end-time'>Apr 25, 2018 09:17:39 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 1m 16s+699ms</span>
+	<span class='label start-time'>Apr 26, 2018 12:37:17 PM</span>
+	<span class='label end-time'>Apr 26, 2018 12:37:55 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 38s+139ms</span>
 </div>
-	<div class='test-desc'><strong><font size = "4" color = "#000080">Watch live TVE dropdown appears[chrome_windows || NBC-NEWYORK ]</font></strong> </div>
+	<div class='test-desc'><strong><font size = "4" color = "#000080">Watch live TVE dropdown appears[sauceChrome_windows || NBC-NEWYORK ]</font></strong> </div>
 	<div class='test-attributes'>
 			<div class='category-list'>
 				<span class='category label white-text'>PoC_Demo</span>
@@ -526,28 +508,23 @@
 			<tbody>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:16:23 PM</td>
-					<td class='step-details'><font size = "2" color = "#2E4053"><b>Machine info.</b> - Hub: AspireVM15-18; Node: 127.0.0.1; Browser: chrome 66; Java Version: 1.8.0_152; Operating System: Windows 10; ;<br><b>Test Data</b> -  -: chrome_windows</font></td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:17:31 PM</td>
+					<td class='timestamp'>12:37:38 PM</td>
 					<td class='step-details'>Step 1. Navigated to 'NBC-NewYork' Home Page!</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:17:33 PM</td>
+					<td class='timestamp'>12:37:42 PM</td>
 					<td class='step-details'>Step 2. Mouse Hover on Connect Link!</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:17:38 PM</td>
-					<td class='step-details'><font color="green">Validation 1: Validated Watch Live TV Hover Panel - Live TV , On Now, On Demand and Full Schedule!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc006_1524671257153.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc006_1524671257153.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc006_1524671257153.png'></td>
+					<td class='timestamp'>12:37:53 PM</td>
+					<td class='step-details'><font color="green">Validation 1: Validated Watch Live TV Hover Panel - Live TV , On Now, On Demand and Full Schedule!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc006_1524726470322.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc006_1524726470322.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc006_1524726470322.png'></td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:17:39 PM</td>
-					<td class='step-details'><font color="green">Test Passed.</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc006_1524671258490.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc006_1524671258490.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc006_1524671258490.png'></td>
+					<td class='timestamp'>12:37:55 PM</td>
+					<td class='step-details'><font color="green">Test Passed.</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc006_1524726473774.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc006_1524726473774.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc006_1524726473774.png'></td>
 				</tr>
 			</tbody>
 		</table>
@@ -556,19 +533,19 @@
 				</li>
 				
 				
-				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='7'>
 					<div class='test-heading'>
 						<span class='test-name'>TC007 - NBC-NEWYORK</span>
-						<span class='test-time'>Apr 25, 2018 09:17:56 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-time'>Apr 26, 2018 12:38:04 PM</span>
+						<span class='test-status right fail'>fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 25, 2018 09:17:56 PM</span>
-	<span class='label end-time'>Apr 25, 2018 09:19:13 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 1m 17s+75ms</span>
+	<span class='label start-time'>Apr 26, 2018 12:38:04 PM</span>
+	<span class='label end-time'>Apr 26, 2018 12:39:33 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 29s+43ms</span>
 </div>
-	<div class='test-desc'><strong><font size = "4" color = "#000080">TVE dropdown should have: ON NOW, On Demand & Full Schedule whick  click through to TV listings[chrome_windows || NBC-NEWYORK ]</font></strong> </div>
+	<div class='test-desc'><strong><font size = "4" color = "#000080">TVE dropdown should have: ON NOW, On Demand & Full Schedule whick  click through to TV listings[sauceChrome_windows || NBC-NEWYORK ]</font></strong> </div>
 	<div class='test-attributes'>
 			<div class='category-list'>
 				<span class='category label white-text'>PoC_Demo</span>
@@ -589,33 +566,75 @@
 			<tbody>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:17:56 PM</td>
-					<td class='step-details'><font size = "2" color = "#2E4053"><b>Machine info.</b> - Hub: AspireVM15-18; Node: 127.0.0.1; Browser: chrome 66; Java Version: 1.8.0_152; Operating System: Windows 10; ;<br><b>Test Data</b> -  -: chrome_windows</font></td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:18:42 PM</td>
+					<td class='timestamp'>12:38:41 PM</td>
 					<td class='step-details'>Step 1. Navigated to 'NBC-NewYork' Home Page!</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:18:43 PM</td>
+					<td class='timestamp'>12:38:48 PM</td>
 					<td class='step-details'>Step 2. Mouse Hover on Connect Link!</td>
 				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:19:10 PM</td>
-					<td class='step-details'>Step 3. Navigated to Full Schedule On Live TV!</td>
+				<tr class='log' status='error'>
+					<td class='status error' title='error' alt='error'><i class='material-icons'>error</i></td>
+					<td class='timestamp'>12:39:33 PM</td>
+					<td class='step-details'><font color="red">Timed out after 25 seconds. Unable to locate the element</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc007_1524726569306.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc007_1524726569306.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc007_1524726569306.png'></td>
 				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:19:12 PM</td>
-					<td class='step-details'><font color="green">Validation 1: Validated TV Listing - TV Listing Page, TV Tabs, Date Picker and Now TV!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc007_1524671351334.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc007_1524671351334.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc007_1524671351334.png'></td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:19:13 PM</td>
-					<td class='step-details'><font color="green">Test Passed.</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc007_1524671352472.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc007_1524671352472.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc007_1524671352472.png'></td>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>12:39:33 PM</td>
+					<td class='step-details'><pre>org.openqa.selenium.NoSuchElementException: Timed out after 25 seconds. Unable to locate the element
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:90)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.isDisplayed(Unknown Source)
+	at com.nbc.pages.HomePage.navigateToFullScheduleOnLiveTV(HomePage.java:395)
+	at com.nbc.testscripts.demo.NBC_Demo.tc007(NBC_Demo.java:362)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"div[class='daySelectWrapper']"}
+  (Session info: chrome=64.0.3282.119)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'ASPIREVM15-18', ip: '172.24.115.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_152'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasMetadata: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 64.0.3282.119, webStorageEnabled: true, webdriver.remote.sessionid: 7351381f9b634ba885d410c5410...}
+Session ID: 7351381f9b634ba885d410c541077607
+*** Element info: {Using=css selector, value=div[class='daySelectWrapper']}
+	at sun.reflect.GeneratedConstructorAccessor41.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.access$001(AjaxElementLocator.java:40)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator$SlowLoadingElement.isLoaded(AjaxElementLocator.java:156)
+	at org.openqa.selenium.support.ui.SlowLoadableComponent.get(SlowLoadableComponent.java:69)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:86)
+	... 19 more
+</pre></td>
 				</tr>
 			</tbody>
 		</table>
@@ -627,16 +646,16 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='8'>
 					<div class='test-heading'>
 						<span class='test-name'>TC008 - NBC-NEWYORK</span>
-						<span class='test-time'>Apr 25, 2018 09:17:57 PM</span>
+						<span class='test-time'>Apr 26, 2018 12:39:20 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 25, 2018 09:17:57 PM</span>
-	<span class='label end-time'>Apr 25, 2018 09:18:56 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 0m 58s+872ms</span>
+	<span class='label start-time'>Apr 26, 2018 12:39:20 PM</span>
+	<span class='label end-time'>Apr 26, 2018 12:40:15 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 55s+82ms</span>
 </div>
-	<div class='test-desc'><strong><font size = "4" color = "#000080">Connect dropdown appears[chrome_windows || NBC-NEWYORK ]</font></strong> </div>
+	<div class='test-desc'><strong><font size = "4" color = "#000080">Connect dropdown appears[sauceChrome_windows || NBC-NEWYORK ]</font></strong> </div>
 	<div class='test-attributes'>
 			<div class='category-list'>
 				<span class='category label white-text'>PoC_Demo</span>
@@ -657,28 +676,23 @@
 			<tbody>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:17:57 PM</td>
-					<td class='step-details'><font size = "2" color = "#2E4053"><b>Machine info.</b> - Hub: AspireVM15-18; Node: 127.0.0.1; Browser: chrome 66; Java Version: 1.8.0_152; Operating System: Windows 10; ;<br><b>Test Data</b> -  -: chrome_windows</font></td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:18:53 PM</td>
+					<td class='timestamp'>12:39:48 PM</td>
 					<td class='step-details'>Step 1. Navigated to 'NBC-NewYork' Home Page!</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:18:53 PM</td>
+					<td class='timestamp'>12:39:53 PM</td>
 					<td class='step-details'>Step 2. Mouse Hover on Connect Link!</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:18:55 PM</td>
-					<td class='step-details'><font color="green">Validation 1: Validated Connect Hover Panel - Media , Responds and Footer!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc008_1524671334549.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc008_1524671334549.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc008_1524671334549.png'></td>
+					<td class='timestamp'>12:40:09 PM</td>
+					<td class='step-details'><font color="green">Validation 1: Validated Connect Hover Panel - Media , Responds and Footer!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc008_1524726601392.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc008_1524726601392.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc008_1524726601392.png'></td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:18:56 PM</td>
-					<td class='step-details'><font color="green">Test Passed.</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc008_1524671335626.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc008_1524671335626.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc008_1524671335626.png'></td>
+					<td class='timestamp'>12:40:15 PM</td>
+					<td class='step-details'><font color="green">Test Passed.</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc008_1524726609642.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc008_1524726609642.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc008_1524726609642.png'></td>
 				</tr>
 			</tbody>
 		</table>
@@ -690,16 +704,16 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='9'>
 					<div class='test-heading'>
 						<span class='test-name'>TC009 - NBC-NEWYORK</span>
-						<span class='test-time'>Apr 25, 2018 09:19:03 PM</span>
+						<span class='test-time'>Apr 26, 2018 12:39:42 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 25, 2018 09:19:03 PM</span>
-	<span class='label end-time'>Apr 25, 2018 09:20:44 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 1m 40s+793ms</span>
+	<span class='label start-time'>Apr 26, 2018 12:39:42 PM</span>
+	<span class='label end-time'>Apr 26, 2018 12:41:24 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 41s+83ms</span>
 </div>
-	<div class='test-desc'><strong><font size = "4" color = "#000080">Icons in connect dropdown are clickable and link out[chrome_windows || NBC-NEWYORK ]</font></strong> </div>
+	<div class='test-desc'><strong><font size = "4" color = "#000080">Icons in connect dropdown are clickable and link out[sauceChrome_windows || NBC-NEWYORK ]</font></strong> </div>
 	<div class='test-attributes'>
 			<div class='category-list'>
 				<span class='category label white-text'>PoC_Demo</span>
@@ -720,83 +734,78 @@
 			<tbody>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:19:03 PM</td>
-					<td class='step-details'><font size = "2" color = "#2E4053"><b>Machine info.</b> - Hub: AspireVM15-18; Node: 127.0.0.1; Browser: chrome 66; Java Version: 1.8.0_152; Operating System: Windows 10; ;<br><b>Test Data</b> -  -: chrome_windows</font></td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:20:29 PM</td>
+					<td class='timestamp'>12:40:04 PM</td>
 					<td class='step-details'>Step 1. Navigated to 'NBC-NewYork' Home Page!</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:20:30 PM</td>
+					<td class='timestamp'>12:40:08 PM</td>
 					<td class='step-details'>Step 2. Mouse Hover on Connect Link!</td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:20:31 PM</td>
-					<td class='step-details'><font color="green">Validation 1: Validated Connect Twitter Link!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671430894.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671430894.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671430894.png'></td>
+					<td class='timestamp'>12:40:14 PM</td>
+					<td class='step-details'><font color="green">Validation 1: Validated Connect Twitter Link!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726611819.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726611819.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726611819.png'></td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:20:32 PM</td>
-					<td class='step-details'><font color="green">Validation 2: Validated Connect Instagram Link!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671431931.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671431931.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671431931.png'></td>
+					<td class='timestamp'>12:40:20 PM</td>
+					<td class='step-details'><font color="green">Validation 2: Validated Connect Instagram Link!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726618757.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726618757.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726618757.png'></td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:20:33 PM</td>
-					<td class='step-details'><font color="green">Validation 3: Validated Connect Facebook Link!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671432973.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671432973.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671432973.png'></td>
+					<td class='timestamp'>12:40:27 PM</td>
+					<td class='step-details'><font color="green">Validation 3: Validated Connect Facebook Link!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726624863.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726624863.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726624863.png'></td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:20:34 PM</td>
-					<td class='step-details'><font color="green">Validation 4: Validated Connect Apps Link!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671434022.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671434022.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671434022.png'></td>
+					<td class='timestamp'>12:40:33 PM</td>
+					<td class='step-details'><font color="green">Validation 4: Validated Connect Apps Link!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726631167.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726631167.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726631167.png'></td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:20:36 PM</td>
-					<td class='step-details'><font color="green">Validation 5: Validated Connect Emails/NewsLetter Link!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671435351.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671435351.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671435351.png'></td>
+					<td class='timestamp'>12:40:39 PM</td>
+					<td class='step-details'><font color="green">Validation 5: Validated Connect Emails/NewsLetter Link!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726637470.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726637470.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726637470.png'></td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:20:37 PM</td>
-					<td class='step-details'><font color="green">Validation 6: Validated Connect Send Us Videos and Pictures Link!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671436572.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671436572.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671436572.png'></td>
+					<td class='timestamp'>12:40:45 PM</td>
+					<td class='step-details'><font color="green">Validation 6: Validated Connect Send Us Videos and Pictures Link!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726643768.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726643768.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726643768.png'></td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:20:38 PM</td>
-					<td class='step-details'><font color="green">Validation 7: Validated Connect SendTips Link!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671437586.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671437586.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671437586.png'></td>
+					<td class='timestamp'>12:40:51 PM</td>
+					<td class='step-details'><font color="green">Validation 7: Validated Connect SendTips Link!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726649625.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726649625.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726649625.png'></td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:20:39 PM</td>
-					<td class='step-details'><font color="green">Validation 8: Validated Footer Connect SendTips Link!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671438659.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671438659.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671438659.png'></td>
+					<td class='timestamp'>12:40:57 PM</td>
+					<td class='step-details'><font color="green">Validation 8: Validated Footer Connect SendTips Link!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726656029.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726656029.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726656029.png'></td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:20:40 PM</td>
-					<td class='step-details'><font color="green">Validation 9: Validated Footer Connect Send Feedback Link!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671439652.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671439652.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671439652.png'></td>
+					<td class='timestamp'>12:41:03 PM</td>
+					<td class='step-details'><font color="green">Validation 9: Validated Footer Connect Send Feedback Link!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726661913.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726661913.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726661913.png'></td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:20:41 PM</td>
-					<td class='step-details'><font color="green">Validation 10: Validated Footer Connect Terms of Service Link!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671440712.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671440712.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671440712.png'></td>
+					<td class='timestamp'>12:41:09 PM</td>
+					<td class='step-details'><font color="green">Validation 10: Validated Footer Connect Terms of Service Link!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726667544.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726667544.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726667544.png'></td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:20:42 PM</td>
-					<td class='step-details'><font color="green">Validation 11: Validated Footer Connect Privacy Policy Link!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671441801.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671441801.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671441801.png'></td>
+					<td class='timestamp'>12:41:15 PM</td>
+					<td class='step-details'><font color="green">Validation 11: Validated Footer Connect Privacy Policy Link!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726673324.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726673324.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726673324.png'></td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:20:43 PM</td>
-					<td class='step-details'><font color="green">Validation 12: Validated Footer Connect Partner Link!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671442839.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671442839.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671442839.png'></td>
+					<td class='timestamp'>12:41:22 PM</td>
+					<td class='step-details'><font color="green">Validation 12: Validated Footer Connect Partner Link!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726679795.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726679795.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726679795.png'></td>
 				</tr>
 				<tr class='log' status='pass'>
 					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:20:44 PM</td>
-					<td class='step-details'><font color="green">Test Passed.</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671443605.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671443605.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524671443605.png'></td>
+					<td class='timestamp'>12:41:24 PM</td>
+					<td class='step-details'><font color="green">Test Passed.</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726682256.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726682256.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc009_1524726682256.png'></td>
 				</tr>
 			</tbody>
 		</table>
@@ -805,19 +814,19 @@
 				</li>
 				
 				
-				<li class='test displayed active  fail' status='fail' bdd='false' test-id='10'>
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='10'>
 					<div class='test-heading'>
 						<span class='test-name'>TC010 - NBC-NEWYORK</span>
-						<span class='test-time'>Apr 25, 2018 09:19:20 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-time'>Apr 26, 2018 12:40:27 PM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 25, 2018 09:19:20 PM</span>
-	<span class='label end-time'>Apr 25, 2018 09:22:38 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 3m 17s+924ms</span>
+	<span class='label start-time'>Apr 26, 2018 12:40:27 PM</span>
+	<span class='label end-time'>Apr 26, 2018 12:42:02 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 34s+250ms</span>
 </div>
-	<div class='test-desc'><strong><font size = "4" color = "#000080">Share bar is visible and functions[chrome_windows || NBC-NEWYORK ]</font></strong> </div>
+	<div class='test-desc'><strong><font size = "4" color = "#000080">Share bar is visible and functions[sauceChrome_windows || NBC-NEWYORK ]</font></strong> </div>
 	<div class='test-attributes'>
 			<div class='category-list'>
 				<span class='category label white-text'>PoC_Demo</span>
@@ -838,18 +847,43 @@
 			<tbody>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:19:20 PM</td>
-					<td class='step-details'><font size = "2" color = "#2E4053"><b>Machine info.</b> - Hub: AspireVM15-18; Node: 127.0.0.1; Browser: chrome 66; Java Version: 1.8.0_152; Operating System: Windows 10; ;<br><b>Test Data</b> -  -: chrome_windows</font></td>
+					<td class='timestamp'>12:41:03 PM</td>
+					<td class='step-details'>Step 1. Navigated to 'NBC-NewYork' Home Page!</td>
 				</tr>
 				<tr class='log' status='info'>
 					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:20:04 PM</td>
-					<td class='step-details'>Step 1. Navigated to 'NBC-NewYork' Home Page!</td>
+					<td class='timestamp'>12:41:31 PM</td>
+					<td class='step-details'>Step 2. Navigated to First Article on Local Stack Section!</td>
 				</tr>
-				<tr class='log' status='fail'>
-					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
-					<td class='timestamp'>9:22:38 PM</td>
-					<td class='step-details'><font color="red">Article Page did not open up. Site might be down.</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc010_1524671557320.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc010_1524671557320.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc010_1524671557320.png'></td>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:41:37 PM</td>
+					<td class='step-details'><font color="green">Validation 1: Validated Facebook Icon!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc010_1524726694717.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc010_1524726694717.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc010_1524726694717.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:41:43 PM</td>
+					<td class='step-details'><font color="green">Validation 2: Validated Twitter Icon!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc010_1524726700976.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc010_1524726700976.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc010_1524726700976.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:41:47 PM</td>
+					<td class='step-details'><font color="green">Validation 3: Validated Comments Icon!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc010_1524726706106.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc010_1524726706106.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc010_1524726706106.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:41:52 PM</td>
+					<td class='step-details'><font color="green">Validation 4: Validated Email Icon!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc010_1524726710537.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc010_1524726710537.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc010_1524726710537.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:42:00 PM</td>
+					<td class='step-details'><font color="green">Validation 5: Validated Print Icon!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc010_1524726717552.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc010_1524726717552.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc010_1524726717552.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>12:42:02 PM</td>
+					<td class='step-details'><font color="green">Test Passed.</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc010_1524726720224.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc010_1524726720224.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc010_1524726720224.png'></td>
 				</tr>
 			</tbody>
 		</table>
@@ -861,16 +895,16 @@
 				<li class='test displayed active  pass' status='pass' bdd='false' test-id='11'>
 					<div class='test-heading'>
 						<span class='test-name'>TC011 - NBC-NEWYORK</span>
-						<span class='test-time'>Apr 25, 2018 09:20:48 PM</span>
+						<span class='test-time'>Apr 26, 2018 12:41:34 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class='test-time-info'>
-	<span class='label start-time'>Apr 25, 2018 09:20:48 PM</span>
-	<span class='label end-time'>Apr 25, 2018 09:21:49 PM</span>
-	<span class='label time-taken grey lighten-1 white-text'>0h 1m 0s+712ms</span>
+	<span class='label start-time'>Apr 26, 2018 12:41:34 PM</span>
+	<span class='label end-time'>Apr 26, 2018 12:41:34 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 0m 0s+0ms</span>
 </div>
-	<div class='test-desc'><strong><font size = "4" color = "#000080">Article w/Advanced tagging (HTML Module).[chrome_windows || NBC-NEWYORK ]</font></strong> </div>
+	<div class='test-desc'><strong><font size = "4" color = "#000080">Article w/Advanced tagging (HTML Module).[sauceChrome_windows || NBC-NEWYORK ]</font></strong> </div>
 	<div class='test-attributes'>
 			<div class='category-list'>
 				<span class='category label white-text'>PoC_Demo</span>
@@ -878,59 +912,6 @@
 			<div class='author-list'>
 				<span class='author label white-text'>AspireSystems</span>
 			</div>
-	</div>
-	<div class='test-steps'>
-		<table class='bordered table-results'>
-			<thead>
-				<tr>
-					<th>Status</th>
-					<th>Timestamp</th>
-					<th>Details</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:20:48 PM</td>
-					<td class='step-details'><font size = "2" color = "#2E4053"><b>Machine info.</b> - Hub: AspireVM15-18; Node: 127.0.0.1; Browser: chrome 66; Java Version: 1.8.0_152; Operating System: Windows 10; ;<br><b>Test Data</b> -  -: chrome_windows</font></td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:21:22 PM</td>
-					<td class='step-details'>Step 1. Navigated to 'NBC-NewYork' Home Page!</td>
-				</tr>
-				<tr class='log' status='info'>
-					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
-					<td class='timestamp'>9:21:42 PM</td>
-					<td class='step-details'>Step 2. Navigated to Article with Advacne Tagging Page!</td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:21:44 PM</td>
-					<td class='step-details'><font color="green">Validation 1: Validated HTML Module!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc011_1524671503927.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc011_1524671503927.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc011_1524671503927.png'></td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:21:46 PM</td>
-					<td class='step-details'><font color="green">Validation 2: Validated HTML Module Tool bar - Back Home, Zoom-In and Zoom-Out!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc011_1524671505535.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc011_1524671505535.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc011_1524671505535.png'></td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:21:47 PM</td>
-					<td class='step-details'><font color="green">Validation 3: Validated HTML Module Time Nav - Time Nav Indicator and Time Nav Interval!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc011_1524671507022.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc011_1524671507022.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc011_1524671507022.png'></td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:21:48 PM</td>
-					<td class='step-details'><font color="green">Validation 4: Validated HTML Module Slide Container!</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc011_1524671508185.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc011_1524671508185.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc011_1524671508185.png'></td>
-				</tr>
-				<tr class='log' status='pass'>
-					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
-					<td class='timestamp'>9:21:49 PM</td>
-					<td class='step-details'><font color="green">Test Passed.</font><img data-featherlight='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc011_1524671508799.png' width='10%' src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc011_1524671508799.png' data-src='C:\NBC\Praveen\25Apr18\NBC PoC\test-output\ScreenShot\tc011_1524671508799.png'></td>
-				</tr>
-			</tbody>
-		</table>
 	</div>
 					</div>
 				</li>
@@ -1010,57 +991,57 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Apr 25, 2018 09:10:51 PM</td>
+										<td>Apr 26, 2018 12:32:23 PM</td>
 										<td class='linked' test-id='1'>TC001 - NBC-NEWYORK</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Apr 25, 2018 09:10:51 PM</td>
+										<td>Apr 26, 2018 12:32:23 PM</td>
 										<td class='linked' test-id='2'>TC002 - NBC-NEWYORK</td>
 										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Apr 25, 2018 09:14:47 PM</td>
+										<td>Apr 26, 2018 12:34:03 PM</td>
 										<td class='linked' test-id='3'>TC003 - NBC-NEWYORK</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Apr 25, 2018 09:14:52 PM</td>
+										<td>Apr 26, 2018 12:34:42 PM</td>
 										<td class='linked' test-id='4'>TC004 - NBC-NEWYORK</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Apr 25, 2018 09:16:21 PM</td>
+										<td>Apr 26, 2018 12:36:49 PM</td>
 										<td class='linked' test-id='5'>TC005 - NBC-NEWYORK</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Apr 25, 2018 09:16:23 PM</td>
+										<td>Apr 26, 2018 12:37:17 PM</td>
 										<td class='linked' test-id='6'>TC006 - NBC-NEWYORK</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Apr 25, 2018 09:17:56 PM</td>
+										<td>Apr 26, 2018 12:38:04 PM</td>
 										<td class='linked' test-id='7'>TC007 - NBC-NEWYORK</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td><span class='test-status fail'>fail</span></td>
 									</tr>
 									<tr>
-										<td>Apr 25, 2018 09:17:57 PM</td>
+										<td>Apr 26, 2018 12:39:20 PM</td>
 										<td class='linked' test-id='8'>TC008 - NBC-NEWYORK</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Apr 25, 2018 09:19:03 PM</td>
+										<td>Apr 26, 2018 12:39:42 PM</td>
 										<td class='linked' test-id='9'>TC009 - NBC-NEWYORK</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Apr 25, 2018 09:19:20 PM</td>
+										<td>Apr 26, 2018 12:40:27 PM</td>
 										<td class='linked' test-id='10'>TC010 - NBC-NEWYORK</td>
-										<td><span class='test-status fail'>fail</span></td>
+										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Apr 25, 2018 09:20:48 PM</td>
+										<td>Apr 26, 2018 12:41:34 PM</td>
 										<td class='linked' test-id='11'>TC011 - NBC-NEWYORK</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
@@ -1131,57 +1112,57 @@
                                         </thead>
                                         <tbody>
                                             <tr>
-                                                <td>Apr 25, 2018 09:10:51 PM</td>
+                                                <td>Apr 26, 2018 12:32:23 PM</td>
                                                 <td class='linked' test-id='1'>TC001 - NBC-NEWYORK</td>
                                                 <td><span class='test-status pass'>pass</span></td>
                                             </tr>
                                             <tr>
-                                                <td>Apr 25, 2018 09:10:51 PM</td>
+                                                <td>Apr 26, 2018 12:32:23 PM</td>
                                                 <td class='linked' test-id='2'>TC002 - NBC-NEWYORK</td>
                                                 <td><span class='test-status fail'>fail</span></td>
                                             </tr>
                                             <tr>
-                                                <td>Apr 25, 2018 09:14:47 PM</td>
+                                                <td>Apr 26, 2018 12:34:03 PM</td>
                                                 <td class='linked' test-id='3'>TC003 - NBC-NEWYORK</td>
                                                 <td><span class='test-status pass'>pass</span></td>
                                             </tr>
                                             <tr>
-                                                <td>Apr 25, 2018 09:14:52 PM</td>
+                                                <td>Apr 26, 2018 12:34:42 PM</td>
                                                 <td class='linked' test-id='4'>TC004 - NBC-NEWYORK</td>
                                                 <td><span class='test-status pass'>pass</span></td>
                                             </tr>
                                             <tr>
-                                                <td>Apr 25, 2018 09:16:21 PM</td>
+                                                <td>Apr 26, 2018 12:36:49 PM</td>
                                                 <td class='linked' test-id='5'>TC005 - NBC-NEWYORK</td>
                                                 <td><span class='test-status pass'>pass</span></td>
                                             </tr>
                                             <tr>
-                                                <td>Apr 25, 2018 09:16:23 PM</td>
+                                                <td>Apr 26, 2018 12:37:17 PM</td>
                                                 <td class='linked' test-id='6'>TC006 - NBC-NEWYORK</td>
                                                 <td><span class='test-status pass'>pass</span></td>
                                             </tr>
                                             <tr>
-                                                <td>Apr 25, 2018 09:17:56 PM</td>
+                                                <td>Apr 26, 2018 12:38:04 PM</td>
                                                 <td class='linked' test-id='7'>TC007 - NBC-NEWYORK</td>
-                                                <td><span class='test-status pass'>pass</span></td>
+                                                <td><span class='test-status fail'>fail</span></td>
                                             </tr>
                                             <tr>
-                                                <td>Apr 25, 2018 09:17:57 PM</td>
+                                                <td>Apr 26, 2018 12:39:20 PM</td>
                                                 <td class='linked' test-id='8'>TC008 - NBC-NEWYORK</td>
                                                 <td><span class='test-status pass'>pass</span></td>
                                             </tr>
                                             <tr>
-                                                <td>Apr 25, 2018 09:19:03 PM</td>
+                                                <td>Apr 26, 2018 12:39:42 PM</td>
                                                 <td class='linked' test-id='9'>TC009 - NBC-NEWYORK</td>
                                                 <td><span class='test-status pass'>pass</span></td>
                                             </tr>
                                             <tr>
-                                                <td>Apr 25, 2018 09:19:20 PM</td>
+                                                <td>Apr 26, 2018 12:40:27 PM</td>
                                                 <td class='linked' test-id='10'>TC010 - NBC-NEWYORK</td>
-                                                <td><span class='test-status fail'>fail</span></td>
+                                                <td><span class='test-status pass'>pass</span></td>
                                             </tr>
                                             <tr>
-                                                <td>Apr 25, 2018 09:20:48 PM</td>
+                                                <td>Apr 26, 2018 12:41:34 PM</td>
                                                 <td class='linked' test-id='11'>TC011 - NBC-NEWYORK</td>
                                                 <td><span class='test-status pass'>pass</span></td>
                                             </tr>
@@ -1201,6 +1182,119 @@
         </div>
     </div>
 </div>
+<div id='exception-view' class='view hide'>
+
+    <section id='controls'>
+        <div class='controls grey lighten-4'>
+            <!-- search -->
+            <div class='chip transparent' alt='Search Tests' title='Search Tests'>
+                <a href="#" class='search-div'>
+                    <i class='material-icons'>search</i> Search
+                </a>
+
+                <div class='input-field left hide'>
+                    <input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+                </div>
+
+            </div>
+            <!-- search -->
+        </div>
+    </section>
+
+    <div class='subview-left left'>
+
+        <div class='view-summary'>
+            <h5>Exceptions</h3>
+                <ul id='exception-collection' class='exception-collection'>
+
+                        <li class='exception displayed active'>
+                            <div class='exception-heading'>
+                                <span class='exception-name'>org.openqa.selenium.NoSuchElementException</span>
+                                <span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+                            </div>
+                            <div class='exception-content hide'>
+                                <div class='exception-tests'>
+                                    <table class='bordered table-results'>
+                                        <thead>
+                                        <tr>
+                                            <th>Timestamp</th>
+                                            <th>TestName</th>
+                                            <th>Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                                    <tr>
+                                                        <td>Apr 26, 2018 12:38:04 PM</td>
+                                                        <td class='linked' test-id='7'>TC007 - NBC-NEWYORK</td>
+                                                        <td><pre><pre>org.openqa.selenium.NoSuchElementException: Timed out after 25 seconds. Unable to locate the element
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:90)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy14.isDisplayed(Unknown Source)
+	at com.nbc.pages.HomePage.navigateToFullScheduleOnLiveTV(HomePage.java:395)
+	at com.nbc.testscripts.demo.NBC_Demo.tc007(NBC_Demo.java:362)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:580)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:716)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:71)
+	at org.testng.internal.TestMethodWithDataProviderMethodWorker.call(TestMethodWithDataProviderMethodWorker.java:14)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"div[class='daySelectWrapper']"}
+  (Session info: chrome=64.0.3282.119)
+  (Driver info: chromedriver=2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7),platform=Windows NT 10.0.10586 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'ASPIREVM15-18', ip: '172.24.115.100', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_152'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.37.544315 (730aa6a5fdba15..., userDataDir: C:\Users\ADMINI~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasMetadata: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 64.0.3282.119, webStorageEnabled: true, webdriver.remote.sessionid: 7351381f9b634ba885d410c5410...}
+Session ID: 7351381f9b634ba885d410c541077607
+*** Element info: {Using=css selector, value=div[class='daySelectWrapper']}
+	at sun.reflect.GeneratedConstructorAccessor41.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)
+	at org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)
+	at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.access$001(AjaxElementLocator.java:40)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator$SlowLoadingElement.isLoaded(AjaxElementLocator.java:156)
+	at org.openqa.selenium.support.ui.SlowLoadableComponent.get(SlowLoadableComponent.java:69)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:86)
+	... 19 more
+</pre></pre></td>
+                                                    </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </li>
+                </ul>
+        </div>
+    </div>
+
+    <div class='subview-right left'>
+        <div class='view-summary'>
+            <h5 class='exception-name'></h5>
+        </div>
+    </div>
+</div>
 <!-- exception view -->
 <div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
@@ -1216,25 +1310,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>70</div>
+					<div class='panel-lead'>58</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Apr 25, 2018 09:10:50 PM</div>
+					<div class='panel-lead'>Apr 26, 2018 12:32:22 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Apr 25, 2018 09:22:38 PM</div>
+			 		<div class='panel-lead'>Apr 26, 2018 12:42:02 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 11m 47s+781ms</div>
+					<div class='panel-lead'>0h 9m 39s+851ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -1310,11 +1404,11 @@
 				passChild: 37,
 				failChild: 2,
 				fatalChild: 0,
-				errorChild: 0,
+				errorChild: 1,
 				warningChild: 0,
 				skipChild: 0,
-				infoChild: 31,
-				exceptionsChild: 2,
+				infoChild: 18,
+				exceptionsChild: 3,
 				
 				passGrandChild: 0,
 				failGrandChild: 0,
