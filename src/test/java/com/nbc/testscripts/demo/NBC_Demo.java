@@ -111,13 +111,13 @@ public class NBC_Demo extends BaseTest {
 			ArticlePage articlePage = homePage.clickOnFirstArticleWithVideo_OnTopSection();
 			Log.message("Step 2. Navigated to First Article with Video on Top Section!");
 
-			Log.assertThatExtentReport(articlePage.validateArticleVideoPlayer(),
+			/*Log.assertThatExtentReport(articlePage.validateArticleVideoPlayer(),
 					"Validation 1: Validated Article Video Player!", "Article Video Player failed to load",
-					driver);
+					driver);*/
 
 
 			Log.assertThatExtentReport(articlePage.validatePrerollVideo(),
-					"Validation 2: Validated Pre-roll Video !", "Pre-roll Video failed to load",
+					"Validation 1: Validated Pre-roll Video !", "Pre-roll Video failed to load",
 					driver);
 
 			// ** Yet to pre-roll validation. I couldn't see any pre-roll when i am

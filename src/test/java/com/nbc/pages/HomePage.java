@@ -291,6 +291,7 @@ public class HomePage extends LoadableComponent<HomePage> implements SpellCheckL
 		final long startTime = StopWatch.startTime();
 		Utils.waitForElement(driver, localStakeSection.get(0));
 		localStakeSection.get(0).click();
+		Utils.waitForElement(driver, lnkNews);
 		Log.event("Clicked first article on Local Stack Section", StopWatch.elapsedTime(startTime));
 		return new ArticlePage(driver).get();
 	} // clickOnFirstArticle_OnStackSection
@@ -303,7 +304,7 @@ public class HomePage extends LoadableComponent<HomePage> implements SpellCheckL
 		Utils.waitForElement(driver, topSectionWithVideos.get(0));
 
 		for (int i = 0; i < topSectionWithVideos.size(); i++) {
-			if("VIDEO".equals(topSectionWithVideos.get(i).getText())){
+			if("VIDEO".equalsIgnoreCase(topSectionWithVideos.get(i).getText())){
 				topSectionWithVideos.get(i).click();
 				break;
 			}
@@ -331,6 +332,7 @@ public class HomePage extends LoadableComponent<HomePage> implements SpellCheckL
 		final long startTime = StopWatch.startTime();
 		Utils.waitForElement(driver, imgLogo);
 		lnkNews.click();
+		Utils.waitForElement(driver, lnkNews);
 		Log.assertThatForEvent((lnkNews.getAttribute("class").contains("nav-selected")), "Clicked on News link..",
 				"Error occurred while clicking on News Link", startTime, driver);
 	} // navigateToNewsPage

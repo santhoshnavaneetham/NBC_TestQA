@@ -8,7 +8,7 @@
 	<parameter name="framesLoad" value="false" />
 	<parameter name="deviceHost" value="localhost" />
 	<parameter name="devicePort" value="4444" />
-	<parameter name="browserName" value="sauceFirefox_windows, sauceSafari_windows" />
+	<parameter name="browserName" value="sauceFirefox_windows, sauceSafari_mac" />
 	<parameter name="har" value="false" />
 	<parameter name="webSite"
 		value="https://www.nbcwashington.com_NBC-Washington" />
