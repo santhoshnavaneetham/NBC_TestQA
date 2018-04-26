@@ -252,7 +252,7 @@ public class WebDriverFactory {
 			if ("chrome".equalsIgnoreCase(browser)) {
 				chromeCapabilities.setCapability(ChromeOptions.CAPABILITY, opt);
 				chromeCapabilities.setPlatform(Platform.fromString(platform));
-
+				
 				if (System.getProperty("har") == "true")
 					chromeCapabilities.setCapability(CapabilityType.PROXY, seleniumProxy);
 
@@ -265,9 +265,9 @@ public class WebDriverFactory {
 				chromeCapabilities.setCapability(ChromeOptions.CAPABILITY, opt);
 				chromeCapabilities.setCapability("opera.arguments", "-screenwidth 1024 -screenheight 768");
 				chromeCapabilities.setPlatform(Platform.fromString(platform));
-				String methodName = new Exception().getStackTrace()[1].getMethodName();
-				chromeCapabilities.setCapability("name", methodName );
-				Thread.sleep(1000);
+				//String methodName = new Exception().getStackTrace()[1].getMethodName();
+				chromeCapabilities.setCapability("name", getCurrentMethodName() );
+				//Thread.sleep(1000);
 				if (System.getProperty("har") == "true")
 					chromeCapabilities.setCapability(CapabilityType.PROXY, seleniumProxy);
 
@@ -279,9 +279,9 @@ public class WebDriverFactory {
 				chromeCapabilities.setCapability(ChromeOptions.CAPABILITY, opt);
 				chromeCapabilities.setCapability("opera.arguments", "-screenwidth 1024 -screenheight 768");
 				chromeCapabilities.setPlatform(Platform.fromString(platform));
-				String methodName = new Exception().getStackTrace()[1].getMethodName();
-				chromeCapabilities.setCapability("name", methodName );
-				Thread.sleep(1000);
+				//String methodName = new Exception().getStackTrace()[1].getMethodName();
+				chromeCapabilities.setCapability("name", getCurrentMethodName() );
+				//Thread.sleep(1000);
 				driver = new RemoteWebDriver(new URL(URL), chromeCapabilities);
 
 			} else if ("SauceChromeWithUserAgentPC".equalsIgnoreCase(browser)) {
@@ -289,10 +289,10 @@ public class WebDriverFactory {
 				chromeCapabilities.setCapability("platform", "Windows 10");
 				chromeCapabilities.setCapability("version", "64.0");
 				chromeCapabilities.setCapability("opera.arguments", "-screenwidth 2560 -screenheight 1600");
-				String methodName = new Exception().getStackTrace()[1].getMethodName();
-				System.out.println("methosdsssssssssssssssss"+methodName);
-				Thread.sleep(1000);
-				chromeCapabilities.setCapability("name", methodName );
+				//String methodName = new Exception().getStackTrace()[1].getMethodName();
+				//System.out.println("methosdsssssssssssssssss"+methodName);
+				//Thread.sleep(1000);
+				chromeCapabilities.setCapability("name", getCurrentMethodName() );
 
 				driver = new RemoteWebDriver(new URL(URL), chromeCapabilities);
 			} else if ("SauceChromeWithUserAgentPixel".equalsIgnoreCase(browser)) {
@@ -301,9 +301,9 @@ public class WebDriverFactory {
 				chromeCapabilities.setCapability(ChromeOptions.CAPABILITY, opt);
 				chromeCapabilities.setCapability("opera.arguments", "-screenwidth 411 -screenheight 731");
 				chromeCapabilities.setPlatform(Platform.fromString(platform));
-				String methodName = new Exception().getStackTrace()[1].getMethodName();
-				chromeCapabilities.setCapability("name", methodName );
-				Thread.sleep(1000);
+				//String methodName = new Exception().getStackTrace()[1].getMethodName();
+				chromeCapabilities.setCapability("name", getCurrentMethodName() );
+				//Thread.sleep(1000);
 				// driver = new RemoteWebDriver(hubURL, chromeCapabilities);
 				driver = new RemoteWebDriver(new URL(URL), chromeCapabilities);
 
@@ -311,10 +311,10 @@ public class WebDriverFactory {
 				chromeCapabilities.setCapability(ChromeOptions.CAPABILITY, opt);
 				chromeCapabilities.setCapability("platform", "Windows 10");
 				chromeCapabilities.setCapability("version", "64.0");
-				String methodName = new Exception().getStackTrace()[1].getMethodName();
-				chromeCapabilities.setCapability("name", methodName );
-				System.out.println("methosdsssssssssssssssss"+methodName);
-				Thread.sleep(1000);
+				//String methodName = new Exception().getStackTrace()[1].getMethodName();
+				chromeCapabilities.setCapability("name", getCurrentMethodName() );
+				//System.out.println("methosdsssssssssssssssss"+methodName);
+				//Thread.sleep(1000);
 				driver = new RemoteWebDriver(new URL(URL), chromeCapabilities);
 
 			} else if ("iexplorer".equalsIgnoreCase(browser)) {
@@ -332,18 +332,18 @@ public class WebDriverFactory {
 			} else if ("sauceFirefox".equalsIgnoreCase(browser)) {
 				firefoxCapabilities.setCapability("platform", "Windows 10");
 				firefoxCapabilities.setCapability("version", "58.0");
-				String methodName = new Exception().getStackTrace()[1].getMethodName();
-				firefoxCapabilities.setCapability("name", methodName );
-				System.out.println("methosdsssssssssssssssss"+methodName);
-				Thread.sleep(1000);
+				//String methodName = new Exception().getStackTrace()[1].getMethodName();
+				firefoxCapabilities.setCapability("name", getCurrentMethodName() );
+				//System.out.println("methosdsssssssssssssssss"+methodName);
+				//Thread.sleep(1000);
 				driver = new RemoteWebDriver(new URL(URL), firefoxCapabilities);
 			} else if ("sauceSafari".equalsIgnoreCase(browser)) {
 				safariCapabilities.setCapability("platform", "macOS 10.12");
 				safariCapabilities.setCapability("version", "11.0");
-				String methodName = new Exception().getStackTrace()[1].getMethodName();
-				safariCapabilities.setCapability("name", methodName );
-				System.out.println("methosdsssssssssssssssss"+methodName);
-				Thread.sleep(1000);
+				//String methodName = new Exception().getStackTrace()[1].getMethodName();
+				safariCapabilities.setCapability("name", getCurrentMethodName() );
+				//System.out.println("methosdsssssssssssssssss"+methodName);
+				//Thread.sleep(1000);
 				driver = new RemoteWebDriver(new URL(URL), safariCapabilities);
 
 			} else {
@@ -482,6 +482,23 @@ public class WebDriverFactory {
 		nodeIP = nodeIP.replace("http://", "");
 		nodeIP = nodeIP.replaceAll(":[0-9]{1,5}", "").trim();
 		return nodeIP;
+	}
+	
+	private static String getCurrentMethodName() {
+		String methodName = null;
+		try {
+			//StackTraceElement[] dmethodName= new Exception().getStackTrace();
+			if(new Exception().getStackTrace()[0].getMethodName().equals("getCurrentMethodName"))
+				methodName= new Exception().getStackTrace()[2].getMethodName();
+			else
+				methodName= new Exception().getStackTrace()[1].getMethodName().equals("get")?
+						new Exception().getStackTrace()[2].getMethodName():new Exception().getStackTrace()[1].getMethodName();
+			firefoxCapabilities.setCapability("name", methodName );
+			System.out.println("methosd_name"+methodName);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return methodName;
 	}
 
 }
