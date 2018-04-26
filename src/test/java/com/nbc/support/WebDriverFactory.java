@@ -333,7 +333,8 @@ public class WebDriverFactory {
 				driver = new RemoteWebDriver(hubURL, firefoxCapabilities);
 			} else if ("sauceFirefox".equalsIgnoreCase(browser)) {
 				firefoxCapabilities.setCapability("platform", "Windows 10");
-				firefoxCapabilities.setCapability("version", "58.0");
+				firefoxCapabilities.setCapability("version", System.getProperty("browserVersion"));
+				//firefoxCapabilities.setCapability("version", "58.0");
 				//String methodName = new Exception().getStackTrace()[1].getMethodName();
 				firefoxCapabilities.setCapability("name", getCurrentMethodName() );
 				//System.out.println("methosdsssssssssssssssss"+methodName);

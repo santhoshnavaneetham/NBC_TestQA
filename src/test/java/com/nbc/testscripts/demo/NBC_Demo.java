@@ -49,7 +49,7 @@ public class NBC_Demo extends BaseTest {
 				"TC001 - " + stakeHolderName.toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {
-
+			
 			HomePage homePage = new HomePage(driver, site).get();
 			Log.message("Step 1. Navigated to '" + stakeHolderName + "' Home Page!");
 			Log.assertThatExtentReport(homePage.validateLogo(), "Validation 1: Branding Logo available as expected!",
@@ -111,10 +111,7 @@ public class NBC_Demo extends BaseTest {
 			ArticlePage articlePage = homePage.clickOnFirstArticleWithVideo_OnTopSection();
 			Log.message("Step 2. Navigated to First Article with Video on Top Section!");
 
-			/*Log.assertThatExtentReport(articlePage.validateArticleVideoPlayer(),
-					"Validation 1: Validated Article Video Player!", "Article Video Player failed to load",
-					driver);*/
-
+			
 
 			Log.assertThatExtentReport(articlePage.validatePrerollVideo(),
 					"Validation 1: Validated Pre-roll Video !", "Pre-roll Video failed to load",
