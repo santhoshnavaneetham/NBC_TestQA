@@ -131,47 +131,54 @@ public class ArticlePage extends LoadableComponent<ArticlePage> {
 	public boolean validatePrerollVideo() {
 		long startTime = StopWatch.startTime();
 		boolean status = false;
+		int prerollSeconds;
+		String prerollMinute, totalTime, videoStartTime;
 		Utils.waitForElement(driver, sharelnkFacebook);
-		Utils.waitForElement(driver, playerTime.get(0));
-
+		Utils.waitForPageLoad(driver);
 		try {
+			Actions action = new Actions(driver);
+			action.moveToElement(playerTime.get(0)).build().perform();
+			if (articleVideoPlayer.isDisplayed() && articleVideoPlayer.isEnabled())
 			if(!playerTime.isEmpty() && playerTime.get(0).getText()!=null && !playerTime.get(0).getText().isEmpty()){
-
-				Log.event("Validating Pre-roll Video Player...totalVideoTime.text"+playerTime.get(2).getText(), StopWatch.elapsedTime(startTime));
-				String prerollMinute = playerTime.get(2).getText().split(":")[0];
-				int prerollSeconds = Integer.parseInt(playerTime.get(2).getText().split(":")[1]);	
-
-				Actions action = new Actions(driver);
+				
+				totalTime = playerTime.get(2).getText();
+				Log.event("Validating Pre-roll Video Player...totalVideoTime.text"+totalTime, StopWatch.elapsedTime(startTime));
+				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", articleVideoPlayer);
+				prerollMinute = totalTime.split(":")[0];
+				prerollSeconds = Integer.parseInt(totalTime.split(":")[1]);	
+							
+				action = new Actions(driver);
 				action.moveToElement(playerTime.get(0)).build().perform();
-
 				Log.event("Validating Pre-roll Video Player...prerollMinute"+prerollMinute, StopWatch.elapsedTime(startTime));
 				Log.event("Validating Pre-roll Video Player...prerollSeconds"+prerollSeconds, StopWatch.elapsedTime(startTime));
-
-				if("0".equals(prerollMinute) && playerTime.get(0).isDisplayed() && prerollSeconds<45) {
-
-					action.moveToElement(playerTime.get(0)).build().perform();
-					String videoStartTime = playerTime.get(0).getText();
-					Log.event("Validating Pre-roll Video Player...videoStartTime"+videoStartTime, StopWatch.elapsedTime(startTime));
-					Thread.sleep(17000);
-					action.moveToElement(playerTime.get(0)).build().perform();
-					Log.event("Validating Pre-roll Video Player...playerTime"+playerTime.get(0).getText(), StopWatch.elapsedTime(startTime));
-					if(!playerTime.get(0).getText().equals(videoStartTime))
-						status=true;
-					else
-						status=false;
+				
+				if("0".equals(prerollMinute) && prerollSeconds<45) {
+																			
+							action.moveToElement(playerTime.get(0)).build().perform();
+							videoStartTime = playerTime.get(0).getText();
+							Log.event("Validating Pre-roll Video Player...videoStartTime"+videoStartTime, StopWatch.elapsedTime(startTime));
+							Thread.sleep(10000);
+							action.moveToElement(playerTime.get(0)).build().perform();
+							Log.event("Validating Pre-roll Video Player...playerTime"+playerTime.get(0).getText(), StopWatch.elapsedTime(startTime));
+							if(!playerTime.get(0).getText().equals(videoStartTime) && playerTime.get(2).getText().equals(totalTime))
+								status=true;
+							else if(!playerTime.get(2).getText().equals(totalTime))
+								status=true;
+							else
+								status=false;
 				}
 			}
-		} catch (NoSuchElementException e) {
+	} catch (NoSuchElementException e) {
 			status = false;
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
+		
 		Log.event("Validating Pre-roll Video Player...", StopWatch.elapsedTime(startTime));
 		return status;
-	}// validatePrerollVideo
-
+	}// validateArticleVideoPlayer
+	
 	/**
 	 * Method to validate Facebook Icon
 	 */

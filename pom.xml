@@ -157,7 +157,7 @@
 				<version>2.21.0</version>
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>${suiteXmlFiles}</suiteXmlFile>
+						<suiteXmlFile>TestNG_XML_Sauce/NBC_Demo_NY_Jenkins_Job_1.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>

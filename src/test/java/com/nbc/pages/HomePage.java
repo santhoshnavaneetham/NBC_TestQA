@@ -444,7 +444,7 @@ public class HomePage extends LoadableComponent<HomePage> implements SpellCheckL
 		try {
 			driver.switchTo().frame(
 					driver.findElement((By.cssSelector("iframe[class='wx-standalone-map']"))));
-			Utils.waitForElement(driver, radar);
+			Utils.waitForElement(driver, radar1);
 			if (radar.isDisplayed())
 				status = true;
 		} catch (NoSuchElementException e) {
