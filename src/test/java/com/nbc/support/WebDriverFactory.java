@@ -311,6 +311,7 @@ public class WebDriverFactory {
 				chromeCapabilities.setCapability(ChromeOptions.CAPABILITY, opt);
 				chromeCapabilities.setCapability("platform", "Windows 10");
 				chromeCapabilities.setCapability("version", System.getProperty("browserVersion"));
+				System.out.println("****************"+System.getProperty("browserVersion"));
 				//chromeCapabilities.setCapability("version", "latest");
 				//String methodName = new Exception().getStackTrace()[1].getMethodName();
 				chromeCapabilities.setCapability("name", getCurrentMethodName() );
