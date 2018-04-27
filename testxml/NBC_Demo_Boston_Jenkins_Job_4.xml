@@ -31,7 +31,7 @@
 		<classes>
 			<class name="com.nbc.testscripts.demo.NBC_Demo" >
 			<methods>
-				<include name="tc005"></include>
+				<include name="tc004"></include>
 			</methods>
 			</class>
 		</classes>
