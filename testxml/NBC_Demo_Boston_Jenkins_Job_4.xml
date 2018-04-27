@@ -8,8 +8,7 @@
 	<parameter name="framesLoad" value="false" />
 	<parameter name="deviceHost" value="localhost" />
 	<parameter name="devicePort" value="4444" />
-	<parameter name="browserName"
-		value="SauceChromeWithUserAgentPC_windows" />
+	<parameter name="browserName" value="sauceFirefox_windows, sauceChrome_windows, sauceEdge_windows" />
 	<parameter name="har" value="false" />
 	<parameter name="webSite"
 		value="https://www.nbcboston.com_NBC-Boston" />
@@ -30,12 +29,10 @@
 
 	<test name="NBC_PoC_JAVA">
 		<classes>
-			<class name="com.nbc.testscripts.demo.NBC_Demo">
-				<methods>
-					<include name="tc005" />
-					<include name="tc006" />
-					<include name="tc007" />
-				</methods>
+			<class name="com.nbc.testscripts.demo.NBC_Demo" >
+			<methods>
+				<include name="tc001"></include>
+			</methods>
 			</class>
 		</classes>
 	</test>
