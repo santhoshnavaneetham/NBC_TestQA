@@ -142,7 +142,7 @@ public class ExtentReporter {
 			htmlReporter.config().setReportName(reportName);
 			htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
 			htmlReporter.config().setTheme(Theme.STANDARD);		
-			htmlReporter.setAppendExisting(true);
+			//htmlReporter.setAppendExisting(false);
 			List<Status> statusHierarchy = Arrays.asList(
 					Status.FATAL,
 					Status.FAIL,
