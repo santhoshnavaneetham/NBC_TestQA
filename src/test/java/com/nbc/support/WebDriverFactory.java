@@ -498,7 +498,7 @@ public class WebDriverFactory {
 			else
 				methodName= new Exception().getStackTrace()[1].getMethodName().equals("get")?
 						new Exception().getStackTrace()[2].getMethodName():new Exception().getStackTrace()[1].getMethodName();
-			firefoxCapabilities.setCapability("name", methodName );
+			//firefoxCapabilities.setCapability("name", methodName );
 			System.out.println("methosd_name"+methodName);
 		} catch (Exception e) {
 			e.printStackTrace();
