@@ -33,6 +33,7 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 public class ExtentReporter {
 
 	private static ExtentReports extentReport = null;
+	private static String Website = (Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("webSite") != null) ? Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("webSite") : "";
 	private static String klovReport = (Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("klovReport") != null) ? Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("klovReport") : "No";
 	private static String extentXReport = (Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("extentXReport") != null) ? Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("extentXReport") : "No";
 	private static HashMap<Integer, ExtentTest> tests = new HashMap<Integer, ExtentTest>();
@@ -198,6 +199,7 @@ public class ExtentReporter {
 			extentReport.setSystemInfo("OS", System.getProperty("os.name"));
 			extentReport.setSystemInfo("User Name", System.getProperty("user.name"));
 			extentReport.setSystemInfo("Java Version", System.getProperty("java.version"));
+			extentReport.setSystemInfo("WebSite", Website);
 			extentReport.config().statusConfigurator().setStatusHierarchy(statusHierarchy);
 			if (extentXReport.equalsIgnoreCase("Yes"))
 			{
