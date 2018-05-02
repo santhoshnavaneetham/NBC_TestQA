@@ -19,31 +19,19 @@ public class NBC_CapturingPerformance_Demo extends BaseTest {
 
 	String notes = null;
 	String testLinkResult = null;
+	String doHar = "true";
 	protected String status = null;
-	private static String xltestDataWorkBook;
-	private static String xltestDataWorkSheet;
 	EnvironmentPropertiesReader environmentPropertiesReader;
 
 	@Test(dataProviderClass = DataProviderUtils.class, dataProvider = "multiBrowserWebsites")
-	public void tc002(String browser, String webSiteWithStakeHolder) throws Exception {
-
-		NBC_CapturingPerformance_Demo.xltestDataWorkBook = "testdata\\data\\PoC.xls";
-		NBC_CapturingPerformance_Demo.xltestDataWorkSheet = "Demo";
+	public void tc002_Performance_Capture(String browser, String webSiteWithStakeHolder) throws Exception {
 
 		// Get the web driver instance
 		final WebDriver driver = WebDriverFactory.get(browser, true);
-		final TestDataExtractor testData = new TestDataExtractor();
-
-		// Loading the test data from excel using the test case id
-		testData.setWorkBookName(xltestDataWorkBook);
-		testData.setWorkSheet(xltestDataWorkSheet);
-		testData.setFilePathMapping(true);
-		testData.setTestCaseId(Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase());
-		testData.readData();
-
+		
 		String site = webSiteWithStakeHolder.split("_")[0];
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
-		Log.testCaseInfo("Performance Capture - HAR", "TC002", "PoC_Demo",
+		Log.testCaseInfo("Performance Capture - HAR", Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo",
 				"Aspire Systems", driver);
 
 		try {
@@ -64,6 +52,7 @@ public class NBC_CapturingPerformance_Demo extends BaseTest {
 					"Failed to navigate to Home Page", driver);
 			Log.assertThatExtentReport(homePage.validateLogo(), "Validation 4: Branding Logo available as expected!",
 					"Branding Logo not available on the page", driver);
+			Log.message(WebDriverFactory.sFileName);
 
 			Log.testCaseResultExtentReport(driver);
 
@@ -82,7 +71,7 @@ public class NBC_CapturingPerformance_Demo extends BaseTest {
 	public final void tearDown(ITestResult result) throws IOException {
 		status = "PASS";
 		environmentPropertiesReader = new EnvironmentPropertiesReader();
-		if (System.getProperty("har") == "true") {
+		if ((System.getProperty("har") == "true") || (doHar == "true")) {
 			// get the HAR data
 			Har har = WebDriverFactory.proxy.getHar();
 

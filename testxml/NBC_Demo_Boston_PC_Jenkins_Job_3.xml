@@ -32,9 +32,9 @@
 		<classes>
 			<class name="com.nbc.testscripts.demo.NBC_Demo">
 				<methods>
-					<include name="tc005" />
-					<include name="tc006" />
-					<include name="tc007" />
+					<include name="tc005_feed_in_spredfast" />
+					<include name="tc006_watch_live_tve_Dropdown" />
+					<include name="tc007_tve_dropdown" />
 				</methods>
 			</class>
 		</classes>

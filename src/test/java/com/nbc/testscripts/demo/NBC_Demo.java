@@ -26,7 +26,7 @@ public class NBC_Demo extends BaseTest {
 	EnvironmentPropertiesReader environmentPropertiesReader;
 
 	@Test(dataProviderClass = DataProviderUtils.class, dataProvider = "multiBrowserWebsites")
-	public void tc001(String browser, String webSiteWithStakeHolder) throws Exception {
+	public void tc001_Logo_is_clickable(String browser, String webSiteWithStakeHolder) throws Exception {
 
 		NBC_Demo.xltestDataWorkBook = "testdata\\data\\PoC.xls";
 		NBC_Demo.xltestDataWorkSheet = "Demo";
@@ -46,7 +46,7 @@ public class NBC_Demo extends BaseTest {
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browser + " || " + stakeHolderName.toUpperCase() + " ]",
-				"TC001 - " + stakeHolderName.toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
+				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {
 			
@@ -81,7 +81,7 @@ public class NBC_Demo extends BaseTest {
 	}// tc001
 
 	@Test(dataProviderClass = DataProviderUtils.class, dataProvider = "multiBrowserWebsites")
-	public void tc002(String browser, String webSiteWithStakeHolder) throws Exception {
+	public void tc002_top_story_playback(String browser, String webSiteWithStakeHolder) throws Exception {
 
 		NBC_Demo.xltestDataWorkBook = "testdata\\data\\PoC.xls";
 		NBC_Demo.xltestDataWorkSheet = "Demo";
@@ -101,7 +101,7 @@ public class NBC_Demo extends BaseTest {
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browser + " || " + stakeHolderName.toUpperCase() + " ]",
-				"TC002 - " + stakeHolderName.toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
+				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {
 
@@ -134,7 +134,7 @@ public class NBC_Demo extends BaseTest {
 	}// tc002
 
 	@Test(dataProviderClass = DataProviderUtils.class, dataProvider = "multiBrowserWebsites")
-	public void tc003(String browser, String webSiteWithStakeHolder) throws Exception {
+	public void tc003_weather_module(String browser, String webSiteWithStakeHolder) throws Exception {
 
 		NBC_Demo.xltestDataWorkBook = "testdata\\data\\PoC.xls";
 		NBC_Demo.xltestDataWorkSheet = "Demo";
@@ -154,7 +154,7 @@ public class NBC_Demo extends BaseTest {
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browser + " || " + stakeHolderName.toUpperCase() + " ]",
-				"TC003 - " + stakeHolderName.toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
+				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {
 
@@ -188,7 +188,7 @@ public class NBC_Demo extends BaseTest {
 	}// tc003
 
 	@Test(dataProviderClass = DataProviderUtils.class, dataProvider = "multiBrowserWebsites")
-	public void tc004(String browser, String webSiteWithStakeHolder) throws Exception {
+	public void tc004_right_rail_Spredfast(String browser, String webSiteWithStakeHolder) throws Exception {
 
 		NBC_Demo.xltestDataWorkBook = "testdata\\data\\PoC.xls";
 		NBC_Demo.xltestDataWorkSheet = "Demo";
@@ -208,7 +208,7 @@ public class NBC_Demo extends BaseTest {
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browser + " || " + stakeHolderName.toUpperCase() + " ]",
-				"TC004 - " + stakeHolderName.toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
+				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {
 
@@ -233,7 +233,7 @@ public class NBC_Demo extends BaseTest {
 	}// tc004
 
 	@Test(dataProviderClass = DataProviderUtils.class, dataProvider = "multiBrowserWebsites")
-	public void tc005(String browser, String webSiteWithStakeHolder) throws Exception {
+	public void tc005_feed_in_spredfast(String browser, String webSiteWithStakeHolder) throws Exception {
 
 		NBC_Demo.xltestDataWorkBook = "testdata\\data\\PoC.xls";
 		NBC_Demo.xltestDataWorkSheet = "Demo";
@@ -253,7 +253,7 @@ public class NBC_Demo extends BaseTest {
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browser + " || " + stakeHolderName.toUpperCase() + " ]",
-				"TC005 - " + stakeHolderName.toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
+				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {
 
@@ -278,7 +278,7 @@ public class NBC_Demo extends BaseTest {
 	}// tc005
 
 	@Test(dataProviderClass = DataProviderUtils.class, dataProvider = "multiBrowserWebsites")
-	public void tc006(String browser, String webSiteWithStakeHolder) throws Exception {
+	public void tc006_watch_live_tve_Dropdown(String browser, String webSiteWithStakeHolder) throws Exception {
 
 		NBC_Demo.xltestDataWorkBook = "testdata\\data\\PoC.xls";
 		NBC_Demo.xltestDataWorkSheet = "Demo";
@@ -298,7 +298,7 @@ public class NBC_Demo extends BaseTest {
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browser + " || " + stakeHolderName.toUpperCase() + " ]",
-				"TC006 - " + stakeHolderName.toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
+				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {
 
@@ -326,7 +326,7 @@ public class NBC_Demo extends BaseTest {
 	}// tc006
 
 	@Test(dataProviderClass = DataProviderUtils.class, dataProvider = "multiBrowserWebsites")
-	public void tc007(String browser, String webSiteWithStakeHolder) throws Exception {
+	public void tc007_tve_dropdown(String browser, String webSiteWithStakeHolder) throws Exception {
 
 		NBC_Demo.xltestDataWorkBook = "testdata\\data\\PoC.xls";
 		NBC_Demo.xltestDataWorkSheet = "Demo";
@@ -346,7 +346,7 @@ public class NBC_Demo extends BaseTest {
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browser + " || " + stakeHolderName.toUpperCase() + " ]",
-				"TC007 - " + stakeHolderName.toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
+				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {
 
@@ -377,7 +377,7 @@ public class NBC_Demo extends BaseTest {
 	}// tc007
 
 	@Test(dataProviderClass = DataProviderUtils.class, dataProvider = "multiBrowserWebsites")
-	public void tc008(String browser, String webSiteWithStakeHolder) throws Exception {
+	public void tc008_connect_dropdown(String browser, String webSiteWithStakeHolder) throws Exception {
 
 		NBC_Demo.xltestDataWorkBook = "testdata\\data\\PoC.xls";
 		NBC_Demo.xltestDataWorkSheet = "Demo";
@@ -397,7 +397,7 @@ public class NBC_Demo extends BaseTest {
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browser + " || " + stakeHolderName.toUpperCase() + " ]",
-				"TC008 - " + stakeHolderName.toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
+				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {
 
@@ -425,7 +425,7 @@ public class NBC_Demo extends BaseTest {
 	}// tc008
 
 	@Test(dataProviderClass = DataProviderUtils.class, dataProvider = "multiBrowserWebsites")
-	public void tc009(String browser, String webSiteWithStakeHolder) throws Exception {
+	public void tc009_icons_in_Connect_dropdown(String browser, String webSiteWithStakeHolder) throws Exception {
 
 		NBC_Demo.xltestDataWorkBook = "testdata\\data\\PoC.xls";
 		NBC_Demo.xltestDataWorkSheet = "Demo";
@@ -446,7 +446,7 @@ public class NBC_Demo extends BaseTest {
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browser + " || " + stakeHolderName.toUpperCase() + " ]",
-				"TC009 - " + stakeHolderName.toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
+				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {
 
@@ -510,7 +510,7 @@ public class NBC_Demo extends BaseTest {
 	}// tc009
 
 	@Test(dataProviderClass = DataProviderUtils.class, dataProvider = "multiBrowserWebsites")
-	public void tc010(String browser, String webSiteWithStakeHolder) throws Exception {
+	public void tc010_share_bar(String browser, String webSiteWithStakeHolder) throws Exception {
 
 		NBC_Demo.xltestDataWorkBook = "testdata\\data\\PoC.xls";
 		NBC_Demo.xltestDataWorkSheet = "Demo";
@@ -530,7 +530,7 @@ public class NBC_Demo extends BaseTest {
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browser + " || " + stakeHolderName.toUpperCase() + " ]",
-				"TC010 - " + stakeHolderName.toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
+				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {
 
@@ -565,7 +565,7 @@ public class NBC_Demo extends BaseTest {
 	}// tc010
 
 	@Test(dataProviderClass = DataProviderUtils.class, dataProvider = "multiBrowserWebsites")
-	public void tc011(String browser, String webSiteWithStakeHolder) throws Exception {
+	public void tc011_article_with_advance_tagging(String browser, String webSiteWithStakeHolder) throws Exception {
 
 		NBC_Demo.xltestDataWorkBook = "testdata\\data\\PoC.xls";
 		NBC_Demo.xltestDataWorkSheet = "Demo";
@@ -585,7 +585,7 @@ public class NBC_Demo extends BaseTest {
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browser + " || " + stakeHolderName.toUpperCase() + " ]",
-				"TC011 - " + stakeHolderName.toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
+				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {
 

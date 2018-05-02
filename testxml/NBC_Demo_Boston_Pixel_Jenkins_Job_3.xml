@@ -12,29 +12,32 @@
 		value="SauceChromeWithUserAgentPixel_windows" />
 	<parameter name="har" value="false" />
 	<parameter name="webSite"
-		value="https://www.nbcboston.com_NBC-Boston" />		
-		
-		<!-- Report Specific Parameters -->
-	
+		value="https://www.nbcboston.com_NBC-Boston" />
+
+	<!-- Report Specific Parameters -->
+
 	<parameter name="testNgReport" value="Yes" />
 	<parameter name="klovReport" value="Yes" />
-	<parameter name="klovMongoDBConnectionName" value="172.24.115.100" />
+	<parameter name="klovMongoDBConnectionName"
+		value="172.24.115.100" />
 	<parameter name="klovMongoDBConnectionPort" value="27017" />
 	<parameter name="klovProjectName" value="NBC_PoC" />
 	<parameter name="klovURL" value="http://172.24.115.100:80" />
 	<parameter name="extentXReport" value="no" />
-	<parameter name="extentXMongoDBConnectionName" value="172.24.115.100" />
+	<parameter name="extentXMongoDBConnectionName"
+		value="172.24.115.100" />
 	<parameter name="extentXMongoDBConnectionPort" value="27017" />
 	<parameter name="extentXProjectName" value="NBC_PoC" />
-	<parameter name="extentXURL" value="http://172.24.115.100:1337" />
+	<parameter name="extentXURL"
+		value="http://172.24.115.100:1337" />
 
 	<test name="NBC_PoC_JAVA">
 		<classes>
 			<class name="com.nbc.testscripts.demo.NBC_Demo">
 				<methods>
-					<include name="tc005" />
-					<include name="tc006" />
-					<include name="tc007" />
+					<include name="tc005_feed_in_spredfast" />
+					<include name="tc006_watch_live_tve_Dropdown" />
+					<include name="tc007_tve_dropdown" />
 				</methods>
 			</class>
 		</classes>

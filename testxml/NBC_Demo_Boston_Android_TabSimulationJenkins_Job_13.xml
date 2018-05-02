@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="NBC_PoC" verbose="3" parallel="true" thread-count="1">
+<suite name="NBC_PoC" verbose="3" parallel="true" thread-count="2">
 
 	<parameter name="documentLoad" value="true" />
 	<parameter name="imageLoad" value="false" />
 	<parameter name="framesLoad" value="false" />
 	<parameter name="deviceHost" value="localhost" />
 	<parameter name="devicePort" value="4444" />
-	<parameter name="browserName" value="sauceFirefox_windows, sauceSafari_mac" />
+	<parameter name="browserName"
+		value="SauceAndroidSamsungGalaxyTabSimulation_windows" />
 	<parameter name="har" value="false" />
 	<parameter name="webSite"
-		value="https://www.nbcwashington.com_NBC-Washington" />
+		value="https://www.nbcboston.com_NBC-Boston" />
 		
 		<!-- Report Specific Parameters -->
 	
@@ -32,7 +33,9 @@
 			<class name="com.nbc.testscripts.demo.NBC_Demo">
 				<methods>
 					<include name="tc001_Logo_is_clickable" />
-					<include name="tc004_right_rail_Spredfast" />					
+					<include name="tc004_right_rail_Spredfast" />
+					<include name="tc006_watch_live_tve_Dropdown" />
+					<include name="tc007_tve_dropdown" />
 				</methods>
 			</class>
 		</classes>

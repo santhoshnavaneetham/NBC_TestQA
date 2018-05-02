@@ -59,7 +59,7 @@ public class WebDriverFactory {
 	static URL hubURL;
 	static Proxy zapProxy = new Proxy();
 
-	public static String sFileName = "./NBC_.har";
+	public static String sFileName = "C:\\Har\\NBC_.har";
 	static DesiredCapabilities ieCapabilities = DesiredCapabilities.internetExplorer();
 	static DesiredCapabilities firefoxCapabilities = DesiredCapabilities.firefox();
 	static DesiredCapabilities chromeCapabilities = DesiredCapabilities.chrome();
@@ -262,7 +262,6 @@ public class WebDriverFactory {
 			} else if ("chromewithuseragent".equalsIgnoreCase(browser)) {
 				opt.addArguments(
 						"--user-agent=Mozilla/5.0 (iPad; U; CPU OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B334b Safari/531.21.10");
-				// opt.addArguments("start-maximized");
 				chromeCapabilities.setCapability(ChromeOptions.CAPABILITY, opt);
 				chromeCapabilities.setCapability("opera.arguments", "-screenwidth 1024 -screenheight 768");
 				chromeCapabilities.setPlatform(Platform.fromString(platform));
@@ -281,12 +280,32 @@ public class WebDriverFactory {
 				chromeCapabilities.setCapability("name", getCurrentMethodName() );
 				driver = new RemoteWebDriver(new URL(URL), chromeCapabilities);
 
+			} else if ("SauceiPadSimulation".equalsIgnoreCase(browser)) {
+				DesiredCapabilities caps = DesiredCapabilities.iphone();
+				caps.setCapability("appiumVersion", "1.7.2");
+				caps.setCapability("deviceName","iPad Simulator");
+				caps.setCapability("deviceOrientation", "portrait");
+				caps.setCapability("platformVersion","11.2");
+				caps.setCapability("platformName", "iOS");
+				caps.setCapability("browserName", "Safari");
+				caps.setCapability("name", getCurrentMethodName());
+				driver = new RemoteWebDriver(new URL(URL), caps);
+
+			} else if ("SauceAndroidSamsungGalaxyTabSimulation".equalsIgnoreCase(browser)) {
+				DesiredCapabilities caps = DesiredCapabilities.android();
+				caps.setCapability("appiumVersion", "1.7.2");
+				caps.setCapability("deviceName","Samsung Galaxy Tab S3 GoogleAPI Emulator");
+				caps.setCapability("deviceOrientation", "portrait");
+				caps.setCapability("browserName", "Chrome");
+				caps.setCapability("platformVersion", "7.1");
+				caps.setCapability("platformName","Android");
+				caps.setCapability("name", getCurrentMethodName());
+				driver = new RemoteWebDriver(new URL(URL), caps);
+
 			} else if ("SauceChromeWithUserAgentPC".equalsIgnoreCase(browser)) {
 				chromeCapabilities.setCapability(ChromeOptions.CAPABILITY, opt);
 				chromeCapabilities.setCapability("platform", "Windows 10");
 				chromeCapabilities.setCapability("version", System.getProperty("chromeVersion"));
-				System.out.println("****************chromeVersion"+System.getProperty("chromeVersion"));
-				//chromeCapabilities.setCapability("version", "64.0");
 				chromeCapabilities.setCapability("opera.arguments", "-screenwidth 2560 -screenheight 1600");
 				chromeCapabilities.setCapability("name", getCurrentMethodName() );
 
@@ -298,25 +317,18 @@ public class WebDriverFactory {
 				chromeCapabilities.setCapability("opera.arguments", "-screenwidth 411 -screenheight 731");
 				chromeCapabilities.setPlatform(Platform.fromString(platform));
 				chromeCapabilities.setCapability("name", getCurrentMethodName() );
-				// driver = new RemoteWebDriver(hubURL, chromeCapabilities);
 				driver = new RemoteWebDriver(new URL(URL), chromeCapabilities);
 
 			}  else if ("sauceChrome".equalsIgnoreCase(browser)) {
 				chromeCapabilities.setCapability(ChromeOptions.CAPABILITY, opt);
 				chromeCapabilities.setCapability("platform", "Windows 10");
 				chromeCapabilities.setCapability("version", System.getProperty("chromeVersion"));
-				System.out.println("****************chromeVersion"+System.getProperty("chromeVersion"));
-				//chromeCapabilities.setCapability("version", "latest");
-				//String methodName = new Exception().getStackTrace()[1].getMethodName();
 				chromeCapabilities.setCapability("name", getCurrentMethodName() );
 				driver = new RemoteWebDriver(new URL(URL), chromeCapabilities);
 
 			} else if ("sauceEdge".equalsIgnoreCase(browser)) {
 				edgeCapabilities.setCapability("platform", "Windows 10");
 				edgeCapabilities.setCapability("version", System.getProperty("edgeVersion"));
-				System.out.println("****************edgeVersion"+System.getProperty("edgeVersion"));
-				//chromeCapabilities.setCapability("version", "latest");
-				//String methodName = new Exception().getStackTrace()[1].getMethodName();
 				edgeCapabilities.setCapability("name", getCurrentMethodName() );
 				driver = new RemoteWebDriver(new URL(URL), edgeCapabilities);
 
@@ -337,16 +349,12 @@ public class WebDriverFactory {
 				firefoxCapabilities.setCapability("platform", "Windows 10");
 				firefoxCapabilities.setCapability("version", System.getProperty("firefoxVersion"));
 				System.out.println("****************firefoxVersion"+System.getProperty("firefoxVersion"));
-				//firefoxCapabilities.setCapability("version", "58.0");
-				//String methodName = new Exception().getStackTrace()[1].getMethodName();
-				firefoxCapabilities.setCapability("name", getCurrentMethodName() );
 				driver = new RemoteWebDriver(new URL(URL), firefoxCapabilities);
 				
 			} else if ("sauceSafari".equalsIgnoreCase(browser)) {
 				safariCapabilities.setCapability("platform", "macOS 10.12");
 				safariCapabilities.setCapability("version", System.getProperty("safariVersion"));
 				System.out.println("****************safariVersion"+System.getProperty("safariVersion"));
-				//String methodName = new Exception().getStackTrace()[1].getMethodName();
 				safariCapabilities.setCapability("name", getCurrentMethodName() );
 				driver = new RemoteWebDriver(new URL(URL), safariCapabilities);
 
