@@ -341,7 +341,7 @@ public class WebDriverFactory {
 				ieCapabilities.setPlatform(Platform.fromString(platform));
 				driver = new RemoteWebDriver(hubURL, ieCapabilities);
 			} else if ("firefox".equalsIgnoreCase(browser)) {
-				firefoxCapabilities.setCapability("unexpectedAlertBehaviour", "ignore");
+			//	firefoxCapabilities.setCapability("unexpectedAlertBehaviour", "ignore");
 				firefoxCapabilities.setPlatform(Platform.fromString(platform));
 				driver = new RemoteWebDriver(hubURL, firefoxCapabilities);
 				
@@ -360,7 +360,7 @@ public class WebDriverFactory {
 
 			} else {
 				synchronized (WebDriverFactory.class) {
-					firefoxCapabilities.setCapability("unexpectedAlertBehaviour", "ignore");
+				//	firefoxCapabilities.setCapability("unexpectedAlertBehaviour", "ignore");
 					firefoxCapabilities.setPlatform(Platform.fromString(platform));
 					driver = new RemoteWebDriver(hubURL, firefoxCapabilities);
 				}
