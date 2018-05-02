@@ -142,45 +142,43 @@ public class ExtentReporter {
 			htmlReporter.config().setReportName(reportName);
 			htmlReporter.config().setTestViewChartLocation(ChartLocation.TOP);
 			htmlReporter.config().setTheme(Theme.STANDARD);	
-			htmlReporter.config().setJS("$(document).ready(function() {\r\n" +
 
-                                  "                    allScreenshots = $$(\"img[src*='ScreenShot']\");\r\n" +
-
-                                  "                    for (idx in allScreenshots) {\r\n" +
-
-                                  "                                    elementNode = allScreenshots[idx];\r\n" +
-
-                                  "                                    if (elementNode.hasAttribute('src')) {\r\n" +
-
-                                  "                                                    currentSrc = elementNode.getAttribute('src');\r\n" +
-
-                                  "                                                    if (currentSrc !== \"\" && currentSrc != null) {\r\n" +
-
-                                  "                                                                    currentSrc = currentSrc.split(\"ScreenShot\");\r\n" +
-
-                                  "                                                                    newSrc = \".\\\\ScreenShot\" + currentSrc[currentSrc.length-1];\r\n" +
-
-                                  "                                                                    elementNode.setAttribute('src', newSrc);\r\n" +
-
-                                  "                            }\r\n" +
-
-                                  "                        }\r\n" +
-
-                                  "                    }\r\n" +
-
-                                  "                          });\r\n" +
-
-                                  "                            \r\n" +
-
-                                  "                    function $$(selector, context) {\r\n" +
-
-                                  "                      context = context || document;\r\n" +
-
-                                  "                      var elements = context.querySelectorAll(selector);\r\n" +
-
-                                  "                      return Array.prototype.slice.call(elements);\r\n" +
-
-                                  "                    }");
+			htmlReporter.config().setJS("$(document).ready(function() {\r\n" + 
+					"				allScreenshots = $$(\"img[src*='ScreenShot']\");\r\n" + 
+					"					for (idx in allScreenshots) {\r\n" + 
+					"									elementNode = allScreenshots[idx];\r\n" + 
+					"									if (elementNode.hasAttribute('src')) {\r\n" + 
+					"													currentSrc = elementNode.getAttribute('src');\r\n" + 
+					"													if (currentSrc !== \"\" && currentSrc != null) {\r\n" + 
+					"																	currentSrc = currentSrc.split(\"ScreenShot\");\r\n" + 
+					"																	newSrc = \".\\\\ScreenShot\" + currentSrc[currentSrc.length-1];\r\n" + 
+					"																	elementNode.setAttribute('src', newSrc);\r\n" + 
+					"													}\r\n" + 
+					"									}\r\n" + 
+					"									if (elementNode.hasAttribute('data-src')) {\r\n" + 
+					"													currentSrc = elementNode.getAttribute('data-src');\r\n" + 
+					"													if (currentSrc !== \"\" && currentSrc != null) {\r\n" + 
+					"																	currentSrc = currentSrc.split(\"ScreenShot\");\r\n" + 
+					"																	newSrc = \".\\\\ScreenShot\" + currentSrc[currentSrc.length-1];\r\n" + 
+					"																	elementNode.setAttribute('data-src', newSrc);\r\n" + 
+					"													}\r\n" + 
+					"									}\r\n" + 
+					"									if (elementNode.hasAttribute('data-featherlight')) {\r\n" + 
+					"													currentSrc = elementNode.getAttribute('data-featherlight');\r\n" + 
+					"													if (currentSrc !== \"\" && currentSrc != null) {\r\n" + 
+					"																	currentSrc = currentSrc.split(\"ScreenShot\");\r\n" + 
+					"																	newSrc = \".\\\\ScreenShot\" + currentSrc[currentSrc.length-1];\r\n" + 
+					"																	elementNode.setAttribute('data-featherlight', newSrc);\r\n" + 
+					"													}\r\n" + 
+					"									}\r\n" + 
+					"					}\r\n" + 
+					"				});\r\n" + 
+					"				  \r\n" + 
+					"				function $$(selector, context) {\r\n" + 
+					"				  context = context || document;\r\n" + 
+					"				  var elements = context.querySelectorAll(selector);\r\n" + 
+					"				  return Array.prototype.slice.call(elements);\r\n" + 
+					"				}");
 
 
 			//htmlReporter.setAppendExisting(false);
