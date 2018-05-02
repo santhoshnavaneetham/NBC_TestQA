@@ -1,29 +1,25 @@
 package com.nbc.pages;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
-import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
-
-import java.io.File;
-import java.util.Iterator;
-import java.util.List;
-import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -36,8 +32,16 @@ import org.openqa.selenium.support.pagefactory.AjaxElementLocatorFactory;
 import org.openqa.selenium.support.pagefactory.ElementLocatorFactory;
 import org.openqa.selenium.support.ui.LoadableComponent;
 import org.testng.Assert;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.InputSource;
+import org.xml.sax.SAXException;
 
-import com.nbc.support.*;
+import com.nbc.support.Log;
+import com.nbc.support.StopWatch;
+import com.nbc.support.Utils;
 import com.swabunga.spell.engine.SpellDictionary;
 import com.swabunga.spell.engine.SpellDictionaryHashMap;
 import com.swabunga.spell.event.SpellCheckEvent;
@@ -849,26 +853,53 @@ public class HomePage extends LoadableComponent<HomePage> implements SpellCheckL
 	/**
 	 * Method to validate Page Spelling
 	 */
-	public void checkPageSpelling() {
+	public String checkPageSpelling(boolean appendToFile) {
 		String dictFile = "dict/english.0";
 		String phonetFile = "dict/phonet.en";
 		long startTime = StopWatch.startTime();
 		String source = driver.findElement(By.tagName("body")).getText();
 		SpellChecker spellCheck = null;
-
+		PrintWriter out = null;
+		int errors = -1, error = 0;
 		try {
 			SpellDictionary dictionary = new SpellDictionaryHashMap(new File(dictFile), new File(phonetFile));
 
 			spellCheck = new SpellChecker(dictionary);
 			spellCheck.addSpellCheckListener((SpellCheckListener) this);
 
-			if (source.length() != 0)
-				spellCheck.checkSpelling(new StringWordTokenizer(source));
-
+			if (source.length() != 0) {
+				File spellCheckList = new File("C:\\SpellCheck\\SpellCheck.txt");
+				out = new PrintWriter(new FileOutputStream(spellCheckList,appendToFile));
+				out.println(new SimpleDateFormat("dd MMM HH:mm:ss SSS").format(Calendar.getInstance().getTime())+"==================================="+driver.getCurrentUrl()+"===================================");
+				for(String stringToBeValidated : source.split("\\n"))
+				{
+					if(stringToBeValidated!=null && !stringToBeValidated.isEmpty() && stringToBeValidated!="") {
+					
+						error = spellCheck.checkSpelling(new StringWordTokenizer(stringToBeValidated));
+						if(error>0) {
+							out.append("INCORRECT - "+stringToBeValidated+System.lineSeparator());
+							errors++;
+						} else {
+							out.append("CORRECT - "+stringToBeValidated+System.lineSeparator());
+						}
+					}
+				}
+				
+				if(errors == -1) {
+					return spellCheckList.getPath()+"_true";
+				} else if (errors >= 0) {
+					return spellCheckList.getPath()+"_false_"+(++errors);
+				}
+			}
+				
+			Log.event("Checking Spelling on Page...", StopWatch.elapsedTime(startTime));	
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			out.close();
 		}
-		Log.event("Checking Spelling on Page...", StopWatch.elapsedTime(startTime));
+		
+		return "false";
 	}// checkPageSpelling
 
 	@SuppressWarnings("rawtypes")
