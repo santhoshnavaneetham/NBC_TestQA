@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="NBC_PoC" verbose="3" parallel="true" thread-count="2">
+
+	<parameter name="documentLoad" value="true" />
+	<parameter name="imageLoad" value="false" />
+	<parameter name="framesLoad" value="false" />
+	<parameter name="deviceHost" value="localhost" />
+	<parameter name="devicePort" value="4444" />
+	<parameter name="browserName" value="sauceChrome_windows" />
+	<parameter name="har" value="false" />
+	<parameter name="webSite"
+		value="https://www.nbcwashington.com_NBC-Washington" />
+		
+		<!-- Report Specific Parameters -->
+	
+	<parameter name="testNgReport" value="Yes" />
+	<parameter name="klovReport" value="Yes" />
+	<parameter name="klovMongoDBConnectionName" value="172.24.115.100" />
+	<parameter name="klovMongoDBConnectionPort" value="27017" />
+	<parameter name="klovProjectName" value="NBC_PoC" />
+	<parameter name="klovURL" value="http://172.24.115.100:80" />
+	<parameter name="extentXReport" value="no" />
+	<parameter name="extentXMongoDBConnectionName" value="172.24.115.100" />
+	<parameter name="extentXMongoDBConnectionPort" value="27017" />
+	<parameter name="extentXProjectName" value="NBC_PoC" />
+	<parameter name="extentXURL" value="http://172.24.115.100:1337" />
+
+	<test name="NBC_PoC_JAVA">
+		<classes>
+			<class name="com.nbc.testscripts.demo.NBC_Demo" />
+		</classes>
+	</test>
+
+</suite>
