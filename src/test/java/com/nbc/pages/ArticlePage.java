@@ -35,6 +35,9 @@ public class ArticlePage extends LoadableComponent<ArticlePage> {
 
 	@FindBy(css = "div[class='player'] div[class='tpVideoBlocker']")
 	WebElement articleVideoPlayer;
+	
+	@FindBy(css = "div[class='player'] video")
+	WebElement articleVideoPlayer2;
 
 	@FindBy(css = "i[class='fa fa-facebook fa-stack-1x fa-inverse']")
 	WebElement sharelnkFacebook;
@@ -177,7 +180,47 @@ public class ArticlePage extends LoadableComponent<ArticlePage> {
 		
 		Log.event("Validating Pre-roll Video Player...", StopWatch.elapsedTime(startTime));
 		return status;
-	}// validateArticleVideoPlayer
+	}// validatePrerollVideo
+	
+	/**
+	 * Method to validate Video pre-roll
+	 */
+	public boolean validatePrerollVideo2() {
+		long startTime = StopWatch.startTime();
+		boolean status = false;
+		String src1, src2;
+		Utils.waitForElement(driver, sharelnkFacebook);
+		Utils.waitForPageLoad(driver);
+		Utils.waitForElement(driver, articleVideoPlayer2);
+		try {
+			//if (articleVideoPlayer.isDisplayed() && articleVideoPlayer.isEnabled()) {
+				if(articleVideoPlayer2.getAttribute("src")!=null && articleVideoPlayer2.getAttribute("src")!="") {
+					src1 = articleVideoPlayer2.getAttribute("src");
+					if(!src1.contains("https://www.nbcnewyork.com")) {
+						Log.event("Pre-roll Source Video ..."+src1, StopWatch.elapsedTime(startTime));
+						while(src1.equals(articleVideoPlayer2.getAttribute("src")));
+					} else {
+						return false;
+					}
+					
+				} else {
+					return false;
+				}
+				src2 = articleVideoPlayer2.getAttribute("src");
+				
+				if(!src1.equals(src2) && src2.contains("https://www.nbcnewyork.com")) {
+					status = true;
+					Log.event("Reloaded Source Video ..."+src2, StopWatch.elapsedTime(startTime));
+				}
+			//}
+			
+	} catch (NoSuchElementException e) {
+			status = false;
+		}
+		
+		Log.event("Validating Pre-roll Video Player...", StopWatch.elapsedTime(startTime));
+		return status;
+	}// validatePrerollVideo
 	
 	/**
 	 * Method to validate Facebook Icon

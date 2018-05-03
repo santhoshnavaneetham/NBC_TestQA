@@ -113,7 +113,7 @@ public class NBC_Demo extends BaseTest {
 
 			
 
-			Log.assertThatExtentReport(articlePage.validatePrerollVideo(),
+			Log.assertThatExtentReport(articlePage.validatePrerollVideo2(),
 					"Validation 1: Validated Pre-roll Video !", "Pre-roll Video failed to load",
 					driver);
 
