@@ -232,14 +232,14 @@ public class WebDriverFactory {
 		String browser = null, platform = null;
 		long startTime = StopWatch.startTime();
 
-		if (System.getProperty("har") == "true") {
+		if (System.getProperty("har").equalsIgnoreCase("true")) {
 			// start the proxy
 			proxy = new BrowserMobProxyServer();
 			proxy.start(0);
 		}
 
 		// get the Selenium proxy object - org.openqa.selenium.Proxy;
-		if (System.getProperty("har") == "true")
+		if (System.getProperty("har").equalsIgnoreCase("true"))
 			seleniumProxy = ClientUtil.createSeleniumProxy(proxy);
 
 		if (browserWithPlatform.contains("_")) {
@@ -254,7 +254,7 @@ public class WebDriverFactory {
 				chromeCapabilities.setCapability(ChromeOptions.CAPABILITY, opt);
 				chromeCapabilities.setPlatform(Platform.fromString(platform));
 				
-				if (System.getProperty("har") == "true")
+				if (System.getProperty("har").equalsIgnoreCase("true"))
 					chromeCapabilities.setCapability(CapabilityType.PROXY, seleniumProxy);
 
 				driver = new RemoteWebDriver(hubURL, chromeCapabilities);
@@ -266,7 +266,7 @@ public class WebDriverFactory {
 				chromeCapabilities.setCapability("opera.arguments", "-screenwidth 1024 -screenheight 768");
 				chromeCapabilities.setPlatform(Platform.fromString(platform));
 				chromeCapabilities.setCapability("name", getCurrentMethodName() );
-				if (System.getProperty("har") == "true")
+				if (System.getProperty("har").equalsIgnoreCase("true"))
 					chromeCapabilities.setCapability(CapabilityType.PROXY, seleniumProxy);
 
 				driver = new RemoteWebDriver(hubURL, chromeCapabilities);
@@ -425,7 +425,7 @@ public class WebDriverFactory {
 		/*if (xmlRead)
 			Log.addTestRunMachineInfo(driver);*/
 
-		if (System.getProperty("har") == "true") {
+		if (System.getProperty("har").equalsIgnoreCase("true")) {
 			// enable more detailed HAR capture, if desired (see CaptureType for the
 			// complete list)
 			proxy.enableHarCaptureTypes(CaptureType.REQUEST_CONTENT, CaptureType.RESPONSE_CONTENT);
