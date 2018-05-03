@@ -920,27 +920,43 @@ public class HomePage extends LoadableComponent<HomePage> implements SpellCheckL
 
 	/**
 	 * Method to validate Broken Links
-	 * @throws IOException 
 	 */
-	public String checkBrokenLinks() throws IOException {
+	public String checkBrokenLinks() {
 		String returnString = "";
 		String HOST = driver.getCurrentUrl();
 		long startTime = StopWatch.startTime();
+		PrintWriter out = null;
 		HashSet<String> readSitemap = readSitemap(HOST + "/sitemap.xml");
-		for (String href : readSitemap) {
-			HashSet<String> linksSet = findHreflinks(new URL(href), HOST);
-			for (String link : linksSet) {
-				URL url = new URL(link);
-				HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-				connection.setRequestMethod("GET");
-				connection.connect();
-				if (connection.getResponseCode() != 200) {
-					returnString = url + ": " + connection.getResponseCode();
-					System.out.println(url + ": " + connection.getResponseCode());
-				}
+		try {
+			File brokenLinkList = new File("C:\\SpellCheck\\BrokenLinks.txt");
+			if(!brokenLinkList.exists())
+			brokenLinkList.getParentFile().mkdirs();
+			out = new PrintWriter(brokenLinkList);
+			out.println(new SimpleDateFormat("dd MMM HH:mm:ss SSS").format(Calendar.getInstance().getTime()));
+			for (String href : readSitemap) {
+				//HashSet<String> linksSet = findHreflinks(new URL(href), HOST);
+				//for (String link : linksSet) {
+					URL url = new URL(href);
+					HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+					connection.setRequestMethod("GET");
+					connection.connect();
+					if (connection.getResponseCode() != 200) {
+					//	returnString = url + ": " + connection.getResponseCode();
+						out.println("BROKEN LINK - "+url + ": " + connection.getResponseCode());
+					} else {
+						out.println("VALID LINK - "+url + ": " + connection.getResponseCode());
+					}
+				//}
 			}
+			returnString =  brokenLinkList.getPath();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			out.close();
 		}
+		
 		Log.event("Checking Broken Links on Page...", StopWatch.elapsedTime(startTime));
+		
 		return returnString;
 	}// checkBrokenLinks
 
@@ -951,7 +967,7 @@ public class HomePage extends LoadableComponent<HomePage> implements SpellCheckL
 			DocumentBuilder documentBuilder = factory.newDocumentBuilder();
 			InputSource inputStream = new InputSource(sitemapURL);
 			Document document = documentBuilder.parse(inputStream);
-			NodeList studentNodeList = document.getElementsByTagName("url");
+			NodeList studentNodeList = document.getElementsByTagName("sitemap");
 			for (int index = 0; index < studentNodeList.getLength(); index++) {
 				Node node = studentNodeList.item(index);
 				if (node.getNodeType() == Node.ELEMENT_NODE) {
@@ -959,8 +975,25 @@ public class HomePage extends LoadableComponent<HomePage> implements SpellCheckL
 					NodeList nameNodeList = element.getElementsByTagName("loc");
 					for (int eIndex = 0; eIndex < nameNodeList.getLength(); eIndex++) {
 						if (nameNodeList.item(eIndex).getNodeType() == Node.ELEMENT_NODE) {
+							
 							Element nameElement = (Element) nameNodeList.item(eIndex);
-							set.add(nameElement.getFirstChild().getNodeValue().trim());
+							InputSource inputStream2 = new InputSource(nameElement.getFirstChild().getNodeValue().trim());
+							Document document2 = documentBuilder.parse(inputStream2);
+							NodeList studentNodeList2 = document2.getElementsByTagName("url");
+							for (int index2 = 0; index2 < studentNodeList2.getLength(); index2++) {
+								Node node2 = studentNodeList2.item(index2);
+								if (node2.getNodeType() == Node.ELEMENT_NODE) {
+
+									Element element2 = (Element) node2;
+									NodeList nameNodeList2 = element2.getElementsByTagName("loc");
+									for (int eIndex2 = 0; eIndex2 < nameNodeList2.getLength(); eIndex2++) {
+										if (nameNodeList2.item(eIndex2).getNodeType() == Node.ELEMENT_NODE) {
+											Element nameElement2 = (Element) nameNodeList2.item(eIndex2);
+											set.add(nameElement2.getFirstChild().getNodeValue().trim());
+										}
+									}
+								}
+							}
 						}
 					}
 				}

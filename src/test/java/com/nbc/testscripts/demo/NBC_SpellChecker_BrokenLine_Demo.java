@@ -84,7 +84,7 @@ public class NBC_SpellChecker_BrokenLine_Demo extends BaseTest {
 			}
 			
 			homePage.clickOnLogo();
-			Log.message("Validation 7: Broken Links on Page --> " + homePage.checkBrokenLinks());
+			Log.message("Validation 7: List of all Valid/Broken Links on Page present in File ---> " + homePage.checkBrokenLinks());
 
 			Log.testCaseResultExtentReport(driver);
 
