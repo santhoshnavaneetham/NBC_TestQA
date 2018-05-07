@@ -71,7 +71,7 @@ public class NBC_CapturingPerformance_Demo extends BaseTest {
 	public final void tearDown(ITestResult result) throws IOException {
 		status = "PASS";
 		environmentPropertiesReader = new EnvironmentPropertiesReader();
-		if ((System.getProperty("har").equalsIgnoreCase("true")) || (doHar == "true")) {
+		if (("true".equalsIgnoreCase(System.getProperty("har"))) || (doHar == "true")) {
 			// get the HAR data
 			Har har = WebDriverFactory.proxy.getHar();
 
