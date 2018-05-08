@@ -231,15 +231,18 @@ public class WebDriverFactory {
 		WebDriver driver = null;
 		String browser = null, platform = null;
 		long startTime = StopWatch.startTime();
-
-		if ("true".equalsIgnoreCase(System.getProperty("har"))) {
+		
+		XmlTest xmlParameters = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest();
+		String harValue = xmlParameters.getParameter("har");
+		
+		if ("true".equalsIgnoreCase(harValue)) {
 			// start the proxy
 			proxy = new BrowserMobProxyServer();
 			proxy.start(0);
 		}
 
 		// get the Selenium proxy object - org.openqa.selenium.Proxy;
-		if ("true".equalsIgnoreCase(System.getProperty("har")))
+		if ("true".equalsIgnoreCase(harValue))
 			seleniumProxy = ClientUtil.createSeleniumProxy(proxy);
 
 		if (browserWithPlatform.contains("_")) {
@@ -254,7 +257,7 @@ public class WebDriverFactory {
 				chromeCapabilities.setCapability(ChromeOptions.CAPABILITY, opt);
 				chromeCapabilities.setPlatform(Platform.fromString(platform));
 				
-				if ("true".equalsIgnoreCase(System.getProperty("har")))
+				if ("true".equalsIgnoreCase(harValue))
 					chromeCapabilities.setCapability(CapabilityType.PROXY, seleniumProxy);
 
 				driver = new RemoteWebDriver(hubURL, chromeCapabilities);
@@ -266,7 +269,7 @@ public class WebDriverFactory {
 				chromeCapabilities.setCapability("opera.arguments", "-screenwidth 1024 -screenheight 768");
 				chromeCapabilities.setPlatform(Platform.fromString(platform));
 				chromeCapabilities.setCapability("name", getCurrentMethodName() );
-				if ("true".equalsIgnoreCase(System.getProperty("har")))
+				if ("true".equalsIgnoreCase(harValue))
 					chromeCapabilities.setCapability(CapabilityType.PROXY, seleniumProxy);
 
 				driver = new RemoteWebDriver(hubURL, chromeCapabilities);
@@ -280,7 +283,17 @@ public class WebDriverFactory {
 				chromeCapabilities.setCapability("name", getCurrentMethodName() );
 				driver = new RemoteWebDriver(new URL(URL), chromeCapabilities);
 
-			} else if ("SauceiPadSimulation".equalsIgnoreCase(browser)) {
+			} else if ("LocalUserAgentPixel".equalsIgnoreCase(browser)) {
+				opt.addArguments(
+						"--user-agent=Mozilla/5.0 (Linux; Android 8.0.0; Pixel Build/OPR3.170623.008) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.109 Mobile Safari/537.36");
+				chromeCapabilities.setCapability(ChromeOptions.CAPABILITY, opt);
+				chromeCapabilities.setCapability("opera.arguments", "-screenwidth 411 -screenheight 731");
+				chromeCapabilities.setPlatform(Platform.fromString(platform));
+				chromeCapabilities.setCapability("name", getCurrentMethodName() );
+				driver = new RemoteWebDriver(hubURL, chromeCapabilities);
+
+			} 
+			else if ("SauceiPadSimulation".equalsIgnoreCase(browser)) {
 				DesiredCapabilities caps = DesiredCapabilities.iphone();
 				caps.setCapability("appiumVersion", "1.7.2");
 				caps.setCapability("deviceName","iPad Simulator");
@@ -425,7 +438,7 @@ public class WebDriverFactory {
 		/*if (xmlRead)
 			Log.addTestRunMachineInfo(driver);*/
 
-		if ("true".equalsIgnoreCase(System.getProperty("har"))) {
+		if ("true".equalsIgnoreCase(harValue)) {
 			// enable more detailed HAR capture, if desired (see CaptureType for the
 			// complete list)
 			proxy.enableHarCaptureTypes(CaptureType.REQUEST_CONTENT, CaptureType.RESPONSE_CONTENT);
