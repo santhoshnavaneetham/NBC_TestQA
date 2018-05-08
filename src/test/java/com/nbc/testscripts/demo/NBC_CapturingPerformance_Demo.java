@@ -5,9 +5,11 @@ import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
+import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import org.testng.xml.XmlTest;
 
 import com.nbc.pages.HomePage;
 import com.nbc.support.*;
@@ -52,7 +54,6 @@ public class NBC_CapturingPerformance_Demo extends BaseTest {
 					"Failed to navigate to Home Page", driver);
 			Log.assertThatExtentReport(homePage.validateLogo(), "Validation 4: Branding Logo available as expected!",
 					"Branding Logo not available on the page", driver);
-			Log.message(WebDriverFactory.sFileName);
 
 			Log.testCaseResultExtentReport(driver);
 
@@ -71,7 +72,10 @@ public class NBC_CapturingPerformance_Demo extends BaseTest {
 	public final void tearDown(ITestResult result) throws IOException {
 		status = "PASS";
 		environmentPropertiesReader = new EnvironmentPropertiesReader();
-		if (("true".equalsIgnoreCase(System.getProperty("har"))) || (doHar == "true")) {
+		XmlTest xmlParameters = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest();
+		String harValue = xmlParameters.getParameter("har");
+		
+		if (("true".equalsIgnoreCase(harValue)) || (doHar == "true")) {
 			// get the HAR data
 			Har har = WebDriverFactory.proxy.getHar();
 
@@ -79,6 +83,7 @@ public class NBC_CapturingPerformance_Demo extends BaseTest {
 			File harFile = new File(WebDriverFactory.sFileName);
 			try {
 				har.writeTo(harFile);
+				Log.message("HAR captured and saved in - '" + WebDriverFactory.sFileName + "'");
 			} catch (IOException ex) {
 			}
 
