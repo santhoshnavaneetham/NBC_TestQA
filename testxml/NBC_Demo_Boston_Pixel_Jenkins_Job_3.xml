@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="NBC_PoC" verbose="3" parallel="true" thread-count="2">
+<suite name="NBC_PoC" verbose="3" parallel="false" thread-count="1">
 
 	<parameter name="documentLoad" value="true" />
 	<parameter name="imageLoad" value="false" />
