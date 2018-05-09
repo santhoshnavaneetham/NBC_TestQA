@@ -634,8 +634,6 @@ public class NBC_Demo extends BaseTest {
 	{
 		Capabilities caps = ((RemoteWebDriver) driver).getCapabilities();
 		return caps.getBrowserName().toString() + " " + caps.getVersion().toString();
-//		String browserName = caps.getBrowserName();
-//		String browserVersion = caps.getVersion();
 	}
 	
 	@AfterMethod(alwaysRun = true)
