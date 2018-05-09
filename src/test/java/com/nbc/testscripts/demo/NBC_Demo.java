@@ -1,13 +1,14 @@
 package com.nbc.testscripts.demo;
 
-import java.io.File;
-import java.io.IOException;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.Capabilities;
+import java.io.File;
+import java.io.IOException;
 
 import com.nbc.pages.ArticlePage;
 import com.nbc.pages.HomePage;
@@ -249,10 +250,11 @@ public class NBC_Demo extends BaseTest {
 		testData.setTestCaseId(Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase());
 		testData.readData();
 
+		String browserDetails = Utils.getBrowser(driver);
 		String site = webSiteWithStakeHolder.split("_")[0];
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
 		Log.testCaseInfo(
-				testData.get("Description") + "[" + browser + " || " + stakeHolderName.toUpperCase() + " ]",
+				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
 				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {

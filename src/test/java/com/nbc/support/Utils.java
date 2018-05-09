@@ -3,10 +3,12 @@ package com.nbc.support;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -185,4 +187,12 @@ public class Utils {
 		return assingedWebDriver;
 
 	}// switchWindows
+	
+	public static String getBrowser(WebDriver driver)
+	{
+		Capabilities caps = ((RemoteWebDriver) driver).getCapabilities();
+		return caps.getBrowserName() + " " + caps.getVersion();
+//		String browserName = caps.getBrowserName();
+//		String browserVersion = caps.getVersion();
+	}
 }
