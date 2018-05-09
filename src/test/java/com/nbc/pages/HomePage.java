@@ -587,17 +587,15 @@ public class HomePage extends LoadableComponent<HomePage> implements SpellCheckL
 		try {
 			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", spredfastFeed);
 
-			for (int i = 0; i < liveSpredfastFeed.size(); i++) {
-				if ((liveSpredfastFeed.get(0).getText().contains("hours ago"))
-						|| (liveSpredfastFeed.get(0).getText().contains("hour ago"))
-						|| (liveSpredfastFeed.get(0).getText().contains("minutes ago"))
+//			for (int i = 0; i < liveSpredfastFeed.size(); i++) {
+				if ((liveSpredfastFeed.get(0).getText().contains("minutes ago"))
 						|| (liveSpredfastFeed.get(0).getText().contains("minute ago"))
 						|| (liveSpredfastFeed.get(0).getText().contains("seconds ago"))
 						|| (liveSpredfastFeed.get(0).getText().contains("second ago")))
 					preStatus = true;
 				else
 					preStatus = false;
-			}
+//			}
 
 			if (spredfastFeed.isDisplayed() && spredfastFeed.isEnabled()
 					&& ((liveSpredfastFeed.size() > 3) /*&& (liveSpredfastFeed.size() == 7)*/) && preStatus)
