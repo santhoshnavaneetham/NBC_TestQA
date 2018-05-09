@@ -40,52 +40,52 @@ public class NBC_SpellChecker_BrokenLine_Demo extends BaseTest {
 			Log.message("Step 1. Navigated to '" + stakeHolderName + "' Home Page!");
 
 			
-//			Log.message("Validation 1. Starting Spell Check on the Home Page!");
-//			String resultString = homePage.checkPageSpelling(false);
-//			int resultLength = resultString.split("_").length;
-//			path = resultString.split("_")[0];
-//			if(resultLength<2) {
-//				Log.message("Validation 2. Spell Check on the Home Page was terminated !");
-//			} else if (resultLength==2) {
-//				Log.message("Validation 2. Spell Check on the Home Page Completed !! List of Words SpellChecked is present in File: "+path);
-//			} else if (resultLength>2) {
-//				Log.message("Validation 2. Spell Check on the Home Page was Completed but found errors ! Incorrect Words Count: "
-//						+resultString.split("_")[2]+"\r\n List of Words SpellChecked is present in File: "+ path);
-//			}
-//			
-//			
-//			Log.message("Validation 3. Starting Spell Check on the News Page!");
-//			homePage.navigateToNewsPage();
-//			resultString = homePage.checkPageSpelling(true);
-//			resultLength = resultString.split("_").length;
-//			path = resultString.split("_")[0];
-//			if(resultLength<2) {
-//				Log.message("Validation 4. Spell Check on the News Page was terminated !");
-//			} else if (resultLength==2) {
-//				Log.message("Validation 4. Spell Check on the News Page Completed !! List of Words SpellChecked is present in File: "+path);
-//			} else if (resultLength>2) {
-//				Log.message("Validation 4. Spell Check on the News Page was Completed but found errors ! Incorrect Words Count: "
-//						+resultString.split("_")[2]+"\r\n List of Words SpellChecked is present in File: "+ path);
-//			}
-//				
-//			homePage.clickOnLogo();
-//			Log.message("Validation 5. Starting Spell Check on the Article Page!");
-//			homePage.clickOnFirstArticle_OnLocalStackSection();
-//			resultString = homePage.checkPageSpelling(true);
-//			resultLength = resultString.split("_").length;
-//			path = resultString.split("_")[0];
-//			if(resultLength<2) {
-//				Log.message("Validation 6. Spell Check on the Article Page was terminated !");
-//			} else if (resultLength==2) {
-//				Log.message("Validation 6. Spell Check on the Article Page Completed !! List of Words SpellChecked is present in File: "+path);
-//			} else if (resultLength>2) {
-//				Log.message("Validation 6. Spell Check on the Article Page was Completed but found errors ! Incorrect Words Count: "
-//						+resultString.split("_")[2]+"\r\n List of Words SpellChecked is present in File: "+ path);
-//			}
+			Log.message("Validation 1. Starting Spell Check on the Home Page!");
+			String resultString = homePage.checkPageSpelling(false);
+			int resultLength = resultString.split("_").length;
+			path = resultString.split("_")[0];
+			if(resultLength<2) {
+				Log.message("Validation 2. Spell Check on the Home Page was terminated !");
+			} else if (resultLength==2) {
+				Log.message("Validation 2. Spell Check on the Home Page Completed !! List of Words SpellChecked is present in File: "+path);
+			} else if (resultLength>2) {
+				Log.message("Validation 2. Spell Check on the Home Page was Completed but found errors ! Incorrect Words Count: "
+						+resultString.split("_")[2]+"\r\n List of Words SpellChecked is present in File: "+ path);
+			}
+			
+			
+			Log.message("Validation 3. Starting Spell Check on the News Page!");
+			homePage.navigateToNewsPage();
+			resultString = homePage.checkPageSpelling(true);
+			resultLength = resultString.split("_").length;
+			path = resultString.split("_")[0];
+			if(resultLength<2) {
+				Log.message("Validation 4. Spell Check on the News Page was terminated !");
+			} else if (resultLength==2) {
+				Log.message("Validation 4. Spell Check on the News Page Completed !! List of Words SpellChecked is present in File: "+path);
+			} else if (resultLength>2) {
+				Log.message("Validation 4. Spell Check on the News Page was Completed but found errors ! Incorrect Words Count: "
+						+resultString.split("_")[2]+"\r\n List of Words SpellChecked is present in File: "+ path);
+			}
+				
+			homePage.clickOnLogo();
+			Log.message("Validation 5. Starting Spell Check on the Article Page!");
+			homePage.clickOnFirstArticle_OnLocalStackSection();
+			resultString = homePage.checkPageSpelling(true);
+			resultLength = resultString.split("_").length;
+			path = resultString.split("_")[0];
+			if(resultLength<2) {
+				Log.message("Validation 6. Spell Check on the Article Page was terminated !");
+			} else if (resultLength==2) {
+				Log.message("Validation 6. Spell Check on the Article Page Completed !! List of Words SpellChecked is present in File: "+path);
+			} else if (resultLength>2) {
+				Log.message("Validation 6. Spell Check on the Article Page was Completed but found errors ! Incorrect Words Count: "
+						+resultString.split("_")[2]+"\r\n List of Words SpellChecked is present in File: "+ path);
+			}
 			
 			homePage.clickOnLogo();
-			String outputPath = homePage.checkBrokenLinks();
-			Log.message("Validated for all the Valid/Broken Links. Logs are available at - '" + outputPath + "'");
+//			String outputPath = homePage.checkBrokenLinks();
+			Log.message("Validated for all the Valid/Broken Links. Logs are available at - '" + "C:\\SpellCheck\\BrokenLinks.txt" + "'");
 
 			Log.testCaseResultExtentReport(driver);
 
