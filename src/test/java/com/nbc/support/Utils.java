@@ -191,6 +191,7 @@ public class Utils {
 	public static String getBrowser(WebDriver driver)
 	{
 		Capabilities caps = ((RemoteWebDriver) driver).getCapabilities();
+		String browserName = caps.getBrowserName().toString();
 		return caps.getBrowserName() + " " + caps.getVersion();
 //		String browserName = caps.getBrowserName();
 //		String browserVersion = caps.getVersion();

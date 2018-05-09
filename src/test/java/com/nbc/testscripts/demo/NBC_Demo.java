@@ -45,8 +45,9 @@ public class NBC_Demo extends BaseTest {
 
 		String site = webSiteWithStakeHolder.split("_")[0];
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
+		String browserDetails = Utils.getBrowser(driver);
 		Log.testCaseInfo(
-				testData.get("Description") + "[" + browser + " || " + stakeHolderName.toUpperCase() + " ]",
+				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
 				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {
@@ -100,8 +101,9 @@ public class NBC_Demo extends BaseTest {
 
 		String site = webSiteWithStakeHolder.split("_")[0];
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
+		String browserDetails = Utils.getBrowser(driver);
 		Log.testCaseInfo(
-				testData.get("Description") + "[" + browser + " || " + stakeHolderName.toUpperCase() + " ]",
+				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
 				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {
@@ -153,8 +155,9 @@ public class NBC_Demo extends BaseTest {
 
 		String site = webSiteWithStakeHolder.split("_")[0];
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
+		String browserDetails = Utils.getBrowser(driver);
 		Log.testCaseInfo(
-				testData.get("Description") + "[" + browser + " || " + stakeHolderName.toUpperCase() + " ]",
+				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
 				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {
@@ -207,8 +210,9 @@ public class NBC_Demo extends BaseTest {
 
 		String site = webSiteWithStakeHolder.split("_")[0];
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
+		String browserDetails = Utils.getBrowser(driver);
 		Log.testCaseInfo(
-				testData.get("Description") + "[" + browser + " || " + stakeHolderName.toUpperCase() + " ]",
+				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
 				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {
@@ -250,9 +254,9 @@ public class NBC_Demo extends BaseTest {
 		testData.setTestCaseId(Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase());
 		testData.readData();
 
-		String browserDetails = Utils.getBrowser(driver);
 		String site = webSiteWithStakeHolder.split("_")[0];
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
+		String browserDetails = Utils.getBrowser(driver);
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
 				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
@@ -298,8 +302,9 @@ public class NBC_Demo extends BaseTest {
 
 		String site = webSiteWithStakeHolder.split("_")[0];
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
+		String browserDetails = Utils.getBrowser(driver);
 		Log.testCaseInfo(
-				testData.get("Description") + "[" + browser + " || " + stakeHolderName.toUpperCase() + " ]",
+				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
 				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {
@@ -346,8 +351,9 @@ public class NBC_Demo extends BaseTest {
 
 		String site = webSiteWithStakeHolder.split("_")[0];
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
+		String browserDetails = Utils.getBrowser(driver);
 		Log.testCaseInfo(
-				testData.get("Description") + "[" + browser + " || " + stakeHolderName.toUpperCase() + " ]",
+				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
 				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {
@@ -397,8 +403,9 @@ public class NBC_Demo extends BaseTest {
 
 		String site = webSiteWithStakeHolder.split("_")[0];
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
+		String browserDetails = Utils.getBrowser(driver);
 		Log.testCaseInfo(
-				testData.get("Description") + "[" + browser + " || " + stakeHolderName.toUpperCase() + " ]",
+				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
 				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {
@@ -446,8 +453,9 @@ public class NBC_Demo extends BaseTest {
 
 		String site = webSiteWithStakeHolder.split("_")[0];
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
+		String browserDetails = Utils.getBrowser(driver);
 		Log.testCaseInfo(
-				testData.get("Description") + "[" + browser + " || " + stakeHolderName.toUpperCase() + " ]",
+				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
 				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {
@@ -530,8 +538,9 @@ public class NBC_Demo extends BaseTest {
 
 		String site = webSiteWithStakeHolder.split("_")[0];
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
+		String browserDetails = Utils.getBrowser(driver);
 		Log.testCaseInfo(
-				testData.get("Description") + "[" + browser + " || " + stakeHolderName.toUpperCase() + " ]",
+				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
 				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {
@@ -585,8 +594,9 @@ public class NBC_Demo extends BaseTest {
 
 		String site = webSiteWithStakeHolder.split("_")[0];
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
+		String browserDetails = Utils.getBrowser(driver);
 		Log.testCaseInfo(
-				testData.get("Description") + "[" + browser + " || " + stakeHolderName.toUpperCase() + " ]",
+				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
 				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {
