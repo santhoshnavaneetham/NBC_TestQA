@@ -45,7 +45,7 @@ public class NBC_Demo extends BaseTest {
 
 		String site = webSiteWithStakeHolder.split("_")[0];
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
-		String browserDetails = Utils.getBrowser(driver);
+		String browserDetails = getBrowser(driver);
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
 				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
@@ -101,7 +101,7 @@ public class NBC_Demo extends BaseTest {
 
 		String site = webSiteWithStakeHolder.split("_")[0];
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
-		String browserDetails = Utils.getBrowser(driver);
+		String browserDetails = getBrowser(driver);
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
 				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
@@ -153,7 +153,7 @@ public class NBC_Demo extends BaseTest {
 
 		String site = webSiteWithStakeHolder.split("_")[0];
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
-		String browserDetails = Utils.getBrowser(driver);
+		String browserDetails = getBrowser(driver);
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
 				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
@@ -208,7 +208,7 @@ public class NBC_Demo extends BaseTest {
 
 		String site = webSiteWithStakeHolder.split("_")[0];
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
-		String browserDetails = Utils.getBrowser(driver);
+		String browserDetails = getBrowser(driver);
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
 				Thread.currentThread().getStackTrace()[1].getMethodName().toLowerCase(), "PoC_Demo", "Aspire Systems", driver);
@@ -254,7 +254,7 @@ public class NBC_Demo extends BaseTest {
 
 		String site = webSiteWithStakeHolder.split("_")[0];
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
-		String browserDetails = Utils.getBrowser(driver);
+		String browserDetails = getBrowser(driver);
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
 				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
@@ -300,7 +300,7 @@ public class NBC_Demo extends BaseTest {
 
 		String site = webSiteWithStakeHolder.split("_")[0];
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
-		String browserDetails = Utils.getBrowser(driver);
+		String browserDetails = getBrowser(driver);
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
 				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
@@ -349,7 +349,7 @@ public class NBC_Demo extends BaseTest {
 
 		String site = webSiteWithStakeHolder.split("_")[0];
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
-		String browserDetails = Utils.getBrowser(driver);
+		String browserDetails = getBrowser(driver);
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
 				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
@@ -401,7 +401,7 @@ public class NBC_Demo extends BaseTest {
 
 		String site = webSiteWithStakeHolder.split("_")[0];
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
-		String browserDetails = Utils.getBrowser(driver);
+		String browserDetails = getBrowser(driver);
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
 				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
@@ -451,7 +451,7 @@ public class NBC_Demo extends BaseTest {
 
 		String site = webSiteWithStakeHolder.split("_")[0];
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
-		String browserDetails = Utils.getBrowser(driver);
+		String browserDetails = getBrowser(driver);
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
 				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
@@ -536,7 +536,7 @@ public class NBC_Demo extends BaseTest {
 
 		String site = webSiteWithStakeHolder.split("_")[0];
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
-		String browserDetails = Utils.getBrowser(driver);
+		String browserDetails = getBrowser(driver);
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
 				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
@@ -592,7 +592,7 @@ public class NBC_Demo extends BaseTest {
 
 		String site = webSiteWithStakeHolder.split("_")[0];
 		String stakeHolderName = webSiteWithStakeHolder.split("_")[1];
-		String browserDetails = Utils.getBrowser(driver);
+		String browserDetails = getBrowser(driver);
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
 				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
@@ -630,6 +630,14 @@ public class NBC_Demo extends BaseTest {
 
 	}// tc011
 
+	public static String getBrowser(WebDriver driver)
+	{
+		Capabilities caps = ((RemoteWebDriver) driver).getCapabilities();
+		return caps.getBrowserName() + " " + caps.getVersion();
+//		String browserName = caps.getBrowserName();
+//		String browserVersion = caps.getVersion();
+	}
+	
 	@AfterMethod(alwaysRun = true)
 	public final void tearDown(ITestResult result) throws IOException {
 		status = "PASS";
