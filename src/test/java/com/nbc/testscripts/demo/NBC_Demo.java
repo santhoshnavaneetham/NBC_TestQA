@@ -216,7 +216,7 @@ public class NBC_Demo extends BaseTest {
 		try {
 
 			HomePage homePage = new HomePage(driver, site).get();
-			Log.message("Step 1. Navigated to '" + stakeHolderName + "' Home Page!");
+			Log.message("Step Navigated to '" + stakeHolderName + "' Home Page!");
 
 			Log.assertThatExtentReport(homePage.validateSpredfastModule(),
 					"Validation 1: Validated Spredfast Module. Module loaded on Right Rail as expected!",
