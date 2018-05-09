@@ -114,8 +114,6 @@ public class NBC_Demo extends BaseTest {
 			ArticlePage articlePage = homePage.clickOnFirstArticleWithVideo_OnTopSection();
 			Log.message("Step 2. Navigated to First Article with Video on Top Section!");
 
-			
-
 			Log.assertThatExtentReport(articlePage.validatePrerollVideo2(),
 					"Validation 1: Validated Pre-roll Video !", "Pre-roll Video failed to load",
 					driver);
@@ -213,7 +211,7 @@ public class NBC_Demo extends BaseTest {
 		String browserDetails = Utils.getBrowser(driver);
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
-				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
+				Thread.currentThread().getStackTrace()[1].getMethodName().toLowerCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {
 
