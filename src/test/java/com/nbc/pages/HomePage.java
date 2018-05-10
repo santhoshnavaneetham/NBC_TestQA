@@ -80,7 +80,7 @@ public class HomePage extends LoadableComponent<HomePage> implements SpellCheckL
 	@FindBy(css = "div[class='brand'] a[data-lid='logo'] img")
 	WebElement imgLogo;
 
-	@FindBy(css = "div[class='stack-section'][data-tb-region='Local'] ul li[data-tb-owning-region-name='Local']")
+	@FindBy(css = "div[class='stack-section'][data-tb-region='Local'] ul li[data-tb-owning-region-name='Local'] a")
 	List<WebElement> localStakeSection;
 
 	@FindBy(css = "div[class='top-stories'] div[class='story'] div[class='headline'] a div[class='headline-tag']")
@@ -293,8 +293,33 @@ public class HomePage extends LoadableComponent<HomePage> implements SpellCheckL
 	 */
 	public ArticlePage clickOnFirstArticle_OnLocalStackSection() {
 		final long startTime = StopWatch.startTime();
-		Utils.waitForElement(driver, localStakeSection.get(0));
-		localStakeSection.get(0).click();
+		String isVideo = null;
+		boolean clicked = false;
+//		Utils.waitForElement(driver, localStakeSection.get(0));
+//		localStakeSection.get(0).click();
+		for (int i = 0; i <localStakeSection.size(); i++) {
+			Utils.waitForElement(driver, localStakeSection.get(i));
+			try {
+				isVideo = localStakeSection.get(i).findElement(By.xpath("span")).getText();
+			} catch (Exception e) {
+				localStakeSection.get(i).click();
+				clicked=true;
+				break;
+			}
+			if(!("VIDEO".equalsIgnoreCase(isVideo) ||"PHOTOS".equalsIgnoreCase(isVideo))) {
+				localStakeSection.get(i).click();
+				clicked=true;
+				break;
+			}
+		}
+		if(!clicked) {
+			try {
+				Log.fail("There are no Articles in Local Stack", driver);
+			} catch (Exception e) {
+				
+			}
+		}
+			
 		Utils.waitForElement(driver, lnkNews);
 		Log.event("Clicked first article on Local Stack Section", StopWatch.elapsedTime(startTime));
 		return new ArticlePage(driver).get();
