@@ -29,7 +29,7 @@
 
 	<test name="NBC_PoC_JAVA">
 		<classes>
-			<class name="com.nbc.testscripts.demo.NBC_Demo" />
+			<class name="com.nbc.testscripts.demo.NBC_Demo_Test" />
 		</classes>
 	</test>
 
