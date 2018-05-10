@@ -29,7 +29,7 @@
 
 	<test name="NBC_PoC_JAVA">
 		<classes>
-			<class name="com.nbc.testscripts.demo.NBC_Demo">
+			<class name="com.nbc.testscripts.demo.NBC_Demo_Test">
 				<methods>
 					<include name="tc005_feed_in_spredfast" />
 					<include name="tc006_watch_live_tve_Dropdown" />
