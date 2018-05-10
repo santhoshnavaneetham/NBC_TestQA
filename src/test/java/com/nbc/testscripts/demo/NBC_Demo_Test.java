@@ -17,7 +17,7 @@ import com.nbc.support.*;
 import net.lightbody.bmp.core.har.Har;
 
 @Listeners(EmailReport.class)
-public class NBC_Demo extends BaseTest {
+public class NBC_Demo_Test extends BaseTest {
 
 	String notes = null;
 	String testLinkResult = null;
@@ -29,8 +29,8 @@ public class NBC_Demo extends BaseTest {
 	@Test(dataProviderClass = DataProviderUtils.class, dataProvider = "multiBrowserWebsites")
 	public void tc001_Logo_is_clickable(String browser, String webSiteWithStakeHolder) throws Exception {
 
-		NBC_Demo.xltestDataWorkBook = "testdata\\data\\PoC.xls";
-		NBC_Demo.xltestDataWorkSheet = "Demo";
+		NBC_Demo_Test.xltestDataWorkBook = "testdata\\data\\PoC.xls";
+		NBC_Demo_Test.xltestDataWorkSheet = "Demo";
 
 		// Get the web driver instance
 		final WebDriver driver = WebDriverFactory.get(browser, true);
@@ -85,8 +85,8 @@ public class NBC_Demo extends BaseTest {
 	@Test(dataProviderClass = DataProviderUtils.class, dataProvider = "multiBrowserWebsites")
 	public void tc002_top_story_playback(String browser, String webSiteWithStakeHolder) throws Exception {
 
-		NBC_Demo.xltestDataWorkBook = "testdata\\data\\PoC.xls";
-		NBC_Demo.xltestDataWorkSheet = "Demo";
+		NBC_Demo_Test.xltestDataWorkBook = "testdata\\data\\PoC.xls";
+		NBC_Demo_Test.xltestDataWorkSheet = "Demo";
 
 		// Get the web driver instance
 		final WebDriver driver = WebDriverFactory.get(browser, true);
@@ -137,8 +137,8 @@ public class NBC_Demo extends BaseTest {
 	@Test(dataProviderClass = DataProviderUtils.class, dataProvider = "multiBrowserWebsites")
 	public void tc003_weather_module(String browser, String webSiteWithStakeHolder) throws Exception {
 
-		NBC_Demo.xltestDataWorkBook = "testdata\\data\\PoC.xls";
-		NBC_Demo.xltestDataWorkSheet = "Demo";
+		NBC_Demo_Test.xltestDataWorkBook = "testdata\\data\\PoC.xls";
+		NBC_Demo_Test.xltestDataWorkSheet = "Demo";
 
 		// Get the web driver instance
 		final WebDriver driver = WebDriverFactory.get(browser, true);
@@ -192,8 +192,8 @@ public class NBC_Demo extends BaseTest {
 	@Test(dataProviderClass = DataProviderUtils.class, dataProvider = "multiBrowserWebsites")
 	public void tc004_right_rail_Spredfast(String browser, String webSiteWithStakeHolder) throws Exception {
 
-		NBC_Demo.xltestDataWorkBook = "testdata\\data\\PoC.xls";
-		NBC_Demo.xltestDataWorkSheet = "Demo";
+		NBC_Demo_Test.xltestDataWorkBook = "testdata\\data\\PoC.xls";
+		NBC_Demo_Test.xltestDataWorkSheet = "Demo";
 
 		// Get the web driver instance
 		final WebDriver driver = WebDriverFactory.get(browser, true);
@@ -238,8 +238,8 @@ public class NBC_Demo extends BaseTest {
 	@Test(dataProviderClass = DataProviderUtils.class, dataProvider = "multiBrowserWebsites")
 	public void tc005_feed_in_spredfast(String browser, String webSiteWithStakeHolder) throws Exception {
 
-		NBC_Demo.xltestDataWorkBook = "testdata\\data\\PoC.xls";
-		NBC_Demo.xltestDataWorkSheet = "Demo";
+		NBC_Demo_Test.xltestDataWorkBook = "testdata\\data\\PoC.xls";
+		NBC_Demo_Test.xltestDataWorkSheet = "Demo";
 
 		// Get the web driver instance
 		final WebDriver driver = WebDriverFactory.get(browser, true);
@@ -284,8 +284,8 @@ public class NBC_Demo extends BaseTest {
 	@Test(dataProviderClass = DataProviderUtils.class, dataProvider = "multiBrowserWebsites")
 	public void tc006_watch_live_tve_Dropdown(String browser, String webSiteWithStakeHolder) throws Exception {
 
-		NBC_Demo.xltestDataWorkBook = "testdata\\data\\PoC.xls";
-		NBC_Demo.xltestDataWorkSheet = "Demo";
+		NBC_Demo_Test.xltestDataWorkBook = "testdata\\data\\PoC.xls";
+		NBC_Demo_Test.xltestDataWorkSheet = "Demo";
 
 		// Get the web driver instance
 		final WebDriver driver = WebDriverFactory.get(browser, true);
@@ -333,8 +333,8 @@ public class NBC_Demo extends BaseTest {
 	@Test(dataProviderClass = DataProviderUtils.class, dataProvider = "multiBrowserWebsites")
 	public void tc007_tve_dropdown(String browser, String webSiteWithStakeHolder) throws Exception {
 
-		NBC_Demo.xltestDataWorkBook = "testdata\\data\\PoC.xls";
-		NBC_Demo.xltestDataWorkSheet = "Demo";
+		NBC_Demo_Test.xltestDataWorkBook = "testdata\\data\\PoC.xls";
+		NBC_Demo_Test.xltestDataWorkSheet = "Demo";
 
 		// Get the web driver instance
 		final WebDriver driver = WebDriverFactory.get(browser, true);
@@ -385,8 +385,8 @@ public class NBC_Demo extends BaseTest {
 	@Test(dataProviderClass = DataProviderUtils.class, dataProvider = "multiBrowserWebsites")
 	public void tc008_connect_dropdown(String browser, String webSiteWithStakeHolder) throws Exception {
 
-		NBC_Demo.xltestDataWorkBook = "testdata\\data\\PoC.xls";
-		NBC_Demo.xltestDataWorkSheet = "Demo";
+		NBC_Demo_Test.xltestDataWorkBook = "testdata\\data\\PoC.xls";
+		NBC_Demo_Test.xltestDataWorkSheet = "Demo";
 
 		// Get the web driver instance
 		final WebDriver driver = WebDriverFactory.get(browser, true);
@@ -434,8 +434,8 @@ public class NBC_Demo extends BaseTest {
 	@Test(dataProviderClass = DataProviderUtils.class, dataProvider = "multiBrowserWebsites")
 	public void tc009_icons_in_Connect_dropdown(String browser, String webSiteWithStakeHolder) throws Exception {
 
-		NBC_Demo.xltestDataWorkBook = "testdata\\data\\PoC.xls";
-		NBC_Demo.xltestDataWorkSheet = "Demo";
+		NBC_Demo_Test.xltestDataWorkBook = "testdata\\data\\PoC.xls";
+		NBC_Demo_Test.xltestDataWorkSheet = "Demo";
 
 		// Get the web driver instance
 		final WebDriver driver = WebDriverFactory.get(browser, true);
@@ -520,8 +520,8 @@ public class NBC_Demo extends BaseTest {
 	@Test(dataProviderClass = DataProviderUtils.class, dataProvider = "multiBrowserWebsites")
 	public void tc010_share_bar(String browser, String webSiteWithStakeHolder) throws Exception {
 
-		NBC_Demo.xltestDataWorkBook = "testdata\\data\\PoC.xls";
-		NBC_Demo.xltestDataWorkSheet = "Demo";
+		NBC_Demo_Test.xltestDataWorkBook = "testdata\\data\\PoC.xls";
+		NBC_Demo_Test.xltestDataWorkSheet = "Demo";
 
 		// Get the web driver instance
 		final WebDriver driver = WebDriverFactory.get(browser, true);
@@ -576,8 +576,8 @@ public class NBC_Demo extends BaseTest {
 	@Test(dataProviderClass = DataProviderUtils.class, dataProvider = "multiBrowserWebsites")
 	public void tc011_article_with_advance_tagging(String browser, String webSiteWithStakeHolder) throws Exception {
 
-		NBC_Demo.xltestDataWorkBook = "testdata\\data\\PoC.xls";
-		NBC_Demo.xltestDataWorkSheet = "Demo";
+		NBC_Demo_Test.xltestDataWorkBook = "testdata\\data\\PoC.xls";
+		NBC_Demo_Test.xltestDataWorkSheet = "Demo";
 
 		// Get the web driver instance
 		final WebDriver driver = WebDriverFactory.get(browser, true);

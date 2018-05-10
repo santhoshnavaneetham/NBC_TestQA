@@ -26,7 +26,7 @@ public class ArticlePage extends LoadableComponent<ArticlePage> {
 
 	private WebDriver driver;
 	private boolean isPageLoaded;
-
+	public int SONARTEST;
 	/**********************************************************************************************
 	 ********************************* WebElements of Article Page ********************************
 	 **********************************************************************************************/

@@ -15,7 +15,7 @@ import com.nbc.support.*;
 import net.lightbody.bmp.core.har.Har;
 
 @Listeners(EmailReport.class)
-public class NBC_SpellChecker_BrokenLine_Demo extends BaseTest {
+public class NBC_Demo_SpellChecker_BrokenLinks extends BaseTest {
 
 	String notes = null;
 	String testLinkResult = null;
