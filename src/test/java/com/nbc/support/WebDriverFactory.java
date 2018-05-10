@@ -4,7 +4,9 @@ import java.lang.reflect.Field;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.Calendar;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.http.HttpHost;
@@ -284,14 +286,47 @@ public class WebDriverFactory {
 				driver = new RemoteWebDriver(new URL(URL), chromeCapabilities);
 
 			} else if ("LocalUserAgentPixel".equalsIgnoreCase(browser)) {
-				opt.addArguments(
-						"--user-agent=Mozilla/5.0 (Linux; Android 8.0.0; Pixel Build/OPR3.170623.008) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.109 Mobile Safari/537.36");
-				chromeCapabilities.setCapability(ChromeOptions.CAPABILITY, opt);
-				chromeCapabilities.setCapability("opera.arguments", "-screenwidth 411 -screenheight 731");
-				chromeCapabilities.setPlatform(Platform.fromString(platform));
-				chromeCapabilities.setCapability("name", getCurrentMethodName() );
-				driver = new RemoteWebDriver(hubURL, chromeCapabilities);
-
+//				opt.addArguments(
+//						"--user-agent=Mozilla/5.0 (Linux; Android 8.0.0; Pixel Build/OPR3.170623.008) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.109 Mobile Safari/537.36");
+//				chromeCapabilities.setCapability(ChromeOptions.CAPABILITY, opt);
+//				chromeCapabilities.setCapability("opera.arguments", "-screenwidth 411 -screenheight 731");
+//				chromeCapabilities.setPlatform(Platform.fromString(platform));
+//				chromeCapabilities.setCapability("name", getCurrentMethodName() );
+//				driver = new RemoteWebDriver(hubURL, chromeCapabilities);
+				
+//				String BrowserMobileOptions = "Galaxy S5";//"Pixel 2";"Pixel 2 XL";"iPhone 5 SE";"iPhone 6/7/8" ;						   
+//				ChromeOptions options = new ChromeOptions();
+//				options.EnableMobileEmulation(BrowserMobileOptions);
+//				options.BinaryLocation = "C:\\Batch Files\\chromedriver.exe";
+//				driver = new ChromeDriver(options);  
+				
+				/*Map<String, String> mobileEmulation = new HashMap<>();
+				mobileEmulation.put("deviceName", "Nexus 5");
+				ChromeOptions chromeOptions = new ChromeOptions();
+				//chromeOptions.setBinary(new File("C:\\Batch Files\\chromedriver.exe"));
+				chromeOptions.setExperimentalOption("mobileEmulation", mobileEmulation);
+				String driverlocation = "C:\\Batch Files\\chromedriver.exe";
+				System.setProperty("webdriver.chrome.driver",driverlocation);
+				driver = new ChromeDriver(chromeOptions);*/
+				
+				Map<String, String> mobileEmulation = new HashMap<>();
+				mobileEmulation.put("deviceName", "iPad Pro");
+				Map<String, Object> chromeOptions = new HashMap<>();
+				chromeOptions.put("mobileEmulation", mobileEmulation);
+				DesiredCapabilities cap = DesiredCapabilities.chrome();
+				cap.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+				driver = new RemoteWebDriver(hubURL,cap);
+				
+			} 
+			else if ("SauceUserAgentPixel".equalsIgnoreCase(browser)) {
+				Map<String, String> mobileEmulation = new HashMap<>();
+				mobileEmulation.put("deviceName", "iPad Pro");
+				Map<String, Object> chromeOptions = new HashMap<>();
+				chromeOptions.put("mobileEmulation", mobileEmulation);
+				DesiredCapabilities cap = DesiredCapabilities.chrome();
+				cap.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
+				driver = new RemoteWebDriver(new URL(URL),cap);
+				
 			} 
 			else if ("SauceiPadSimulation".equalsIgnoreCase(browser)) {
 				DesiredCapabilities caps = DesiredCapabilities.iphone();
