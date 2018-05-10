@@ -12,6 +12,7 @@ import java.io.IOException;
 
 import com.nbc.pages.ArticlePage;
 import com.nbc.pages.HomePage;
+import com.nbc.pages.HomePage2;
 import com.nbc.support.*;
 
 import net.lightbody.bmp.core.har.Har;
@@ -543,7 +544,7 @@ public class NBC_Demo_Test extends BaseTest {
 
 		try {
 
-			HomePage homePage = new HomePage(driver, site).get();
+			HomePage2 homePage = new HomePage2(driver, site).get();
 			Log.message("Step 1. Navigated to '" + stakeHolderName + "' Home Page!");
 
 			ArticlePage articlePage = homePage.clickOnFirstArticle_OnLocalStackSection();
