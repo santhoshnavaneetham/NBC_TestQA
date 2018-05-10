@@ -211,7 +211,7 @@ public class NBC_Demo_Test extends BaseTest {
 		String browserDetails = getBrowser(driver);
 		Log.testCaseInfo(
 				testData.get("Description") + "[" + browserDetails + " || " + stakeHolderName.toUpperCase() + " ]",
-				Thread.currentThread().getStackTrace()[1].getMethodName().toLowerCase(), "PoC_Demo", "Aspire Systems", driver);
+				Thread.currentThread().getStackTrace()[1].getMethodName().toUpperCase(), "PoC_Demo", "Aspire Systems", driver);
 
 		try {
 
