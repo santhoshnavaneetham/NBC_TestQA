@@ -957,7 +957,7 @@ public class HomePage extends LoadableComponent<HomePage> implements SpellCheckL
 			out = new PrintWriter(brokenLinkList);
 			out.println(new SimpleDateFormat("dd MMM HH:mm:ss SSS").format(Calendar.getInstance().getTime()));
 			for (String href : readSitemap) {
-				//HashSet<String> linksSet = findHreflinks(new URL(href), HOST);
+				//HashSet<String> linksSet = findHreflinks(new URL(href), HOST)
 				//for (String link : linksSet) {
 					URL url = new URL(href);
 					HttpURLConnection connection = (HttpURLConnection) url.openConnection();
